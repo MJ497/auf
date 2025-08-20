@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <base target="_self">
+    <title>About Us - Augustine Udefa Foundation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@preline/preline@2.0.0/dist/preline.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+    <script src="script.js" defer></script>
+    
+      <link rel="stylesheet" href="main.css">
+     <script>
+     tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                fontFamily: {
+                    sans: ['Outfit', 'sans-serif'],
+                },
+                extend: {
+                    colors: {
+                        gold: {
+                            500: '#E68B31'
+                            
+                        },
+                        blue:{
+                            500: '#3b82f6',
+                            600: '#2563eb',
+                            700: '#1d4ed8',
+                            900: '#02113aff'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        
+    </style>
+</head>
+<body class="bg-white dark:bg-gray-900 transition-colors duration-300 font-sans">
+    <!-- Navigation -->
+   <!-- Navigation -->
+    <header class="sticky top-0 z-50 bg-white/90 dark:bg-gray-900/90 backdrop-blur-md border-b border-gray-200 dark:border-gray-800">
+       <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  <div class="flex justify-between h-20 items-center">
+    <div class="flex items-center flex-shrink-0">
+      <a href="#" id="logo-link">
+        <img
+          src="img/logo.PNG"
+          alt="Logo"
+          class="h-8 w-auto sm:h-10 md:h-12 lg:h-16 object-contain"
+        >
+      </a>
+    </div>
+    <div class="hidden md:flex items-center space-x-8">
+         <a href="index.html" class="nav-link text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white" id="home-link">Home</a>
+      <a href="#about" class="nav-link text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white" id="about-link">About</a>
+      
+      <a href="program.html" class="nav-link text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white" id="programs-link">Programs</a>
+      <a href="event.html" class="nav-link text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white" id="events-link">Events</a>
+      <a href="volunteer.html" class="nav-link text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white" id="trustees-link">Volunteer</a>
+      <a href="donate.html" class="nav-link text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white" id="donate-link">Donate</a>
+    </div>
+    <button class="md:hidden text-gray-500 dark:text-gray-400" id="mobile-menu-button">
+      <i class="fas fa-bars text-xl"></i>
+    </button>
+  </div>
+</nav>
+
+        
+        <!-- Mobile menu -->
+        <div class="hidden md:hidden bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                 <a href="index.html" class="block px-3 py-2 rounded-md text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800" id="mobile-home-link">Home</a>
+                <a href="" class="block px-3 py-2 rounded-md text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800" id="mobile-about-link">About</a>
+                
+                <a href="program.html" class="block px-3 py-2 rounded-md text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800" id="mobile-programs-link">Programs</a>
+                <a href="event.html" class="block px-3 py-2 rounded-md text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800" id="mobile-events-link">Events</a>
+                <a href="volunteer.html" class="block px-3 py-2 rounded-md text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800" id="mobile-trustees-link">Volunteer</a>
+                <a href="donate.html" class="block px-3 py-2 rounded-lg  text-grey-700  hover:bg-gray-100 id="mobile-donate-link">Donate</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative h-96 flex items-center justify-center bg-gray-900 overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-r from-gray-900 to-transparent z-10"></div>
+        <img src="https://images.unsplash.com/flagged/photo-1579133311477-9121405c78dd?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+             alt="Students learning" 
+             class="absolute inset-0 w-full h-full object-cover">
+        <div class="relative z-20 text-center px-4">
+            <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">About Our Foundation</h1>
+            <p class="text-xl text-gray-300 max-w-2xl mx-auto">Empowering Nigeria's future through education, opportunity, and community development.</p>
+        </div>
+    </section>
+
+    <!-- Mission & Vision -->
+    <section class="py-20 bg-white dark:bg-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12">
+                <div class="bg-gray-50 dark:bg-gray-800 p-8 rounded-xl">
+                      <div class="w-12 h-12 rounded-full bg-gold-500 flex items-center justify-center text-white">
+                            <i class="fas fa-bullseye text-xl"></i>
+                        </div>
+                    <h2 class="text-2xl font-bold text-blue-900 dark:text-white mb-4 section-title">Our Mission</h2>
+                    <p class="text-gray-600 dark:text-gray-300 mb-6">
+                       The Foundation envisages a future where free educational institutions are established, and health services provided free of charge to the less privileged and financially disadvantaged people in our society. We believe that every life is important, and education is the bedrock of a nation. So, everyone, including the poor, should have the privilege to access health care and the formal education they desire and need.  
+                    </p>
+                    <div class="flex items-center space-x-4">
+                     
+                    </div>
+                </div>
+                <div class="bg-gray-50 dark:bg-gray-800 p-8 rounded-xl">
+                      <div class="w-12 h-12 rounded-full bg-gold-500 flex items-center justify-center text-white">
+                            <i class="fas fa-eye text-xl"></i>
+                        </div>
+                    <h2 class="text-2xl font-bold text-blue-900 dark:text-white mb-4 section-title">Our Vision</h2>
+                    <p class="text-gray-600 dark:text-gray-300 mb-6">
+                      The Augustine Udefa Foundation is committed to improving the lives of people, especially those with the fewest resources, by providing opportunities for them to access free education and quality health services.   
+                    </p>
+                    <div class="flex items-center space-x-4">
+                     
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   
+
+    <!-- Team Members -->
+    <section class="py-20 bg-white dark:bg-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-blue-900 dark:text-white mb-4">Our Team</h2>
+                <p class="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">The dedicated professionals who make our mission possible every day.</p>
+                <div class="w-20 h-1 bg-gold-500 mx-auto mt-4"></div>
+            </div>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+           
+                <!-- Team Member 1 -->
+                <div class="bg-gray-50 dark:bg-gray-800 rounded-xl shadow-md overflow-hidden transition-all duration-300 team-card cursor-pointer" onclick="openTeamModal('archie')">
+                    <div class="overflow-hidden h-64">
+                        <img src="img/archie.JPG"  
+                             alt="archie Adebayo" 
+                             class="w-full h-full object-cover transition-transform duration-300">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-1">Efiok Aniekan Archibong, PhD</h3>
+                        <p class="text-gold-500 font-medium mb-3">Programs Director</p>
+                        <p class="text-gray-600 dark:text-gray-300 text-sm mb-4">possesses an investigative mindset and passion for the scientific process, in addition to his great problem-solving skills and cognitive skills.</p>
+                        <div class="flex space-x-3">
+                            <a href="https://www.linkedin.com/in/efiok-archibong" target="_blank" class="text-gray-500 hover:text-gold-500 social-icon"><i class="fab fa-linkedin-in"></i></a>
+
+                            <a href="https://www.facebook.com/share/1KGfncwJdW/?mibextid=wwXIfr" target="_blank"  class="text-gray-500 hover:text-gold-500 social-icon"><i class="fab fa-facebook"></i></a>
+
+                               <a href="https://www.instagram.com/archibongefiok?igsh=MXY3Zmx1dmg4ejJtMw==" target="_blank"  class="text-gray-500 hover:text-gold-500 social-icon"><i class="fab fa-instagram"></i></a>
+
+                            
+                        </div>
+                    </div>
+                </div>
+                <!-- Team Member 2 -->
+                <div class="bg-gray-50 dark:bg-gray-800 rounded-xl shadow-md overflow-hidden transition-all duration-300 team-card cursor-pointer" onclick="openTeamModal('Charles')">
+                    <div class="overflow-hidden h-64">
+                        <img src="img/charlesvic.jpg" 
+                             alt="Charles-Vic Anyati" 
+                             class="w-full h-full object-cover transition-transform duration-300">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-1">Charles-Vic Anyati</h3>
+                        <p class="text-gold-500 font-medium mb-3"> Graphic Designer and Director of Publicity</p>
+                        <p class="text-gray-600 dark:text-gray-300 text-sm mb-4"> visual artist and technologist who blends creativity with innovation to craft impactful visual experiences.</p>
+                        <div class="flex space-x-3">
+                            <a href="https://www.facebook.com/share/1EmvDNfMrb/?mibextid=wwXIfr" class="text-gray-500 hover:text-gold-500 social-icon"><i class="fab fa-facebook"></i></a>
+                            <!-- <a href="#" class="text-gray-500 hover:text-gold-500 social-icon"><i class="fab fa-twitter"></i></a> -->
+                        </div>
+                    </div>
+                </div>
+                <!-- Team Member 3 -->
+                <div class="bg-gray-50 dark:bg-gray-800 rounded-xl shadow-md overflow-hidden transition-all duration-300 team-card cursor-pointer" onclick="openTeamModal('Esther')">
+                    <div class="overflow-hidden h-64">
+                        <img src="img/esther.jpg" 
+                             alt="Esther Oluebube Orindu" 
+                             class="w-full h-full object-cover transition-transform duration-300">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-1">Esther Oluebube Orindu</h3>
+                        <p class="text-gold-500 font-medium mb-3">Programs Review Writer</p>
+                        <p class="text-gray-600 dark:text-gray-300 text-sm mb-4">Builds partnerships with schools, communities, and local governments.</p>
+                        <div class="flex space-x-3">
+                            <a href="https://www.facebook.com/share/1As8gGFW2X/?mibextid=wwXIfr" class="text-gray-500 hover:text-gold-500 social-icon"><i class="fab fa-facebook"></i></a>
+                            <a href="https://www.instagram.com/aries_pride_?igsh=eGJyZHM4YjZrNWlt" class="text-gray-500 hover:text-gold-500 social-icon"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+    <!-- Team Member Modals -->
+    <div id="archie-modal" class="fixed inset-0 z-50 flex items-center justify-center hidden modal-overlay">
+        <div class="bg-white dark:bg-gray-900 w-full h-full flex items-center justify-center modal-content">
+            <div class="w-full max-w-4xl mx-auto rounded-xl shadow-2xl flex flex-col md:flex-row p-0 md:p-8">
+                <div class="flex flex-col md:flex-row w-full">
+                    <div class="flex-shrink-0 flex items-center justify-center bg-gray-100 dark:bg-gray-800 md:rounded-l-xl md:rounded-r-none p-6 md:p-0" style="min-width:220px;">
+                        <img src="img/archie.JPG" alt="archie " class="rounded-lg w-40 h-40 object-cover md:w-56 md:h-56">
+                    </div>
+                    <div class="flex-1 p-6 md:p-8 flex flex-col">
+                        <div class="flex justify-between items-start mb-6">
+                            <div>
+                                <h3 class="text-2xl font-bold text-gray-900 dark:text-white">Efiok Archibong, Ph.D.</h3>
+                                <p class="text-gold-500 font-medium">Program Director</p>
+                            </div>
+                            <button onclick="closeTeamModal('archie-modal')" class="text-gray-400 hover:text-gray-500 dark:hover:text-gray-300">
+                                <i class="fas fa-times text-xl"></i>
+                            </button>
+                        </div>
+                        <div class="mb-4">
+                            <p class="text-gray-600 dark:text-gray-300 mb-2">Efiok Archibong, Ph.D., is a lecturer and researcher at David Umahi Federal University of Health Sciences. He holds a bachelor’s degree in physiology, a master’s degree in blood physiology, and a Ph.D. degree in cardiovascular physiology, all from the University of Calabar, Nigeria. </p>
+                            <p class="text-gray-600 dark:text-gray-300">Efiok is a resourceful fellow with good leadership skills and exceptional ability to engage in rigorous and meaningful activities. He has performed research copiously and presented excellent seminar and conference papers. He possesses an investigative mindset and passion for the scientific process, in addition to his great problem-solving skills and cognitive skills. He is always willing to offer his time, skills, expertise, resources and support in the service to humanity. Efiok is doing his best to create an environment for significant positive change, helping the less privileged and promoting education and health. </p>
+                            <a href="mailto:efioka@augustineudefafoundation.com" class="text-gold-500 hover:text-gold-500 social-icon"><i class="fa-solid fa-envelope"></i>efioka@augustineudefafoundation.com</a>
+                            
+                        </div>
+                        <div class="flex justify-end mt-auto">
+                            <button onclick="closeTeamModal('archie-modal')" class="px-4 py-2 bg-blue-900 text-white rounded-lg hover:bg-blue-900 transition-colors">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="Charles-modal" class="fixed inset-0 z-50 flex items-center justify-center hidden modal-overlay">
+        <div class="bg-white dark:bg-gray-900 w-full h-full flex items-center justify-center modal-content">
+            <div class="w-full max-w-4xl mx-auto rounded-xl shadow-2xl flex flex-col md:flex-row p-0 md:p-8">
+                <div class="flex flex-col md:flex-row w-full">
+                    <div class="flex-shrink-0 flex items-center justify-center bg-gray-100 dark:bg-gray-800 md:rounded-l-xl md:rounded-r-none p-6 md:p-0" style="min-width:220px;">
+                        <img src="img/charlesvic.jpg" alt="Charles-Vic Anyati" class="rounded-lg w-40 h-40 object-cover md:w-56 md:h-56">
+                    </div>
+                    <div class="flex-1 p-6 md:p-8 flex flex-col">
+                        <div class="flex justify-between items-start mb-6">
+                            <div>
+                                <h3 class="text-2xl font-bold text-gray-900 dark:text-white">Charles-Vic Anyati</h3>
+                                <p class="text-gold-500 font-medium"> Graphic Designer and Director of Publicity</p>
+                            </div>
+                            <button onclick="closeTeamModal('Charles-modal')" class="text-gray-400 hover:text-gray-500 dark:hover:text-gray-300">
+                                <i class="fas fa-times text-xl"></i>
+                            </button>
+                        </div>
+                        <div class="mb-4">
+                            <p class="text-gray-600 dark:text-gray-300 mb-2">Anyati, Charles-Vic is a forward-thinking visual artist and technologist who blends creativity with innovation to craft impactful visual experiences. Born in Obudu, Cross River State, he holds a Bachelor of Arts degree from the University of Cross River State, where he developed a strong foundation in design, visual storytelling, and creative technology.</p>
+                            <p class="text-gray-600 dark:text-gray-300">With expertise in branding, printing, and digital design, Charles-Vic brings stories to life through art that resonates, engages, and inspires. As the founder of a growing creative business, Charles-Vic is passionate about using visual language to solve problems, spark emotion, and elevate brands. His work bridges aesthetics with function driven by a deep belief in the power of creativity to transform ideas into lasting impressions.</p>
+                             <a href="mailto:charlevic@augustineudefafoundation.com" class="text-gold-500 hover:text-gold-500 social-icon"><i class="fa-solid fa-envelope"></i>charlevics@augustineudefafoundation.com</a>
+                            
+                        </div>
+                        <div class="flex justify-end mt-auto">
+                            <button onclick="closeTeamModal('Charles-modal')" class="px-4 py-2 bg-blue-900 text-white rounded-lg hover:bg-blue-900 transition-colors">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="Esther-modal" class="fixed inset-0 z-50 flex items-center justify-center hidden modal-overlay">
+        <div class="bg-white dark:bg-gray-900 w-full h-full flex items-center justify-center modal-content">
+            <div class="w-full max-w-4xl mx-auto rounded-xl shadow-2xl flex flex-col md:flex-row p-0 md:p-8">
+                <div class="flex flex-col md:flex-row w-full">
+                    <div class="flex-shrink-0 flex items-center justify-center bg-gray-100 dark:bg-gray-800 md:rounded-l-xl md:rounded-r-none p-6 md:p-0" style="min-width:220px;">
+                        <img src="img/esther.jpg" alt="Esther Oluebube Orindu" class="rounded-lg w-40 h-40 object-cover md:w-56 md:h-56">
+                    </div>
+                    <div class="flex-1 p-6 md:p-8 flex flex-col">
+                        <div class="flex justify-between items-start mb-6">
+                            <div>
+                                <h3 class="text-2xl font-bold text-gray-900 dark:text-white">Esther Oluebube Orindu</h3>
+                                <p class="text-gold-500 font-medium">Programs Review Writer</p>
+                            </div>
+                            <button onclick="closeTeamModal('Esther-modal')" class="text-gray-400 hover:text-gray-500 dark:hover:text-gray-300">
+                                <i class="fas fa-times text-xl"></i>
+                            </button>
+                        </div>
+                        <div class="mb-4">
+                            <p class="text-gray-600 dark:text-gray-300 mb-2">Orindu Esther Oluebube, a bright and compassionate young woman pursuing her passion for healthcare as a nursing student. With a strong desire to make a positive impact on people's lives, she's dedicated to her studies and clinical rotations. Her empathetic nature and excellent communication skills make her a valuable asset to the people around her  especially her colleagues. As she navigates the challenges of nursing school, she's driven by her commitment to delivering high-quality patient care and making a difference in her community.</p>
+                            
+                            <a href="mailto:esthero@augustineudefafoundation.com" class="text-gold-500 hover:text-gold-500 social-icon"><i class="fa-solid fa-envelope"></i>esthero@augustineudefafoundation.com</a>
+                        </div>
+                        <div class="flex justify-end mt-auto">
+                            <button onclick="closeTeamModal('Esther-modal')" class="px-4 py-2 bg-blue-900 text-white rounded-lg hover:bg-blue-900 transition-colors">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="py-20 bg-gray-50 dark:bg-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12">
+                <div>
+                    <h2 class="text-3xl font-bold text-blue-900 dark:text-white mb-6 section-title">Contact Us</h2>
+                    <p class="text-gray-600 dark:text-gray-300 mb-8">
+                        We'd love to hear from you! Whether you have questions about our programs, want to partner with us, or need support, our team is here to help.
+                    </p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 mt-1">
+                                <i class="fas fa-map-marker-alt text-gold-500 text-xl"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="font-semibold text-gray-900 dark:text-white">Headquarters</h3>
+                                <p class="text-gray-600 dark:text-gray-300 mt-1">15 Education Way, Victoria Island, Lagos, Nigeria</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 mt-1">
+                                <i class="fas fa-phone-alt text-gold-500 text-xl"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="font-semibold text-gray-900 dark:text-white">Phone</h3>
+                                <p class="text-gray-600 dark:text-gray-300 mt-1">+234 803 123 4567</p>
+                                <p class="text-gray-600 dark:text-gray-300">+234 809 876 5432</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 mt-1">
+                                <i class="fas fa-envelope text-gold-500 text-xl"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="font-semibold text-gray-900 dark:text-white">Email</h3>
+                                <p class="text-gray-600 dark:text-gray-300 mt-1">augustineudefafoundation@gmail.com</p>
+                                <p class="text-gray-600 dark:text-gray-300"></p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 mt-1">
+                                <i class="fas fa-clock text-gold-500 text-xl"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="font-semibold text-gray-900 dark:text-white">Office Hours</h3>
+                                <p class="text-gray-600 dark:text-gray-300 mt-1">Monday - Friday: 8:00 AM - 5:00 PM</p>
+                                <p class="text-gray-600 dark:text-gray-300">Saturday: 10:00 AM - 2:00 PM</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <div class="bg-white dark:bg-gray-900 rounded-xl shadow-md p-8">
+                        <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-6">Send Us a Message</h3>
+                        <form id="contact-form">
+                            <div class="mb-6">
+                                <label for="name" class="block text-gray-700 dark:text-gray-300 mb-2">Full Name</label>
+                                <input type="text" id="name" name="name" required class="w-full px-4 py-3 border border-gray-300 dark:border-gray-700 rounded-lg focus:outline-none contact-input bg-white dark:bg-gray-800">
+                            </div>
+                            <div class="mb-6">
+                                <label for="email" class="block text-gray-700 dark:text-gray-300 mb-2">Email Address</label>
+                                <input type="email" id="email" name="email" required class="w-full px-4 py-3 border border-gray-300 dark:border-gray-700 rounded-lg focus:outline-none contact-input bg-white dark:bg-gray-800">
+                            </div>
+                            <div class="mb-6">
+                                <label for="subject" class="block text-gray-700 dark:text-gray-300 mb-2">Subject</label>
+                                <select id="subject" name="subject" required class="w-full px-4 py-3 border border-gray-300 dark:border-gray-700 rounded-lg focus:outline-none contact-input bg-white dark:bg-gray-800">
+                                    <option value="">Select a subject</option>
+                                    <option value="scholarship">Scholarship Inquiry</option>
+                                    <option value="donation">Donation Question</option>
+                                    <option value="partnership">Partnership Opportunity</option>
+                                    <option value="volunteer">Volunteer Inquiry</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            <div class="mb-6">
+                                <label for="message" class="block text-gray-700 dark:text-gray-300 mb-2">Message</label>
+                                <textarea id="message" name="message" rows="4" required class="w-full px-4 py-3 border border-gray-300 dark:border-gray-700 rounded-lg focus:outline-none contact-input bg-white dark:bg-gray-800"></textarea>
+                            </div>
+                            <button type="submit" class="w-full py-3 bg-blue-900 text-white rounded-lg hover:bg-gold-600 transition-colors font-medium">Send Message</button>
+                        </form>
+                        <!-- Loading Modal -->
+                        <div id="loading-modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+                            <div class="bg-white dark:bg-gray-900 rounded-lg p-8 flex flex-col items-center">
+                                <div class="loader mb-4 border-4 border-blue-900 border-t-transparent rounded-full w-12 h-12 animate-spin"></div>
+                                <p class="text-gray-900 dark:text-white font-semibold">Sending your message...</p>
+                            </div>
+                        </div>
+                        <!-- Success Modal -->
+                        <div id="success-modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+                            <div class="bg-white dark:bg-gray-900 rounded-lg p-8 flex flex-col items-center">
+                                <i class="fas fa-check-circle text-green-500 text-4xl mb-4"></i>
+                                <p class="text-gray-900 dark:text-white font-semibold mb-4">Your message was sent successfully!</p>
+                                <button id="success-close" class="px-4 py-2 bg-blue-900 text-white rounded-lg hover:bg-blue-900 transition-colors">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bylaws Section -->
+    <section class="py-20 bg-white dark:bg-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">Foundation Bylaws</h2>
+                <p class="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">The governing principles and operational guidelines of the Augustine Udefa Foundation.</p>
+                <div class="w-20 h-1 bg-gold-500 mx-auto mt-4"></div>
+            </div>
+            
+            <div class="bg-gray-50 dark:bg-gray-800 rounded-xl shadow-md p-8">
+                <div class="mb-8">
+                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-4">Article I: Name and Purpose</h3>
+                    <p class="text-gray-600 dark:text-gray-300 mb-4">
+                        The name of this organization shall be the Augustine Udefa Foundation (AUF), a nonprofit organization established under the laws of Nigeria.
+                    </p>
+                    <p class="text-gray-600 dark:text-gray-300">
+                        The purpose of the Foundation is to provide educational opportunities to underprivileged students in Nigeria through scholarships, infrastructure development, and community programs.
+                    </p>
+                </div>
+                
+                <div class="mb-8">
+                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-4">Article II: Governance</h3>
+                    <p class="text-gray-600 dark:text-gray-300 mb-4">
+                        The Foundation shall be governed by a Board of Trustees consisting of not fewer than five (5) and not more than nine (9) members. Trustees shall serve three-year terms with the possibility of renewal.
+                    </p>
+                    <p class="text-gray-600 dark:text-gray-300">
+                        The Board shall meet quarterly and is responsible for setting policy, approving budgets, and ensuring the Foundation fulfills its mission.
+                    </p>
+                </div>
+                
+                <div class="mb-8">
+                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-4">Article III: Financial Management</h3>
+                    <p class="text-gray-600 dark:text-gray-300 mb-4">
+                        All funds received by the Foundation shall be used exclusively for charitable and educational purposes as outlined in the mission statement.
+                    </p>
+                    <p class="text-gray-600 dark:text-gray-300">
+                        The Foundation shall maintain complete financial records and undergo annual independent audits. No part of the net earnings shall benefit any private individual.
+                    </p>
+                </div>
+                
+                <div class="mb-8">
+                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-4">Article IV: Scholarship Awards</h3>
+                    <p class="text-gray-600 dark:text-gray-300 mb-4">
+                        Scholarships shall be awarded based on financial need, academic merit, and leadership potential without regard to ethnicity, religion, or gender.
+                    </p>
+                    <p class="text-gray-600 dark:text-gray-300">
+                        The Scholarship Committee shall establish transparent selection criteria and procedures, with all decisions being final.
+                    </p>
+                </div>
+                
+                <div class="text-center mt-12">
+                    <a href="#" class="px-6 py-3 border border-gray-300 dark:border-gray-600 text-gray-900 dark:text-white rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors font-medium inline-flex items-center" id="full-bylaws-link">
+                        Download Full Bylaws (PDF)
+                        <i class="fas fa-download ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Augustine Udefa Foundation</h3>
+                    <p class="text-gray-400">Empowering Nigerian youth through education since 2025.</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="about.html" class="text-gray-400 hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="programs.html" class="text-gray-400 hover:text-white transition-colors">Programs</a></li>
+                        <li><a href="news.html" class="text-gray-400 hover:text-white transition-colors">News & Stories</a></li>
+                        <li><a href="donate.html" class="text-gray-400 hover:text-white transition-colors">Donate</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Contact</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li class="flex items-center"><i class="fas fa-map-marker-alt mr-2"></i> 15 Education Way, Lagos</li>
+                        <li class="flex items-center"><i class="fas fa-phone-alt mr-2"></i> +234 803 123 4567</li>
+                        <li class="flex items-center"><i class="fas fa-envelope mr-2"></i> augustineudefafoundation@gmail.com</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Follow Us</h3>
+                    <div class="flex space-x-4">
+                          <a href="https://www.facebook.com/share/1CYdGtH2dk/?mibextid=wwXIfr" class="text-gray-400 hover:text-white transition-colors text-xl"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors text-xl"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/augustineudefafoundation?igsh=eWsybWllYXlyMDB6&utm_source=qr" class="text-gray-400 hover:text-white transition-colors text-xl"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors text-xl"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 Augustine Udefa Foundation. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        if (mobileMenuButton && mobileMenu) {
+            mobileMenuButton.addEventListener('click', function() {
+                const isHidden = mobileMenu.classList.contains('hidden');
+                if (isHidden) {
+                    mobileMenu.classList.remove('hidden');
+                    mobileMenuButton.innerHTML = '<i class="fas fa-times text-xl"></i>';
+                } else {
+                    mobileMenu.classList.add('hidden');
+                    mobileMenuButton.innerHTML = '<i class="fas fa-bars text-xl"></i>';
+                }
+            });
+        }
+
+        // Form submission handler
+        // EmailJS integration for contact form
+        (function(){
+          emailjs.init("OVe_xXvQFu7Rl_q5Q"); // your public key
+        })();
+
+        document.addEventListener('DOMContentLoaded', () => {
+          const form = document.getElementById('contact-form');
+          const loading = document.getElementById('loading-modal');
+          const success = document.getElementById('success-modal');
+          const closeBtn = document.getElementById('success-close');
+
+          if(form) {
+            form.addEventListener('submit', function(e) {
+              e.preventDefault();
+              loading.classList.remove('hidden');
+              emailjs.sendForm("service_b6zbahp", "template_cgydb0j", this)
+                .then(() => {
+                  loading.classList.add('hidden');
+                  success.classList.remove('hidden');
+                  form.reset();
+                })
+                .catch(err => {
+                  loading.classList.add('hidden');
+                  alert('Failed to send message. Please try again.');
+                  console.error('EmailJS error:', err);
+                });
+            });
+          }
+          if(closeBtn) {
+            closeBtn.addEventListener('click', function() {
+              success.classList.add('hidden');
+            });
+          }
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if (targetId !== '#') {
+                    document.querySelector(targetId).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Bylaws download link
+        document.getElementById('full-bylaws-link')?.addEventListener('click', function(e) {
+            e.preventDefault();
+            alert('Downloading the full bylaws document...');
+            // In a real implementation, this would trigger a file download
+        });
+        // Team Member Modal Functions
+        function openTeamModal(id) {
+            document.getElementById(id + '-modal').classList.remove('hidden');
+        }
+        function closeTeamModal(id) {
+            document.getElementById(id).classList.add('hidden');
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <base target="_self">
+    <title>Donate - Augustine Udefa Foundation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@preline/preline@2.0.0/dist/preline.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="script.js" defer></script>
+     
+   
+   <link rel="stylesheet" href="main.css">
+</head>
+<body class="bg-white dark:bg-gray-900 transition-colors duration-300 font-sans">
+    <!-- Navigation -->
+    <!-- Navigation -->
+    <header class="sticky top-0 z-50 bg-white/90 dark:bg-gray-900/90 backdrop-blur-md border-b border-gray-200 dark:border-gray-800">
+       <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  <div class="flex justify-between h-20 items-center">
+    <div class="flex items-center flex-shrink-0">
+      <a href="#" id="logo-link">
+        <img
+          src="img/imgg.png"
+          alt="Logo"
+          class="h-8 w-auto sm:h-10 md:h-12 lg:h-16 object-contain"
+        >
+      </a>
+    </div>
+    <div class="hidden md:flex items-center space-x-8">
+         <a href="index.html" class="nav-link text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white" id="home-link">Home</a>
+      <a href="about.html" class="nav-link text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white" id="about-link">About</a>
+      
+      <a href="program.html" class="nav-link text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white" id="programs-link">Programs</a>
+      <a href="event.html" class="nav-link text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white" id="events-link">Events</a>
+      <a href="volunteer.html" class="nav-link text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white" id="trustees-link">Volunteer</a>
+      <a href="donate.html" class="nav-link text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white" id="donate-link">Donate</a>
+    </div>
+    <button class="md:hidden text-gray-500 dark:text-gray-400" id="mobile-menu-button">
+      <i class="fas fa-bars text-xl"></i>
+    </button>
+  </div>
+</nav>
+
+        
+        <!-- Mobile menu -->
+        <div class="hidden md:hidden bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                 <a href="index.html" class="block px-3 py-2 rounded-md text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800" id="mobile-home-link">Home</a>
+                <a href="about.html" class="block px-3 py-2 rounded-md text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800" id="mobile-about-link">About</a>
+                
+                <a href="program.html" class="block px-3 py-2 rounded-md text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800" id="mobile-programs-link">Programs</a>
+                <a href="event.html" class="block px-3 py-2 rounded-md text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800" id="mobile-events-link">Events</a>
+                <a href="volunteer.html" class="block px-3 py-2 rounded-md text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800" id="mobile-trustees-link">Volunteer</a>
+                <a href="donate.html" class="block px-3 py-2 rounded-lg  text-grey-700  hover:bg-gray-100 id="mobile-donate-link">Donate</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative h-96 flex items-center justify-center bg-gray-900 overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-r from-gray-900 to-transparent z-10"></div>
+        <img src="https://images.unsplash.com/photo-1521791055366-0d553872125f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80" 
+             alt="Students benefiting from donations" 
+             class="absolute inset-0 w-full h-full object-cover">
+        <div class="relative z-20 text-center px-4">
+            <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">Support Our Cause</h1>
+            <p class="text-xl text-gray-300 max-w-2xl mx-auto">Your donation helps empower Nigerian youth through education, health, and community development.</p>
+        </div>
+    </section>
+
+    <!-- Donation Impact -->
+    <!-- <section class="py-16 bg-gray-50 dark:bg-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">Your Donation Makes a Difference</h2>
+                <p class="text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">Every dollar contributes to transforming lives in Nigerian communities through our various programs.</p>
+                <div class="w-20 h-1 bg-gold-500 mx-auto mt-4"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white dark:bg-gray-900 rounded-xl p-8 text-center shadow-sm">
+                    <div class="w-16 h-16 bg-gold-500/10 text-gold-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-graduation-cap text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">Education</h3>
+                    <p class="text-gray-600 dark:text-gray-300">
+                        $50 provides school supplies for one student for a year. $500 funds a full scholarship.
+                    </p>
+                </div>
+                
+                <div class="bg-white dark:bg-gray-900 rounded-xl p-8 text-center shadow-sm">
+                    <div class="w-16 h-16 bg-gold-500/10 text-gold-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-heartbeat text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">Health</h3>
+                    <p class="text-gray-600 dark:text-gray-300">
+                        $25 provides a mosquito net. $100 supports a health outreach program for 50 people.
+                    </p>
+                </div>
+                
+                <div class="bg-white dark:bg-gray-900 rounded-xl p-8 text-center shadow-sm">
+                    <div class="w-16 h-16 bg-gold-500/10 text-gold-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-utensils text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">Food Security</h3>
+                    <p class="text-gray-600 dark:text-gray-300">
+                        $15 feeds a child for a week. $300 supports a community feeding program for a month.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- Donation Form -->
+    <section class="py-20 bg-white dark:bg-gray-900">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-gray-50 dark:bg-gray-800 rounded-xl shadow-md overflow-hidden">
+                <div class="p-8 md:p-10">
+                    <h2 class="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-2">Make a Donation</h2>
+                    <p class="text-gray-600 dark:text-gray-300 mb-6">Your generous support helps us continue our mission to empower Nigerian youth.</p>
+                    
+                    <form id="donation-form" class="space-y-6">
+                        <!-- Currency Selection & Donation Amount -->
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-3">Select Currency *</label>
+                            <select id="currency-select" name="currency-select" class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg mb-4 dark:bg-gray-700 dark:text-white">
+                                <option value="USD">US Dollar ($)</option>
+                                <option value="NGN">Nigerian Naira (₦)</option>
+                            </select>
+                            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-3">Select Donation Amount (<span id="currency-label">USD</span>) *</label>
+                            <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+                                <button type="button" class="donation-option py-3 px-4 border border-gray-300 dark:border-gray-600 rounded-lg text-center transition-all" data-amount="25">
+                                    <span class="font-medium text-gray-900 dark:text-white" id="preset-amount-1">$25</span>
+                                </button>
+                                <button type="button" class="donation-option py-3 px-4 border border-gray-300 dark:border-gray-600 rounded-lg text-center transition-all" data-amount="50">
+                                    <span class="font-medium text-gray-900 dark:text-white" id="preset-amount-2">$50</span>
+                                </button>
+                                <button type="button" class="donation-option py-3 px-4 border border-gray-300 dark:border-gray-600 rounded-lg text-center transition-all" data-amount="100">
+                                    <span class="font-medium text-gray-900 dark:text-white" id="preset-amount-3">$100</span>
+                                </button>
+                                <button type="button" class="donation-option py-3 px-4 border border-gray-300 dark:border-gray-600 rounded-lg text-center transition-all" data-amount="250">
+                                    <span class="font-medium text-gray-900 dark:text-white" id="preset-amount-4">$250</span>
+                                </button>
+                            </div>
+                            <div class="mt-3 relative">
+                                <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                                    <span class="text-gray-500 dark:text-gray-400" id="custom-currency-symbol">$</span>
+                                </div>
+                                <input type="number" id="custom-amount" name="custom-amount" min="1" step="1" 
+                                       class="pl-7 w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg form-input focus:outline-none focus:ring-1 focus:ring-gold-500 dark:bg-gray-700 dark:text-white" 
+                                       placeholder="Other amount">
+                            </div>
+                            <input type="hidden" id="donation-amount" name="donation-amount" value="">
+                        </div>
+                        
+                        <!-- Payment Method -->
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-3">Payment Method *</label>
+                            <div class="grid grid-cols-2 gap-3">
+                                <button type="button" class="payment-method py-3 px-4 border border-gray-300 dark:border-gray-600 rounded-lg text-center transition-all selected" data-method="card">
+                                    <i class="far fa-credit-card text-lg mr-2 text-gold-500"></i>
+                                    <span class="font-medium text-gray-900 dark:text-white">Credit/Debit Card</span>
+                                </button>
+                                <button type="button" class="payment-method py-3 px-4 border border-gray-300 dark:border-gray-600 rounded-lg text-center transition-all" data-method="bank">
+                                    <i class="fas fa-university text-lg mr-2"></i>
+                                    <span class="font-medium text-gray-900 dark:text-white">Bank Transfer</span>
+                                </button>
+                            </div>
+                            <input type="hidden" id="payment-method" name="payment-method" value="card">
+                        </div>
+                        
+                        <!-- Card Payment Form (shown by default) -->
+                        <div id="card-payment-form">
+                            <div class="space-y-4">
+                                <div>
+                                    <label for="card-name" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Name on Card *</label>
+                                    <input type="text" id="card-name" name="card-name" required 
+                                           class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg form-input focus:outline-none focus:ring-1 focus:ring-gold-500 dark:bg-gray-700 dark:text-white">
+                                </div>
+                                
+                                <div>
+                                    <label for="card-number" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Card Number *</label>
+                                    <input type="text" id="card-number" name="card-number" required 
+                                           class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg form-input focus:outline-none focus:ring-1 focus:ring-gold-500 dark:bg-gray-700 dark:text-white"
+                                           placeholder="1234 5678 9012 3456">
+                                </div>
+                                
+                                <div class="grid grid-cols-2 gap-4">
+                                    <div>
+                                        <label for="card-expiry" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Expiry Date *</label>
+                                        <input type="text" id="card-expiry" name="card-expiry" required 
+                                               class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg form-input focus:outline-none focus:ring-1 focus:ring-gold-500 dark:bg-gray-700 dark:text-white"
+                                               placeholder="MM/YY">
+                                    </div>
+                                    <div>
+                                        <label for="card-cvc" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">CVC *</label>
+                                        <input type="text" id="card-cvc" name="card-cvc" required 
+                                               class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg form-input focus:outline-none focus:ring-1 focus:ring-gold-500 dark:bg-gray-700 dark:text-white"
+                                               placeholder="123">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Bank Transfer Info (hidden by default) -->
+                        <div id="bank-transfer-info" class="hidden bg-gray-100 dark:bg-gray-700 p-4 rounded-lg">
+                            <h4 class="font-medium text-gray-900 dark:text-white mb-2">Bank Transfer Details</h4>
+                            <div class="space-y-2 text-sm text-gray-600 dark:text-gray-300">
+                                <p><span class="font-medium">Bank Name:</span> Zenith Bank Nigeria</p>
+                                <p><span class="font-medium">Account Name:</span> Augustine Udefa Foundation</p>
+                                <p><span class="font-medium">Account Number:</span> 1012345678</p>
+                                <p><span class="font-medium">SWIFT Code:</span> ZEIBNGLA</p>
+                                <p class="mt-3">Please include your name as reference when making the transfer.</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Donor Information -->
+                        <div class="pt-4 border-t border-gray-200 dark:border-gray-700">
+                            <h3 class="text-lg font-medium text-gray-900 dark:text-white mb-4">Donor Information</h3>
+                            <div class="grid md:grid-cols-2 gap-4">
+                                <div>
+                                    <label for="first-name" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">First Name *</label>
+                                    <input type="text" id="first-name" name="first-name" required 
+                                           class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg form-input focus:outline-none focus:ring-1 focus:ring-gold-500 dark:bg-gray-700 dark:text-white">
+                                </div>
+                                <div>
+                                    <label for="last-name" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Last Name *</label>
+                                    <input type="text" id="last-name" name="last-name" required 
+                                           class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg form-input focus:outline-none focus:ring-1 focus:ring-gold-500 dark:bg-gray-700 dark:text-white">
+                                </div>
+                            </div>
+                            <div class="mt-4">
+                                <label for="email" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Email Address *</label>
+                                <input type="email" id="email" name="email" required 
+                                       class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg form-input focus:outline-none focus:ring-1 focus:ring-gold-500 dark:bg-gray-700 dark:text-white">
+                            </div>
+                            <div class="mt-4">
+                                <label for="phone" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Phone Number</label>
+                                <input type="tel" id="phone" name="phone" 
+                                       class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg form-input focus:outline-none focus:ring-1 focus:ring-gold-500 dark:bg-gray-700 dark:text-white">
+                            </div>
+                        </div>
+                        
+                        <!-- Donation Frequency -->
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-3">Donation Frequency</label>
+                            <div class="grid grid-cols-2 gap-3">
+                                <button type="button" class="frequency-option py-3 px-4 border border-gray-300 dark:border-gray-600 rounded-lg text-center transition-all selected" data-frequency="one-time">
+                                    <span class="font-medium text-gray-900 dark:text-white">One-Time</span>
+                                </button>
+                                <button type="button" class="frequency-option py-3 px-4 border border-gray-300 dark:border-gray-600 rounded-lg text-center transition-all" data-frequency="monthly">
+                                    <span class="font-medium text-gray-900 dark:text-white">Monthly</span>
+                                </button>
+                            </div>
+                            <input type="hidden" id="donation-frequency" name="donation-frequency" value="one-time">
+                        </div>
+                        
+                        <!-- Submit Button -->
+                        <div class="pt-4">
+                            <button type="submit" class="w-full px-6 py-3 bg-gold-500 text-white rounded-lg hover:bg-gold-600 transition-colors font-medium">
+                                Donate Now
+                            </button>
+                            <p class="text-xs text-gray-500 dark:text-gray-400 mt-2 text-center">
+                                Your donation is secure and tax-deductible. By donating, you agree to our <a href="#" class="text-gold-500 hover:underline">Terms of Service</a> and <a href="#" class="text-gold-500 hover:underline">Privacy Policy</a>.
+                            </p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Security Assurance -->
+    <section class="py-16 bg-gray-50 dark:bg-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">Secure Donations</h2>
+                <p class="text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">Your financial information is protected with industry-standard security measures.</p>
+                <div class="w-20 h-1 bg-gold-500 mx-auto mt-4"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white dark:bg-gray-900 rounded-xl p-8 text-center">
+                    <div class="w-16 h-16 bg-gold-500/10 text-gold-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-lock text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">256-bit Encryption</h3>
+                    <p class="text-gray-600 dark:text-gray-300">
+                        All transactions are encrypted using SSL technology to ensure your data remains private.
+                    </p>
+                </div>
+                
+                <div class="bg-white dark:bg-gray-900 rounded-xl p-8 text-center">
+                    <div class="w-16 h-16 bg-gold-500/10 text-gold-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-shield-alt text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">PCI Compliant</h3>
+                    <p class="text-gray-600 dark:text-gray-300">
+                        We meet all Payment Card Industry security standards for processing payments.
+                    </p>
+                </div>
+                
+                <div class="bg-white dark:bg-gray-900 rounded-xl p-8 text-center">
+                    <div class="w-16 h-16 bg-gold-500/10 text-gold-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-user-shield text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">Data Privacy</h3>
+                    <p class="text-gray-600 dark:text-gray-300">
+                        We never store your full credit card details and protect your personal information.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Augustine Udefa Foundation</h3>
+                    <p class="text-gray-400">Empowering Nigerian youth through education since 2025.</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="about.html" class="text-gray-400 hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="programs.html" class="text-gray-400 hover:text-white transition-colors">Programs</a></li>
+                        <li><a href="events.html" class="text-gray-400 hover:text-white transition-colors">Events</a></li>
+                        <li><a href="volunteer.html" class="text-gray-400 hover:text-white transition-colors">Volunteer</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Contact</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li class="flex items-center"><i class="fas fa-map-marker-alt mr-2"></i> 15 Education Way, Lagos</li>
+                        <li class="flex items-center"><i class="fas fa-phone-alt mr-2"></i> +234 803 123 4567</li>
+                        <li class="flex items-center"><i class="fas fa-envelope mr-2"></i> augustineudefafoundation@gmail.com</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Follow Us</h3>
+                    <div class="flex space-x-4">
+                          <a href="https://www.facebook.com/share/1CYdGtH2dk/?mibextid=wwXIfr" class="text-gray-400 hover:text-white transition-colors text-xl"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors text-xl"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/augustineudefafoundation?igsh=eWsybWllYXlyMDB6&utm_source=qr" class="text-gray-400 hover:text-white transition-colors text-xl"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors text-xl"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 Augustine Udefa Foundation. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Paystack Inline Script -->
+    <script src="https://js.paystack.co/v1/inline.js"></script>
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        if (mobileMenuButton && mobileMenu) {
+            mobileMenuButton.addEventListener('click', function() {
+                const isHidden = mobileMenu.classList.contains('hidden');
+                if (isHidden) {
+                    mobileMenu.classList.remove('hidden');
+                    mobileMenuButton.innerHTML = '<i class="fas fa-times text-xl"></i>';
+                } else {
+                    mobileMenu.classList.add('hidden');
+                    mobileMenuButton.innerHTML = '<i class="fas fa-bars text-xl"></i>';
+                }
+            });
+        }
+
+        // Donation amount selection
+        const donationOptions = document.querySelectorAll('.donation-option');
+        const customAmountInput = document.getElementById('custom-amount');
+        const donationAmountInput = document.getElementById('donation-amount');
+        
+        donationOptions.forEach(option => {
+            option.addEventListener('click', function() {
+                // Remove selected class from all options
+                donationOptions.forEach(opt => opt.classList.remove('selected'));
+                // Add selected class to clicked option
+                this.classList.add('selected');
+                // Set the donation amount
+                const amount = this.getAttribute('data-amount');
+                donationAmountInput.value = amount;
+                // Clear custom amount if set
+                customAmountInput.value = '';
+            });
+        });
+        
+        customAmountInput.addEventListener('input', function() {
+            // Remove selected class from all preset options
+            donationOptions.forEach(opt => opt.classList.remove('selected'));
+            // Set the donation amount to custom value
+            donationAmountInput.value = this.value;
+        });
+
+        // Payment method selection
+        const paymentMethods = document.querySelectorAll('.payment-method');
+        const paymentMethodInput = document.getElementById('payment-method');
+        const cardPaymentForm = document.getElementById('card-payment-form');
+        const bankTransferInfo = document.getElementById('bank-transfer-info');
+        
+        paymentMethods.forEach(method => {
+            method.addEventListener('click', function() {
+                // Remove selected class from all methods
+                paymentMethods.forEach(m => m.classList.remove('selected'));
+                // Add selected class to clicked method
+                this.classList.add('selected');
+                // Set the payment method
+                const method = this.getAttribute('data-method');
+                paymentMethodInput.value = method;
+                
+                // Toggle between card and bank transfer forms
+                if (method === 'card') {
+                    cardPaymentForm.classList.remove('hidden');
+                    bankTransferInfo.classList.add('hidden');
+                } else {
+                    cardPaymentForm.classList.add('hidden');
+                    bankTransferInfo.classList.remove('hidden');
+                }
+            });
+        });
+
+        // Donation frequency selection
+        const frequencyOptions = document.querySelectorAll('.frequency-option');
+        const donationFrequencyInput = document.getElementById('donation-frequency');
+        
+        frequencyOptions.forEach(option => {
+            option.addEventListener('click', function() {
+                // Remove selected class from all options
+                frequencyOptions.forEach(opt => opt.classList.remove('selected'));
+                // Add selected class to clicked option
+                this.classList.add('selected');
+                // Set the donation frequency
+                const frequency = this.getAttribute('data-frequency');
+                donationFrequencyInput.value = frequency;
+            });
+        });
+
+        // Form submission
+        // Exchange rate (update as needed or fetch dynamically)
+        let usdToNgnRate = 1500; // Example rate, update to current
+
+        // Currency dropdown logic
+        const currencySelect = document.getElementById('currency-select');
+        const currencyLabel = document.getElementById('currency-label');
+        const customCurrencySymbol = document.getElementById('custom-currency-symbol');
+        const presetAmounts = [
+            document.getElementById('preset-amount-1'),
+            document.getElementById('preset-amount-2'),
+            document.getElementById('preset-amount-3'),
+            document.getElementById('preset-amount-4')
+        ];
+
+        function updatePresetAmounts() {
+            if (currencySelect.value === 'USD') {
+                presetAmounts[0].textContent = '$25';
+                presetAmounts[1].textContent = '$50';
+                presetAmounts[2].textContent = '$100';
+                presetAmounts[3].textContent = '$250';
+                currencyLabel.textContent = 'USD';
+                customCurrencySymbol.textContent = '$';
+            } else {
+                presetAmounts[0].textContent = '₦' + (25 * usdToNgnRate).toLocaleString();
+                presetAmounts[1].textContent = '₦' + (50 * usdToNgnRate).toLocaleString();
+                presetAmounts[2].textContent = '₦' + (100 * usdToNgnRate).toLocaleString();
+                presetAmounts[3].textContent = '₦' + (250 * usdToNgnRate).toLocaleString();
+                currencyLabel.textContent = 'NGN';
+                customCurrencySymbol.textContent = '₦';
+            }
+        }
+        currencySelect.addEventListener('change', updatePresetAmounts);
+        updatePresetAmounts();
+
+        // Update preset button values on currency change
+        donationOptions.forEach((option, idx) => {
+            option.addEventListener('click', function() {
+                donationOptions.forEach(opt => opt.classList.remove('selected'));
+                this.classList.add('selected');
+                let amount = this.getAttribute('data-amount');
+                if (currencySelect.value === 'NGN') {
+                    amount = (parseInt(amount) * usdToNgnRate).toString();
+                }
+                donationAmountInput.value = amount;
+                customAmountInput.value = '';
+            });
+        });
+
+        customAmountInput.addEventListener('input', function() {
+            donationOptions.forEach(opt => opt.classList.remove('selected'));
+            let val = this.value;
+            if (currencySelect.value === 'NGN') {
+                donationAmountInput.value = val;
+            } else {
+                donationAmountInput.value = val;
+            }
+        });
+
+        // Paystack integration
+        document.getElementById('donation-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            // Validate donation amount
+            if (!donationAmountInput.value) {
+                alert('Please select or enter a donation amount');
+                return;
+            }
+            // Validate donor info
+            const email = document.getElementById('email').value;
+            const firstName = document.getElementById('first-name').value;
+            const lastName = document.getElementById('last-name').value;
+            if (!email || !firstName || !lastName) {
+                alert('Please fill in all required donor information');
+                return;
+            }
+            // Currency and amount
+            const currency = currencySelect.value;
+            let amount = parseInt(donationAmountInput.value);
+            // Paystack expects amount in kobo (NGN) or cents (USD)
+            let paystackAmount = amount * 100;
+            // Use your Paystack public key
+            let paystackKey = (currency === 'NGN') ? 'pk_test_xxxx' : 'pk_test_xxxx'; // Replace with your real keys
+            // Open Paystack payment modal
+            var handler = PaystackPop.setup({
+                key: paystackKey,
+                email: email,
+                amount: paystackAmount,
+                currency: currency,
+                firstname: firstName,
+                lastname: lastName,
+                callback: function(response){
+                    alert('Payment complete! Reference: ' + response.reference);
+                    document.getElementById('donation-form').reset();
+                    donationOptions[0].classList.add('selected');
+                    paymentMethods[0].classList.add('selected');
+                    frequencyOptions[0].classList.add('selected');
+                    cardPaymentForm.classList.remove('hidden');
+                    bankTransferInfo.classList.add('hidden');
+                },
+                onClose: function(){
+                    alert('Transaction was not completed, window closed.');
+                }
+            });
+            handler.openIframe();
+        });
+
+        // Format card number as user types
+        document.getElementById('card-number').addEventListener('input', function(e) {
+            let value = this.value.replace(/\s+/g, '').replace(/[^0-9]/gi, '');
+            let formatted = '';
+            
+            for (let i = 0; i < value.length; i++) {
+                if (i > 0 && i % 4 === 0) {
+                    formatted += ' ';
+                }
+                formatted += value[i];
+            }
+            
+            this.value = formatted.substring(0, 19);
+        });
+
+        // Format expiry date as MM/YY
+        document.getElementById('card-expiry').addEventListener('input', function(e) {
+            let value = this.value.replace(/\D/g, '');
+            
+            if (value.length > 2) {
+                this.value = value.substring(0, 2) + '/' + value.substring(2, 4);
+            } else {
+                this.value = value;
+            }
+        });
+
+      
+    </script>
+</body>
+</html>

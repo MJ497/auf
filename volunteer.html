@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <base target="_self">
+    <title>Volunteer - Augustine Udefa Foundation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@preline/preline@2.0.0/dist/preline.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="main.css">
+    
+   
+ 
+</head>
+<body class="bg-white dark:bg-gray-900 transition-colors duration-300 font-sans">
+    <!-- Navigation -->
+    <header class="sticky top-0 z-50 bg-white/90 dark:bg-gray-900/90 backdrop-blur-md border-b border-gray-200 dark:border-gray-800">
+       <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  <div class="flex justify-between h-20 items-center">
+    <div class="flex items-center flex-shrink-0">
+      <a href="#" id="logo-link">
+        <img
+          src="img/imgg.png"
+          alt="Logo"
+          class="h-8 w-auto sm:h-10 md:h-12 lg:h-16 object-contain"
+        >
+      </a>
+    </div>
+    <div class="hidden md:flex items-center space-x-8">
+         <a href="index.html" class="nav-link text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white" id="home-link">Home</a>
+      <a href="about.html" class="nav-link text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white" id="about-link">About</a>
+      
+      <a href="program.html" class="nav-link text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white" id="programs-link">Programs</a>
+      <a href="event.html" class="nav-link text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white" id="events-link">Events</a>
+      <a href="volunteer.html" class="nav-link text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white" id="trustees-link">Volunteer</a>
+      <a href="donate.html" class="nav-link text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white" id="donate-link">Donate</a>
+    </div>
+    <button class="md:hidden text-gray-500 dark:text-gray-400" id="mobile-menu-button">
+      <i class="fas fa-bars text-xl"></i>
+    </button>
+  </div>
+</nav>
+
+        
+        <!-- Mobile menu -->
+        <div class="hidden md:hidden bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                 <a href="index.html" class="block px-3 py-2 rounded-md text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800" id="mobile-home-link">Home</a>
+                <a href="about.html" class="block px-3 py-2 rounded-md text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800" id="mobile-about-link">About</a>
+                
+                <a href="program.html" class="block px-3 py-2 rounded-md text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800" id="mobile-programs-link">Programs</a>
+                <a href="event.html" class="block px-3 py-2 rounded-md text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800" id="mobile-events-link">Events</a>
+                <a href="volunteer.html" class="block px-3 py-2 rounded-md text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800" id="mobile-trustees-link">Volunteer</a>
+                <a href="donate.html" class="block px-3 py-2 rounded-lg  text-grey-700  hover:bg-gray-100 id="mobile-donate-link">Donate</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative h-96 flex items-center justify-center bg-gray-900 overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-r from-gray-900 to-transparent z-10"></div>
+        <img src="https://images.unsplash.com/photo-1521791055366-0d553872125f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80" 
+             alt="Volunteers working together" 
+             class="absolute inset-0 w-full h-full object-cover">
+        <div class="relative z-20 text-center px-4">
+            <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">Volunteer With Us</h1>
+            <p class="text-xl text-gray-300 max-w-2xl mx-auto">Join our team of dedicated volunteers making a difference in Nigerian communities.</p>
+        </div>
+    </section>
+
+    <!-- Why Volunteer -->
+    <section class="py-20 bg-white dark:bg-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">Why Volunteer With AUF?</h2>
+                <p class="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">Your time and skills can transform lives in our communities.</p>
+                <div class="w-20 h-1 bg-gold-500 mx-auto mt-4"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-gray-50 dark:bg-gray-800 rounded-xl p-8 text-center">
+                    <div class="volunteer-icon bg-gold-500/10 text-gold-500 mx-auto">
+                        <i class="fas fa-hands-helping text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">Make an Impact</h3>
+                    <p class="text-gray-600 dark:text-gray-300">
+                        Directly contribute to improving education, health, and living conditions in underserved communities.
+                    </p>
+                </div>
+                
+                <div class="bg-gray-50 dark:bg-gray-800 rounded-xl p-8 text-center">
+                    <div class="volunteer-icon bg-gold-500/10 text-gold-500 mx-auto">
+                        <i class="fas fa-users text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">Build Community</h3>
+                    <p class="text-gray-600 dark:text-gray-300">
+                        Connect with like-minded individuals passionate about creating positive change in Nigeria.
+                    </p>
+                </div>
+                
+                <div class="bg-gray-50 dark:bg-gray-800 rounded-xl p-8 text-center">
+                    <div class="volunteer-icon bg-gold-500/10 text-gold-500 mx-auto">
+                        <i class="fas fa-chart-line text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">Grow Personally</h3>
+                    <p class="text-gray-600 dark:text-gray-300">
+                        Develop new skills, gain valuable experience, and enhance your professional network.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Volunteer Opportunities -->
+    <section class="py-20 bg-gray-50 dark:bg-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">Volunteer Opportunities</h2>
+                <p class="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">Choose how you'd like to contribute to our mission.</p>
+                <div class="w-20 h-1 bg-gold-500 mx-auto mt-4"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Education Volunteer -->
+                <div class="bg-white dark:bg-gray-900 rounded-xl shadow-md overflow-hidden transition-all duration-300 volunteer-card">
+                    <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                         alt="Education volunteer" 
+                         class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">Education Programs</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">
+                            Help with scholarship programs, tutoring, school supplies distribution, and educational workshops.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-gold-500/10 text-gold-600 dark:text-gold-400 rounded-full text-xs font-medium">Tutoring</span>
+                            <span class="px-3 py-1 bg-gold-500/10 text-gold-600 dark:text-gold-400 rounded-full text-xs font-medium">Mentoring</span>
+                            <span class="px-3 py-1 bg-gold-500/10 text-gold-600 dark:text-gold-400 rounded-full text-xs font-medium">Workshops</span>
+                        </div>
+                        <button class="w-full px-4 py-2 bg-gold-500 text-white rounded-lg hover:bg-gold-600 transition-colors font-medium" onclick="showVolunteerForm('Education Programs')">
+                            Volunteer Now
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Health Volunteer -->
+                <div class="bg-white dark:bg-gray-900 rounded-xl shadow-md overflow-hidden transition-all duration-300 volunteer-card">
+                    <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                         alt="Health volunteer" 
+                         class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">Health Initiatives</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">
+                            Assist with medical outreach, health education, and distribution of health supplies like mosquito nets.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-gold-500/10 text-gold-600 dark:text-gold-400 rounded-full text-xs font-medium">Medical</span>
+                            <span class="px-3 py-1 bg-gold-500/10 text-gold-600 dark:text-gold-400 rounded-full text-xs font-medium">Education</span>
+                            <span class="px-3 py-1 bg-gold-500/10 text-gold-600 dark:text-gold-400 rounded-full text-xs font-medium">Outreach</span>
+                        </div>
+                        <button class="w-full px-4 py-2 bg-gold-500 text-white rounded-lg hover:bg-gold-600 transition-colors font-medium" onclick="showVolunteerForm('Health Initiatives')">
+                            Volunteer Now
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Food Supply Volunteer -->
+                <div class="bg-white dark:bg-gray-900 rounded-xl shadow-md overflow-hidden transition-all duration-300 volunteer-card">
+                    <img src="https://images.unsplash.com/photo-1606787366850-de6330128bfc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                         alt="Food supply volunteer" 
+                         class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">Food Supply Programs</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">
+                            Help with food distribution, nutrition education, and community feeding programs.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-gold-500/10 text-gold-600 dark:text-gold-400 rounded-full text-xs font-medium">Distribution</span>
+                            <span class="px-3 py-1 bg-gold-500/10 text-gold-600 dark:text-gold-400 rounded-full text-xs font-medium">Nutrition</span>
+                            <span class="px-3 py-1 bg-gold-500/10 text-gold-600 dark:text-gold-400 rounded-full text-xs font-medium">Community</span>
+                        </div>
+                        <button class="w-full px-4 py-2 bg-gold-500 text-white rounded-lg hover:bg-gold-600 transition-colors font-medium" onclick="showVolunteerForm('Food Supply Programs')">
+                            Volunteer Now
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Events Volunteer -->
+                <div class="bg-white dark:bg-gray-900 rounded-xl shadow-md overflow-hidden transition-all duration-300 volunteer-card">
+                    <img src="https://images.unsplash.com/photo-1541178735493-479c1a27ed24?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80" 
+                         alt="Events volunteer" 
+                         class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">Event Coordination</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">
+                            Assist with planning and executing our scholarship awards, donation events, and community programs.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-gold-500/10 text-gold-600 dark:text-gold-400 rounded-full text-xs font-medium">Planning</span>
+                            <span class="px-3 py-1 bg-gold-500/10 text-gold-600 dark:text-gold-400 rounded-full text-xs font-medium">Logistics</span>
+                            <span class="px-3 py-1 bg-gold-500/10 text-gold-600 dark:text-gold-400 rounded-full text-xs font-medium">Coordination</span>
+                        </div>
+                        <button class="w-full px-4 py-2 bg-gold-500 text-white rounded-lg hover:bg-gold-600 transition-colors font-medium" onclick="showVolunteerForm('Event Coordination')">
+                            Volunteer Now
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Fundraising Volunteer -->
+                <div class="bg-white dark:bg-gray-900 rounded-xl shadow-md overflow-hidden transition-all duration-300 volunteer-card">
+                    <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80" 
+                         alt="Fundraising volunteer" 
+                         class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">Fundraising</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">
+                            Help us raise funds through campaigns, donor outreach, and fundraising events.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-gold-500/10 text-gold-600 dark:text-gold-400 rounded-full text-xs font-medium">Campaigns</span>
+                            <span class="px-3 py-1 bg-gold-500/10 text-gold-600 dark:text-gold-400 rounded-full text-xs font-medium">Outreach</span>
+                            <span class="px-3 py-1 bg-gold-500/10 text-gold-600 dark:text-gold-400 rounded-full text-xs font-medium">Events</span>
+                        </div>
+                        <button class="w-full px-4 py-2 bg-gold-500 text-white rounded-lg hover:bg-gold-600 transition-colors font-medium" onclick="showVolunteerForm('Fundraising')">
+                            Volunteer Now
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Skills-Based Volunteer -->
+                <div class="bg-white dark:bg-gray-900 rounded-xl shadow-md overflow-hidden transition-all duration-300 volunteer-card">
+                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                         alt="Skills-based volunteer" 
+                         class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">Skills-Based Volunteering</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">
+                            Offer your professional skills (IT, design, accounting, etc.) to support our operations.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-gold-500/10 text-gold-600 dark:text-gold-400 rounded-full text-xs font-medium">Professional</span>
+                            <span class="px-3 py-1 bg-gold-500/10 text-gold-600 dark:text-gold-400 rounded-full text-xs font-medium">Technical</span>
+                            <span class="px-3 py-1 bg-gold-500/10 text-gold-600 dark:text-gold-400 rounded-full text-xs font-medium">Specialized</span>
+                        </div>
+                        <button class="w-full px-4 py-2 bg-gold-500 text-white rounded-lg hover:bg-gold-600 transition-colors font-medium" onclick="showVolunteerForm('Skills-Based Volunteering')">
+                            Volunteer Now
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Volunteer Form Modal -->
+    <div id="volunteer-modal" class="hidden fixed inset-0 bg-gray-900 bg-opacity-50 z-50 flex items-center justify-center p-4">
+        <div class="bg-white dark:bg-gray-800 rounded-xl shadow-xl max-w-2xl w-full max-h-[90vh] overflow-y-auto">
+            <div class="p-6">
+                <div class="flex justify-between items-center mb-4">
+                    <h3 class="text-2xl font-bold text-gray-900 dark:text-white" id="modal-title">Volunteer Application</h3>
+                    <button onclick="closeVolunteerForm()" class="text-gray-500 hover:text-gray-700 dark:hover:text-gray-300">
+                        <i class="fas fa-times text-xl"></i>
+                    </button>
+                </div>
+                
+                <form id="volunteer-form" class="space-y-4">
+                    <input type="hidden" id="volunteer-opportunity" name="opportunity">
+                    
+                    <div>
+                        <label for="full-name" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Full Name *</label>
+                        <input type="text" id="full-name" name="full-name" required 
+                               class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg form-input focus:outline-none focus:ring-1 focus:ring-gold-500 dark:bg-gray-700 dark:text-white">
+                    </div>
+                    
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Email Address *</label>
+                        <input type="email" id="email" name="email" required 
+                               class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg form-input focus:outline-none focus:ring-1 focus:ring-gold-500 dark:bg-gray-700 dark:text-white">
+                    </div>
+                    
+                    <div>
+                        <label for="phone" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Phone Number *</label>
+                        <input type="tel" id="phone" name="phone" required 
+                               class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg form-input focus:outline-none focus:ring-1 focus:ring-gold-500 dark:bg-gray-700 dark:text-white">
+                    </div>
+                    
+                    <div>
+                        <label for="location" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Location (City/State) *</label>
+                        <input type="text" id="location" name="location" required 
+                               class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg form-input focus:outline-none focus:ring-1 focus:ring-gold-500 dark:bg-gray-700 dark:text-white">
+                    </div>
+                    
+                    <div>
+                        <label for="availability" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Availability *</label>
+                        <select id="availability" name="availability" required 
+                                class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg form-input focus:outline-none focus:ring-1 focus:ring-gold-500 dark:bg-gray-700 dark:text-white">
+                            <option value="">Select your availability</option>
+                            <option value="weekdays">Weekdays</option>
+                            <option value="weekends">Weekends</option>
+                            <option value="both">Both weekdays and weekends</option>
+                            <option value="flexible">Flexible</option>
+                        </select>
+                    </div>
+                    
+                    <div>
+                        <label for="skills" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Skills/Experience</label>
+                        <textarea id="skills" name="skills" rows="3" 
+                                  class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg form-input focus:outline-none focus:ring-1 focus:ring-gold-500 dark:bg-gray-700 dark:text-white"
+                                  placeholder="Briefly describe your skills, experience, or why you want to volunteer with us"></textarea>
+                    </div>
+                    
+                    <div class="pt-2">
+                        <button type="submit" class="w-full px-6 py-3 bg-gold-500 text-white rounded-lg hover:bg-gold-600 transition-colors font-medium">
+                            Submit Application
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Volunteer Testimonials -->
+    <section class="py-20 bg-white dark:bg-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">What Our Volunteers Say</h2>
+                <p class="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">Hear from people who have volunteered with us.</p>
+                <div class="w-20 h-1 bg-gold-500 mx-auto mt-4"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-gray-50 dark:bg-gray-800 rounded-xl p-8">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-gold-500/10 flex items-center justify-center text-gold-500 mr-4">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-900 dark:text-white">Amina Yusuf</h4>
+                            <p class="text-sm text-gray-500 dark:text-gray-400">Education Volunteer</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-300 italic">
+                        "Volunteering with AUF's education program has been incredibly rewarding. Seeing the students' progress and knowing I'm helping shape their future keeps me motivated."
+                    </p>
+                </div>
+                
+                <div class="bg-gray-50 dark:bg-gray-800 rounded-xl p-8">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-gold-500/10 flex items-center justify-center text-gold-500 mr-4">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-900 dark:text-white">Chinedu Okoro</h4>
+                            <p class="text-sm text-gray-500 dark:text-gray-400">Health Volunteer</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-300 italic">
+                        "The health outreach programs allow me to use my medical training to make a real difference in communities that need it most. AUF's approach is truly impactful."
+                    </p>
+                </div>
+                
+                <div class="bg-gray-50 dark:bg-gray-800 rounded-xl p-8">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-gold-500/10 flex items-center justify-center text-gold-500 mr-4">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-900 dark:text-white">Fatima Bello</h4>
+                            <p class="text-sm text-gray-500 dark:text-gray-400">Event Volunteer</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-300 italic">
+                        "I've helped organize three scholarship award ceremonies with AUF. The joy on the students' faces and their families' gratitude makes all the effort worthwhile."
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action 
+    <section class="py-16 bg-gold-500">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Ready to Make a Difference?</h2>
+            <p class="text-xl text-white/90 mb-8 max-w-3xl mx-auto">
+                Join our team of dedicated volunteers and help transform lives in Nigerian communities.
+            </p>
+            <a href="#" class="inline-block px-8 py-3 bg-white text-gold-600 rounded-lg hover:bg-gray-100 transition-colors font-bold text-lg">
+                Volunteer Today
+            </a>
+        </div>
+    </section> --->
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Augustine Udefa Foundation</h3>
+                    <p class="text-gray-400">Empowering Nigerian youth through education since 2025.</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="about.html" class="text-gray-400 hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="programs.html" class="text-gray-400 hover:text-white transition-colors">Programs</a></li>
+                        <li><a href="events.html" class="text-gray-400 hover:text-white transition-colors">Events</a></li>
+                        <li><a href="donate.html" class="text-gray-400 hover:text-white transition-colors">Donate</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Contact</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li class="flex items-center"><i class="fas fa-map-marker-alt mr-2"></i> 15 Education Way, Lagos</li>
+                        <li class="flex items-center"><i class="fas fa-phone-alt mr-2"></i> +234 803 123 4567</li>
+                        <li class="flex items-center"><i class="fas fa-envelope mr-2"></i> augustineudefafoundation@gmail.com</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Follow Us</h3>
+                    <div class="flex space-x-4">
+                         <a href="https://www.facebook.com/share/1CYdGtH2dk/?mibextid=wwXIfr" class="text-gray-400 hover:text-white transition-colors text-xl"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors text-xl"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/augustineudefafoundation?igsh=eWsybWllYXlyMDB6&utm_source=qr" class="text-gray-400 hover:text-white transition-colors text-xl"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors text-xl"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 Augustine Udefa Foundation. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        if (mobileMenuButton && mobileMenu) {
+            mobileMenuButton.addEventListener('click', function() {
+                const isHidden = mobileMenu.classList.contains('hidden');
+                if (isHidden) {
+                    mobileMenu.classList.remove('hidden');
+                    mobileMenuButton.innerHTML = '<i class="fas fa-times text-xl"></i>';
+                } else {
+                    mobileMenu.classList.add('hidden');
+                    mobileMenuButton.innerHTML = '<i class="fas fa-bars text-xl"></i>';
+                }
+            });
+        }
+
+        // Volunteer form modal functions
+        function showVolunteerForm(opportunity) {
+            document.getElementById('volunteer-modal').classList.remove('hidden');
+            document.getElementById('volunteer-opportunity').value = opportunity;
+            document.getElementById('modal-title').textContent = `Volunteer for ${opportunity}`;
+        }
+
+        function closeVolunteerForm() {
+            document.getElementById('volunteer-modal').classList.add('hidden');
+        }
+
+        // Form submission
+        document.getElementById('volunteer-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            // Here you would typically send the form data to your server
+            alert('Thank you for your volunteer application! We will contact you soon.');
+            closeVolunteerForm();
+            this.reset();
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if (targetId !== '#') {
+                    document.querySelector(targetId).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+      
+    </script>
+</body>
+</html>

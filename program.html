@@ -1,0 +1,1049 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <base target="_self">
+    <title>Our Programs - Augustine Udefa Foundation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@preline/preline@2.0.0/dist/preline.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="main.css">
+      
+    <link rel="icon" href="img/favicon.png" type="image/png">
+</head>
+<body class="bg-white dark:bg-gray-900 transition-colors duration-300 font-sans">
+    <!-- Navigation -->
+    <header class="sticky top-0 z-50 bg-white/90 dark:bg-gray-900/90 backdrop-blur-md border-b border-gray-200 dark:border-gray-800">
+       <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  <div class="flex justify-between h-20 items-center">
+    <div class="flex items-center flex-shrink-0">
+      <a href="#" id="logo-link">
+        <img
+          src="img/imgg.png"
+          alt="Logo"
+          class="h-8 w-auto sm:h-10 md:h-12 lg:h-16 object-contain"
+        >
+      </a>
+    </div>
+    <div class="hidden md:flex items-center space-x-8">
+         <a href="index.html" class="nav-link text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white" id="home-link">Home</a>
+      <a href="about.html" class="nav-link text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white" id="about-link">About</a>
+      
+      <a href="#programs" class="nav-link text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white" id="programs-link">Programs</a>
+      <a href="event.html" class="nav-link text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white" id="events-link">Events</a>
+      <a href="volunteer.html" class="nav-link text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white" id="trustees-link">Volunteer</a>
+      <a href="donate.html" class="nav-link text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white" id="donate-link">Donate</a>
+    </div>
+    <button class="md:hidden text-gray-500 dark:text-gray-400" id="mobile-menu-button">
+      <i class="fas fa-bars text-xl"></i>
+    </button>
+  </div>
+</nav>
+
+        
+        <!-- Mobile menu -->
+        <div class="hidden md:hidden bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                 <a href="index.html" class="block px-3 py-2 rounded-md text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800" id="mobile-home-link">Home</a>
+                <a href="about.html" class="block px-3 py-2 rounded-md text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800" id="mobile-about-link">About</a>
+                
+                <a href="program.html" class="block px-3 py-2 rounded-md text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800" id="mobile-programs-link">Programs</a>
+                <a href="event.html" class="block px-3 py-2 rounded-md text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800" id="mobile-events-link">Events</a>
+                <a href="volunteer.html" class="block px-3 py-2 rounded-md text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800" id="mobile-trustees-link">Volunteer</a>
+                <a href="donate.html" class="block px-3 py-2 rounded-md text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800" id="mobile-donate-link">Donate</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative h-96 flex items-center justify-center bg-gray-900 overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-r from-gray-900 to-transparent z-10"></div>
+        <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+             alt="Students in classroom" 
+             class="absolute inset-0 w-full h-full object-cover">
+        <div class="relative z-20 text-center px-4">
+            <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">Our Programs</h1>
+            <p class="text-xl text-gray-300 max-w-2xl mx-auto">Transforming lives through education, health, and community support initiatives.</p>
+        </div>
+    </section>
+
+    <!-- Education Programs -->
+    <section class="py-20 bg-white dark:bg-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">Education Programs</h2>
+                <p class="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">Investing in Nigeria's future through comprehensive educational support.</p>
+                <div class="w-20 h-1 bg-gold-500 mx-auto mt-4"></div>
+            </div>
+            
+              <!-- <div class="mb-16 bg-gray-50 dark:bg-gray-800 rounded-xl shadow-md p-8">
+                <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-6">How to Apply for Scholarships</h3>
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0 mt-1">
+                            <div class="w-10 h-10 rounded-full bg-gold-500 flex items-center justify-center text-white">
+                                <span class="font-bold">1</span>
+                            </div>
+                        </div>
+                        <div class="ml-4">
+                            <h4 class="font-semibold text-gray-900 dark:text-white">Create an Account</h4>
+                            <p class="text-gray-600 dark:text-gray-300 mt-1">
+                                Register with your email and create a password to access our scholarship portal.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0 mt-1">
+                            <div class="w-10 h-10 rounded-full bg-gold-500 flex items-center justify-center text-white">
+                                <span class="font-bold">2</span>
+                            </div>
+                        </div>
+                        <div class="ml-4">
+                            <h4 class="font-semibold text-gray-900 dark:text-white">Complete Profile</h4>
+                            <p class="text-gray-600 dark:text-gray-300 mt-1">
+                                Provide your academic records, personal statement, and required documents.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0 mt-1">
+                            <div class="w-10 h-10 rounded-full bg-gold-500 flex items-center justify-center text-white">
+                                <span class="font-bold">3</span>
+                            </div>
+                        </div>
+                        <div class="ml-4">
+                            <h4 class="font-semibold text-gray-900 dark:text-white">Submit Application</h4>
+                            <p class="text-gray-600 dark:text-gray-300 mt-1">
+                                Select your desired scholarship and submit your completed application.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+            </div> -->
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Scholarship 1 -->
+                <div class="bg-gray-50 dark:bg-gray-800 rounded-xl shadow-md p-8 transition-all duration-300 program-card">
+                    <div class="w-16 h-16 rounded-full bg-gold-500 flex items-center justify-center text-white mb-6">
+                        <i class="fas fa-microphone text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">Augustine Udefa Speaking Scholarship</h3>
+                    <p class="text-gray-600 dark:text-gray-300 mb-4">
+                        For students demonstrating exceptional public speaking and debate skills. Covers tuition, books, and speech training.
+                    </p>
+                    <ul class="text-gray-600 dark:text-gray-300 text-sm mb-6 space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-gold-500 mt-1 mr-2"></i>
+                            <span> Full tuition fee support for the period of your program.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-gold-500 mt-1 mr-2"></i>
+                            <span>Minimum CGPA for this one is 4.30 out of 5.0 or 3.30 out of 4.0</span>
+                        </li>
+                        <!-- <li class="flex items-start">
+                            <i class="fas fa-check text-gold-500 mt-1 mr-2"></i>
+                            <span>Mentorship from professional speakers</span>
+                        </li> -->
+                    </ul>
+                    <div class="flex flex-col space-y-3">
+                        <a href="speakingscholarship.html" class="px-4 py-2 bg-gold-500 text-white rounded-lg hover:bg-gold-600 transition-colors font-medium text-center">Apply Now</a>
+                        <a href="speakingscholarship.html" class="px-4 py-2 border border-gray-300 dark:border-gray-600 text-gray-900 dark:text-white rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors font-medium text-center">Learn More</a>
+                    </div>
+                </div>
+                
+                <!-- Scholarship 2 -->
+                <div class="bg-gray-50 dark:bg-gray-800 rounded-xl shadow-md p-8 transition-all duration-300 program-card">
+                    <div class="w-16 h-16 rounded-full bg-gold-500 flex items-center justify-center text-white mb-6">
+                        <i class="fas fa-hands-helping text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">Augustine Udefa Orphan Scholarship</h3>
+                    <p class="text-gray-600 dark:text-gray-300 mb-4">
+                        Supporting orphaned students with full academic funding and psychosocial support throughout their education.
+                    </p>
+                    <ul class="text-gray-600 dark:text-gray-300 text-sm mb-6 space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-gold-500 mt-1 mr-2"></i>
+                            <span>For Secondary & university students</span>
+                        </li>
+                        
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-gold-500 mt-1 mr-2"></i>
+                            <span> minimum cumulative grade point average (CGPA) of 3.5 on a 5.0 scale or 2.5 on a 4.0 scale</span>
+                        </li>
+                      
+                    </ul>
+                    <div class="flex flex-col space-y-3">
+                        <a href="orphanscholarship.html" class="px-4 py-2 bg-gold-500 text-white rounded-lg hover:bg-gold-600 transition-colors font-medium text-center">Apply Now</a>
+                        <a href="orphanscholarship.html" class="px-4 py-2 border border-gray-300 dark:border-gray-600 text-gray-900 dark:text-white rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors font-medium text-center">Learn More</a>
+                    </div>
+                </div>
+                
+                <!-- Scholarship 3 -->
+                <div class="bg-gray-50 dark:bg-gray-800 rounded-xl shadow-md p-8 transition-all duration-300 program-card">
+                    <div class="w-16 h-16 rounded-full bg-gold-500 flex items-center justify-center text-white mb-6">
+                        <i class="fas fa-star text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">Augustine Udefa Excellence Scholarship</h3>
+                    <p class="text-gray-600 dark:text-gray-300 mb-4">
+                        Recognizing academic excellence with comprehensive funding for top-performing students across all disciplines.
+                    </p>
+                    <ul class="text-gray-600 dark:text-gray-300 text-sm mb-6 space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-gold-500 mt-1 mr-2"></i>
+                            <span>Minimum CGPA of 4.30 out of 5.0 or 3.30 out of 4.0</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-gold-500 mt-1 mr-2"></i>
+                            <span>Full tuition coverage + stipend</span>
+                        </li>
+                        <!-- <li class="flex items-start">
+                            <i class="fas fa-check text-gold-500 mt-1 mr-2"></i>
+                            <span>International study opportunities</span>
+                        </li> -->
+                    </ul>
+                    <div class="flex flex-col space-y-3">
+                        <a href="excellence.html" class="px-4 py-2 bg-gold-500 text-white rounded-lg hover:bg-gold-600 transition-colors font-medium text-center">Apply Now</a>
+                        <a href="excellence.html" class="px-4 py-2 border border-gray-300 dark:border-gray-600 text-gray-900 dark:text-white rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors font-medium text-center">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            
+          
+        </div>
+    </section>
+
+    <!-- Health Programs -->
+    <section class="py-20 bg-gray-50 dark:bg-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">Health Programs</h2>
+                <p class="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">Improving community health through accessible medical care and education.</p>
+                <div class="w-20 h-1 bg-gold-500 mx-auto mt-4"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-white dark:bg-gray-900 rounded-xl shadow-md overflow-hidden">
+                    <div class="md:flex">
+                        <div class="md:flex-shrink-0 md:w-1/3">
+                            <img class="h-full w-full object-cover" src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Medical camp">
+                        </div>
+                        <div class="p-8 md:w-2/3">
+                            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">Rural Medical Outreach</h3>
+                            <p class="text-gray-600 dark:text-gray-300 mb-4">
+                                Quarterly medical camps providing free consultations, medications, and health education to underserved communities.
+                            </p>
+                            <div class="flex items-center text-sm text-gray-500 dark:text-gray-400">
+                                <i class="fas fa-map-marker-alt mr-2 text-gold-500"></i>
+                                <span>12 states covered annually</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white dark:bg-gray-900 rounded-xl shadow-md overflow-hidden">
+                    <div class="md:flex">
+                        <div class="md:flex-shrink-0 md:w-1/3">
+                            <img class="h-full w-full object-cover" src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Mosquito nets">
+                        </div>
+                        <div class="p-8 md:w-2/3">
+                            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">Malaria Prevention Initiative</h3>
+                            <p class="text-gray-600 dark:text-gray-300 mb-4">
+                                Distribution of long-lasting insecticide-treated nets to schools and vulnerable households.
+                            </p>
+                            <div class="flex items-center text-sm text-gray-500 dark:text-gray-400">
+                                <i class="fas fa-check-circle mr-2 text-gold-500"></i>
+                                <span>400+ nets donated to Government College Nigeria</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-8 grid md:grid-cols-3 gap-6">
+                <div class="bg-white dark:bg-gray-900 rounded-xl shadow-md p-6">
+                    <div class="w-12 h-12 rounded-full bg-gold-500 flex items-center justify-center text-white mb-4">
+                        <i class="fas fa-heartbeat text-xl"></i>
+                    </div>
+                    <h3 class="font-bold text-gray-900 dark:text-white mb-2">School Health Program</h3>
+                    <p class="text-gray-600 dark:text-gray-300 text-sm">
+                        Regular health screenings and vaccinations for students in partner schools.
+                    </p>
+                </div>
+                <div class="bg-white dark:bg-gray-900 rounded-xl shadow-md p-6">
+                    <div class="w-12 h-12 rounded-full bg-gold-500 flex items-center justify-center text-white mb-4">
+                        <i class="fas fa-hand-holding-medical text-xl"></i>
+                    </div>
+                    <h3 class="font-bold text-gray-900 dark:text-white mb-2">Maternal Health</h3>
+                    <p class="text-gray-600 dark:text-gray-300 text-sm">
+                        Prenatal care and education for expectant mothers in rural areas.
+                    </p>
+                </div>
+                <div class="bg-white dark:bg-gray-900 rounded-xl shadow-md p-6">
+                    <div class="w-12 h-12 rounded-full bg-gold-500 flex items-center justify-center text-white mb-4">
+                        <i class="fas fa-brain text-xl"></i>
+                    </div>
+                    <h3 class="font-bold text-gray-900 dark:text-white mb-2">Mental Health Awareness</h3>
+                    <p class="text-gray-600 dark:text-gray-300 text-sm">
+                        Workshops and counseling services addressing mental health in schools.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Food Supply Programs -->
+    <section class="py-20 bg-white dark:bg-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">Food Supply Programs</h2>
+                <p class="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">Combating hunger and malnutrition through sustainable food initiatives.</p>
+                <div class="w-20 h-1 bg-gold-500 mx-auto mt-4"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-gray-50 dark:bg-gray-800 rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1542823438-3588a5234e82?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                         alt="School feeding program" 
+                         class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">School Feeding Program</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">
+                            Daily nutritious meals for students in partner schools to improve concentration and attendance.
+                        </p>
+                        <div class="flex items-center text-sm text-gray-500 dark:text-gray-400">
+                            <i class="fas fa-utensils mr-2 text-gold-500"></i>
+                            <span>1,200+ meals served daily</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-gray-50 dark:bg-gray-800 rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                         alt="Food bank" 
+                         class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">Community Food Bank</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">
+                            Monthly distribution of food packages to vulnerable families in partnership with local farmers.
+                        </p>
+                        <div class="flex items-center text-sm text-gray-500 dark:text-gray-400">
+                            <i class="fas fa-home mr-2 text-gold-500"></i>
+                            <span>500+ families supported monthly</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-gray-50 dark:bg-gray-800 rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                         alt="Agricultural training" 
+                         class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">Agricultural Training</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">
+                            Empowering communities with sustainable farming techniques to achieve food security.
+                        </p>
+                        <div class="flex items-center text-sm text-gray-500 dark:text-gray-400">
+                            <i class="fas fa-seedling mr-2 text-gold-500"></i>
+                            <span>15 communities trained annually</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-20 bg-gray-50 dark:bg-gray-800">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">Frequently Asked Questions</h2>
+                <div class="w-20 h-1 bg-gold-500 mx-auto mt-4"></div>
+            </div>
+            <div class="space-y-8">
+                <!-- General FAQs -->
+                <div>
+                    <h3 class="text-2xl font-bold text-gold-500 mb-4">General FAQs</h3>
+                    <div class="space-y-4">
+                        <!-- General FAQ Items -->
+                        <div class="accordion-item bg-white dark:bg-gray-900 rounded-lg shadow-md overflow-hidden">
+                            <button class="accordion-header w-full px-6 py-4 text-left font-semibold text-gray-900 dark:text-white flex justify-between items-center">
+                                <span>1. What is the mission of the foundation?</span>
+                                <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                            </button>
+                            <div class="accordion-content px-6">
+                                <div class="pb-4 text-gray-700 dark:text-gray-300">
+                                    We are dedicated to expanding access to quality education and affordable healthcare for underserved communities, empowering individuals to live healthier and more productive lives.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item bg-white dark:bg-gray-900 rounded-lg shadow-md overflow-hidden">
+                            <button class="accordion-header w-full px-6 py-4 text-left font-semibold text-gray-900 dark:text-white flex justify-between items-center">
+                                <span>2. Who does the foundation serve?</span>
+                                <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                            </button>
+                            <div class="accordion-content px-6">
+                                <div class="pb-4 text-gray-700 dark:text-gray-300">
+                                    <ul class="list-disc ml-6">
+                                        <li>We support children, youth and the elderly.</li>
+                                        <li>Those from marginalized communities that are facing barriers to education and healthcare, especially in low-income situations.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item bg-white dark:bg-gray-900 rounded-lg shadow-md overflow-hidden">
+                            <button class="accordion-header w-full px-6 py-4 text-left font-semibold text-gray-900 dark:text-white flex justify-between items-center">
+                                <span>3. How does the foundation improve education access?</span>
+                                <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                            </button>
+                            <div class="accordion-content px-6">
+                                <div class="pb-4 text-gray-700 dark:text-gray-300">
+                                    <ul class="list-disc ml-6">
+                                        <li>Scholarship</li>
+                                        <li>Provision of school materials</li>
+                                        <li>Literacy or learning programs</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item bg-white dark:bg-gray-900 rounded-lg shadow-md overflow-hidden">
+                            <button class="accordion-header w-full px-6 py-4 text-left font-semibold text-gray-900 dark:text-white flex justify-between items-center">
+                                <span>4. What healthcare services are provided?</span>
+                                <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                            </button>
+                            <div class="accordion-content px-6">
+                                <div class="pb-4 text-gray-700 dark:text-gray-300">
+                                    <ul class="list-disc ml-6">
+                                        <li>Free medical outreach</li>
+                                        <li>Disease prevention/health awareness campaigns</li>
+                                        <li>Provision of health-related consumables to the less privileged</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item bg-white dark:bg-gray-900 rounded-lg shadow-md overflow-hidden">
+                            <button class="accordion-header w-full px-6 py-4 text-left font-semibold text-gray-900 dark:text-white flex justify-between items-center">
+                                <span>5. How can I get involved?</span>
+                                <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                            </button>
+                            <div class="accordion-content px-6">
+                                <div class="pb-4 text-gray-700 dark:text-gray-300">
+                                    <ul class="list-disc ml-6">
+                                        <li>Donate to fund programs</li>
+                                        <li>Volunteer (during medical outreach)</li>
+                                        <li>Partner with us (Schools, hospitals, corporations and NGOs)</li>
+                                        <li>Sponsor a child</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item bg-white dark:bg-gray-900 rounded-lg shadow-md overflow-hidden">
+                            <button class="accordion-header w-full px-6 py-4 text-left font-semibold text-gray-900 dark:text-white flex justify-between items-center">
+                                <span>6. Where does the foundation operate?</span>
+                                <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                            </button>
+                            <div class="accordion-content px-6">
+                                <div class="pb-4 text-gray-700 dark:text-gray-300">
+                                    We currently operate in Nigeria with major priorities to areas with the greatest need.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item bg-white dark:bg-gray-900 rounded-lg shadow-md overflow-hidden">
+                            <button class="accordion-header w-full px-6 py-4 text-left font-semibold text-gray-900 dark:text-white flex justify-between items-center">
+                                <span>7. How are donated funds used?</span>
+                                <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                            </button>
+                            <div class="accordion-content px-6">
+                                <div class="pb-4 text-gray-700 dark:text-gray-300">
+                                    <ul class="list-disc ml-6">
+                                        <li>Over 80% of donated funds go directly to programs</li>
+                                        <li>About 20% of donations cover operational expenses</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item bg-white dark:bg-gray-900 rounded-lg shadow-md overflow-hidden">
+                            <button class="accordion-header w-full px-6 py-4 text-left font-semibold text-gray-900 dark:text-white flex justify-between items-center">
+                                <span>8. How can I apply for support?</span>
+                                <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                            </button>
+                            <div class="accordion-content px-6">
+                                <div class="pb-4 text-gray-700 dark:text-gray-300">
+                                    <ul class="list-disc ml-6">
+                                        <li>Visit our website</li>
+                                        <li>Apply for aid or contact info@augustineudefafoundation.com</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Speaking Scholarship FAQs -->
+                <div>
+                    <h3 class="text-2xl font-bold text-gold-500 mb-4 mt-8">FAQs on Augustine Udefa Speaking Scholarship</h3>
+                    <div class="space-y-4">
+                        <!-- Speaking FAQ Items -->
+                        <div class="accordion-item bg-white dark:bg-gray-900 rounded-lg shadow-md overflow-hidden">
+                            <button class="accordion-header w-full px-6 py-4 text-left font-semibold text-gray-900 dark:text-white flex justify-between items-center">
+                                <span>1. What is Y’tino Intellectual Discourse?</span>
+                                <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                            </button>
+                            <div class="accordion-content px-6">
+                                <div class="pb-4 text-gray-700 dark:text-gray-300">
+                                    This is the name of the social media channels on Facebook, Instagram, and TikTok, where we host our intellectual discourse, leading to the award of the speaking scholarship.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item bg-white dark:bg-gray-900 rounded-lg shadow-md overflow-hidden">
+                            <button class="accordion-header w-full px-6 py-4 text-left font-semibold text-gray-900 dark:text-white flex justify-between items-center">
+                                <span>2. What is the mission of this scholarship program?</span>
+                                <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                            </button>
+                            <div class="accordion-content px-6">
+                                <div class="pb-4 text-gray-700 dark:text-gray-300">
+                                    We aim to foster intellectual discourse by connecting curious minds with scholarship opportunities, thought-provoking discussions and resources that encourage critical thinking and academic growth.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item bg-white dark:bg-gray-900 rounded-lg shadow-md overflow-hidden">
+                            <button class="accordion-header w-full px-6 py-4 text-left font-semibold text-gray-900 dark:text-white flex justify-between items-center">
+                                <span>3. How is this platform different from other scholarship programs?</span>
+                                <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                            </button>
+                            <div class="accordion-content px-6">
+                                <div class="pb-4 text-gray-700 dark:text-gray-300">
+                                    <ul class="list-disc ml-6">
+                                        <li>We emphasize intellectual engagement.</li>
+                                        <li>We host intellectual discourses which sometimes take the form of a debate.</li>
+                                        <li>A panel of independent judges and the public are responsible for winning this scholarship.</li>
+                                        <li>The discourse is mostly online presentations through pre-recorded videos.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item bg-white dark:bg-gray-900 rounded-lg shadow-md overflow-hidden">
+                            <button class="accordion-header w-full px-6 py-4 text-left font-semibold text-gray-900 dark:text-white flex justify-between items-center">
+                                <span>4. What are the eligibility criteria?</span>
+                                <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                            </button>
+                            <div class="accordion-content px-6">
+                                <div class="pb-4 text-gray-700 dark:text-gray-300">
+                                    <ul class="list-disc ml-6">
+                                        <li>Must be a student in any public institution of higher learning in Nigeria</li>
+                                        <li>Must be of good moral conduct</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item bg-white dark:bg-gray-900 rounded-lg shadow-md overflow-hidden">
+                            <button class="accordion-header w-full px-6 py-4 text-left font-semibold text-gray-900 dark:text-white flex justify-between items-center">
+                                <span>5. What documents are required?</span>
+                                <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                            </button>
+                            <div class="accordion-content px-6">
+                                <div class="pb-4 text-gray-700 dark:text-gray-300">
+                                    <ul class="list-disc ml-6">
+                                        <li>Admission letter</li>
+                                        <li>CV</li>
+                                        <li>Cover letter</li>
+                                        <li>Attestation letter from your head of department or institution on their letterhead, attesting to your good moral conduct.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item bg-white dark:bg-gray-900 rounded-lg shadow-md overflow-hidden">
+                            <button class="accordion-header w-full px-6 py-4 text-left font-semibold text-gray-900 dark:text-white flex justify-between items-center">
+                                <span>6. What is the value of the scholarship?</span>
+                                <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                            </button>
+                            <div class="accordion-content px-6">
+                                <div class="pb-4 text-gray-700 dark:text-gray-300">
+                                    <ul class="list-disc ml-6">
+                                        <li>Full tuition fee for the entire duration of your studies and N100,000 cash prize for the winner</li>
+                                        <li>Full tuition fee support for one academic session and N50,000 cash prize for the second-place winner</li>
+                                        <li>Full tuition fee support for one academic session for the third place.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item bg-white dark:bg-gray-900 rounded-lg shadow-md overflow-hidden">
+                            <button class="accordion-header w-full px-6 py-4 text-left font-semibold text-gray-900 dark:text-white flex justify-between items-center">
+                                <span>7. Can my scholarship be terminated?</span>
+                                <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                            </button>
+                            <div class="accordion-content px-6">
+                                <div class="pb-4 text-gray-700 dark:text-gray-300">
+                                    Yes, if:
+                                    <ul class="list-disc ml-6">
+                                        <li>You do not meet the minimum CGPA requirement for renewal, which is 3.5 on a 5.0 scale or 2.5 on a 4.0 scale.</li>
+                                        <li>You are rusticated from your institution because of misconduct of any form</li>
+                                        <li>You are seen making or sharing posts on social media that promote nudity and sexual immorality.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item bg-white dark:bg-gray-900 rounded-lg shadow-md overflow-hidden">
+                            <button class="accordion-header w-full px-6 py-4 text-left font-semibold text-gray-900 dark:text-white flex justify-between items-center">
+                                <span>8. How can I apply for this scholarship?</span>
+                                <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                            </button>
+                            <div class="accordion-content px-6">
+                                <div class="pb-4 text-gray-700 dark:text-gray-300">
+                                    <ul class="list-disc ml-6">
+                                        <li>Click on the Apply button</li>
+                                        <li>Complete all application details</li>
+                                        <li>Upload all necessary documents</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item bg-white dark:bg-gray-900 rounded-lg shadow-md overflow-hidden">
+                            <button class="accordion-header w-full px-6 py-4 text-left font-semibold text-gray-900 dark:text-white flex justify-between items-center">
+                                <span>9. Need more help?</span>
+                                <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                            </button>
+                            <div class="accordion-content px-6">
+                                <div class="pb-4 text-gray-700 dark:text-gray-300">
+                                    <ul class="list-disc ml-6">
+                                        <li>Visit our website</li>
+                                        <li>Email us @ info@augustineudefafoundation.com</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Orphan Scholarship FAQs -->
+                <div>
+                    <h3 class="text-2xl font-bold text-gold-500 mb-4 mt-8">FAQs on Augustine Udefa Orphan Scholarship</h3>
+                    <div class="space-y-4">
+                        <!-- Orphan FAQ Items -->
+                        <div class="accordion-item bg-white dark:bg-gray-900 rounded-lg shadow-md overflow-hidden">
+                            <button class="accordion-header w-full px-6 py-4 text-left font-semibold text-gray-900 dark:text-white flex justify-between items-center">
+                                <span>1. What is the mission of this program?</span>
+                                <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                            </button>
+                            <div class="accordion-content px-6">
+                                <div class="pb-4 text-gray-700 dark:text-gray-300">
+                                    To connect orphans with scholarships, educational support to help achieve their educational dreams.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item bg-white dark:bg-gray-900 rounded-lg shadow-md overflow-hidden">
+                            <button class="accordion-header w-full px-6 py-4 text-left font-semibold text-gray-900 dark:text-white flex justify-between items-center">
+                                <span>2. Who is eligible for this scholarship?</span>
+                                <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                            </button>
+                            <div class="accordion-content px-6">
+                                <div class="pb-4 text-gray-700 dark:text-gray-300">
+                                    <ul class="list-disc ml-6">
+                                        <li>A child or person that has lost both parents</li>
+                                        <li>Those with terminally ill parents or in extreme poverty</li>
+                                        <li>Those who have successfully gained admission into or are in a public tertiary institution in Nigeria if you intend to acquire tertiary education</li>
+                                        <li>Those in public secondary schools in good academic standing who can no longer continue their education because of the demise of their parents.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item bg-white dark:bg-gray-900 rounded-lg shadow-md overflow-hidden">
+                            <button class="accordion-header w-full px-6 py-4 text-left font-semibold text-gray-900 dark:text-white flex justify-between items-center">
+                                <span>3. What else does the scholarship cover apart from tuition?</span>
+                                <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                            </button>
+                            <div class="accordion-content px-6">
+                                <div class="pb-4 text-gray-700 dark:text-gray-300">
+                                    <ul class="list-disc ml-6">
+                                        <li>Uniform and supplies (for secondary school)</li>
+                                        <li>Mentorship and career guidance</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item bg-white dark:bg-gray-900 rounded-lg shadow-md overflow-hidden">
+                            <button class="accordion-header w-full px-6 py-4 text-left font-semibold text-gray-900 dark:text-white flex justify-between items-center">
+                                <span>4. What is the duration of the scholarship?</span>
+                                <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                            </button>
+                            <div class="accordion-content px-6">
+                                <div class="pb-4 text-gray-700 dark:text-gray-300">
+                                    Covers full tuition throughout your program
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item bg-white dark:bg-gray-900 rounded-lg shadow-md overflow-hidden">
+                            <button class="accordion-header w-full px-6 py-4 text-left font-semibold text-gray-900 dark:text-white flex justify-between items-center">
+                                <span>5. What documents are required during application?</span>
+                                <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                            </button>
+                            <div class="accordion-content px-6">
+                                <div class="pb-4 text-gray-700 dark:text-gray-300">
+                                    <ul class="list-disc ml-6">
+                                        <li>Admission letter</li>
+                                        <li>Curriculum vitae</li>
+                                        <li>Personal statement (500 – 1000 words), explaining your situation.</li>
+                                        <li>Academic report from your school, showing your grades and other necessary information.</li>
+                                        <li>Three letters of recommendation, confirming that you have lost both of your parents and can no longer continue your education. Two should come from religious leaders and one from your teacher.</li>
+                                        <li>An attestation letter from your head of department or school authority, confirming that you have been admitted into or are currently enrolled in your school</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item bg-white dark:bg-gray-900 rounded-lg shadow-md overflow-hidden">
+                            <button class="accordion-header w-full px-6 py-4 text-left font-semibold text-gray-900 dark:text-white flex justify-between items-center">
+                                <span>6. Can my scholarship be renewed?</span>
+                                <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                            </button>
+                            <div class="accordion-content px-6">
+                                <div class="pb-4 text-gray-700 dark:text-gray-300">
+                                    Your scholarship can be renewed if you:
+                                    <ul class="list-disc ml-6">
+                                        <li>Have a minimum cumulative grade point average (CGPA) of 3.5 on a 5.0 scale or 2.5 on a 4.0 scale.</li>
+                                        <li>Submit a letter from your head of department or institution, confirming your CGPA and ability to complete your studies in due time.</li>
+                                        <li>Submit two attestation letters from two academic referees, attesting to your good moral conduct.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item bg-white dark:bg-gray-900 rounded-lg shadow-md overflow-hidden">
+                            <button class="accordion-header w-full px-6 py-4 text-left font-semibold text-gray-900 dark:text-white flex justify-between items-center">
+                                <span>7. Can my scholarship be terminated?</span>
+                                <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                            </button>
+                            <div class="accordion-content px-6">
+                                <div class="pb-4 text-gray-700 dark:text-gray-300">
+                                    Yes, if:
+                                    <ul class="list-disc ml-6">
+                                        <li>You do not meet the minimum CGPA requirement for renewal which is of 3.5 on a 5.0 scale or 2.5 on a 4.0 scale.</li>
+                                        <li>You are rusticated from your institution because of misconduct of any form</li>
+                                        <li>You are seen making or sharing posts on social media that promote nudity and sexual immorality.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item bg-white dark:bg-gray-900 rounded-lg shadow-md overflow-hidden">
+                            <button class="accordion-header w-full px-6 py-4 text-left font-semibold text-gray-900 dark:text-white flex justify-between items-center">
+                                <span>8. How can I apply for the scholarship?</span>
+                                <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                            </button>
+                            <div class="accordion-content px-6">
+                                <div class="pb-4 text-gray-700 dark:text-gray-300">
+                                    <ul class="list-disc ml-6">
+                                        <li>Click on the apply button</li>
+                                        <li>Complete all application details</li>
+                                        <li>Upload all necessary documents</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item bg-white dark:bg-gray-900 rounded-lg shadow-md overflow-hidden">
+                            <button class="accordion-header w-full px-6 py-4 text-left font-semibold text-gray-900 dark:text-white flex justify-between items-center">
+                                <span>9. Need more help?</span>
+                                <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                            </button>
+                            <div class="accordion-content px-6">
+                                <div class="pb-4 text-gray-700 dark:text-gray-300">
+                                    <ul class="list-disc ml-6">
+                                        <li>Visit our website</li>
+                                        <li>Call us or</li>
+                                        <li>Email us @ info@augustineudefafoundation.com</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Excellence Scholarship FAQs -->
+                <div>
+                    <h3 class="text-2xl font-bold text-gold-500 mb-4 mt-8">FAQs on Augustine Udefa Excellence Scholarship</h3>
+                    <div class="space-y-4">
+                        <!-- Excellence FAQ Items -->
+                        <div class="accordion-item bg-white dark:bg-gray-900 rounded-lg shadow-md overflow-hidden">
+                            <button class="accordion-header w-full px-6 py-4 text-left font-semibold text-gray-900 dark:text-white flex justify-between items-center">
+                                <span>1. What is the mission of this program?</span>
+                                <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                            </button>
+                            <div class="accordion-content px-6">
+                                <div class="pb-4 text-gray-700 dark:text-gray-300">
+                                    To groom and nurture academically proven students to achieve their dreams in any academic field.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item bg-white dark:bg-gray-900 rounded-lg shadow-md overflow-hidden">
+                            <button class="accordion-header w-full px-6 py-4 text-left font-semibold text-gray-900 dark:text-white flex justify-between items-center">
+                                <span>2. Who is eligible to apply?</span>
+                                <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                            </button>
+                            <div class="accordion-content px-6">
+                                <div class="pb-4 text-gray-700 dark:text-gray-300">
+                                    <ul class="list-disc ml-6">
+                                        <li>Any student in a Nigerian public university or polytechnic in their second or third year with a minimum CGPA of 4.30 on a 5.0 scale or 3.30 on a 4.0 scale.</li>
+                                        <li>Any student with good moral conduct</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item bg-white dark:bg-gray-900 rounded-lg shadow-md overflow-hidden">
+                            <button class="accordion-header w-full px-6 py-4 text-left font-semibold text-gray-900 dark:text-white flex justify-between items-center">
+                                <span>3. How do I apply for the scholarship?</span>
+                                <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                            </button>
+                            <div class="accordion-content px-6">
+                                <div class="pb-4 text-gray-700 dark:text-gray-300">
+                                    <ul class="list-disc ml-6">
+                                        <li>Complete the online application form</li>
+                                        <li>Submit the required documents</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item bg-white dark:bg-gray-900 rounded-lg shadow-md overflow-hidden">
+                            <button class="accordion-header w-full px-6 py-4 text-left font-semibold text-gray-900 dark:text-white flex justify-between items-center">
+                                <span>4. What documents are required?</span>
+                                <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                            </button>
+                            <div class="accordion-content px-6">
+                                <div class="pb-4 text-gray-700 dark:text-gray-300">
+                                    <ul class="list-disc ml-6">
+                                        <li>Your admission letter</li>
+                                        <li>Curriculum vitae</li>
+                                        <li>A personal statement (500 – 1000 words), introducing yourself and detailing your academic achievements and awards.</li>
+                                        <li>An unofficial student transcript or academic report, showing courses taken, grades obtained, and CGPA.</li>
+                                        <li>Three letters of recommendation from academic referees.</li>
+                                        <li>An attestation letter from your head of department or school authority, confirming your status as a student in your institution.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item bg-white dark:bg-gray-900 rounded-lg shadow-md overflow-hidden">
+                            <button class="accordion-header w-full px-6 py-4 text-left font-semibold text-gray-900 dark:text-white flex justify-between items-center">
+                                <span>5. How are recipients selected?</span>
+                                <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                            </button>
+                            <div class="accordion-content px-6">
+                                <div class="pb-4 text-gray-700 dark:text-gray-300">
+                                    <ul class="list-disc ml-6">
+                                        <li>Based on eligibility criteria and submission of required documents.</li>
+                                        <li>Quality of your personal statement and recommendation letters.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item bg-white dark:bg-gray-900 rounded-lg shadow-md overflow-hidden">
+                            <button class="accordion-header w-full px-6 py-4 text-left font-semibold text-gray-900 dark:text-white flex justify-between items-center">
+                                <span>6. When will I know if I have been awarded?</span>
+                                <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                            </button>
+                            <div class="accordion-content px-6">
+                                <div class="pb-4 text-gray-700 dark:text-gray-300">
+                                    Notifications are sent after the deadline via email and information about recipients are published on our website.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item bg-white dark:bg-gray-900 rounded-lg shadow-md overflow-hidden">
+                            <button class="accordion-header w-full px-6 py-4 text-left font-semibold text-gray-900 dark:text-white flex justify-between items-center">
+                                <span>7. Is the scholarship renewable?</span>
+                                <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                            </button>
+                            <div class="accordion-content px-6">
+                                <div class="pb-4 text-gray-700 dark:text-gray-300">
+                                    Yes, if the recipient meets the following requirements:
+                                    <ul class="list-disc ml-6">
+                                        <li>Have a minimum CGPA of 4.30 on a 5.0 scale or 3.30 on a 4.0 scale.</li>
+                                        <li>Submit an unofficial transcript and a letter from your head of department or institution, confirming your CGPA and ability to complete your studies in due time.</li>
+                                        <li>Submit two attestation letters from two academic referees, attesting to your good moral conduct.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item bg-white dark:bg-gray-900 rounded-lg shadow-md overflow-hidden">
+                            <button class="accordion-header w-full px-6 py-4 text-left font-semibold text-gray-900 dark:text-white flex justify-between items-center">
+                                <span>8. Can my scholarship be terminated?</span>
+                                <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                            </button>
+                            <div class="accordion-content px-6">
+                                <div class="pb-4 text-gray-700 dark:text-gray-300">
+                                    Yes, if the following applies to you:
+                                    <ul class="list-disc ml-6">
+                                        <li>You do not meet the minimum CPGA requirement for renewal.</li>
+                                        <li>You are rusticated by your institution because of misconduct of any form.</li>
+                                        <li>You are seen making or sharing posts on social media that promote nudity and sexual immorality.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item bg-white dark:bg-gray-900 rounded-lg shadow-md overflow-hidden">
+                            <button class="accordion-header w-full px-6 py-4 text-left font-semibold text-gray-900 dark:text-white flex justify-between items-center">
+                                <span>9. Can I use this scholarship with other financial aid?</span>
+                                <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                            </button>
+                            <div class="accordion-content px-6">
+                                <div class="pb-4 text-gray-700 dark:text-gray-300">
+                                    Yes, unless otherwise specified.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item bg-white dark:bg-gray-900 rounded-lg shadow-md overflow-hidden">
+                            <button class="accordion-header w-full px-6 py-4 text-left font-semibold text-gray-900 dark:text-white flex justify-between items-center">
+                                <span>10. Contact and support</span>
+                                <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                            </button>
+                            <div class="accordion-content px-6">
+                                <div class="pb-4 text-gray-700 dark:text-gray-300">
+                                    Email us @ info@augustineudefafoundation.com
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+    <!-- Scholarship Modals -->
+    <!-- Speaking Scholarship Learn More Modal -->
+   
+
+   
+
+   
+
+ 
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Augustine Udefa Foundation</h3>
+                    <p class="text-gray-400">Empowering Nigerian youth through education since 2025.</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="about.html" class="text-gray-400 hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="programs.html" class="text-gray-400 hover:text-white transition-colors">Programs</a></li>
+                        <li><a href="news.html" class="text-gray-400 hover:text-white transition-colors">News & Stories</a></li>
+                        <li><a href="donate.html" class="text-gray-400 hover:text-white transition-colors">Donate</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Contact</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li class="flex items-center"><i class="fas fa-map-marker-alt mr-2"></i> 15 Education Way, Lagos</li>
+                        <li class="flex items-center"><i class="fas fa-phone-alt mr-2"></i> +234 803 123 4567</li>
+                        <li class="flex items-center"><i class="fas fa-envelope mr-2"></i> augustineudefafoundation@gmail.com</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Follow Us</h3>
+                    <div class="flex space-x-4">
+                          <a href="https://www.facebook.com/share/1CYdGtH2dk/?mibextid=wwXIfr" class="text-gray-400 hover:text-white transition-colors text-xl"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors text-xl"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/augustineudefafoundation?igsh=eWsybWllYXlyMDB6&utm_source=qr" class="text-gray-400 hover:text-white transition-colors text-xl"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors text-xl"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 Augustine Udefa Foundation. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+  
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        if (mobileMenuButton && mobileMenu) {
+            mobileMenuButton.addEventListener('click', function() {
+                const isHidden = mobileMenu.classList.contains('hidden');
+                if (isHidden) {
+                    mobileMenu.classList.remove('hidden');
+                    mobileMenuButton.innerHTML = '<i class="fas fa-times text-xl"></i>';
+                } else {
+                    mobileMenu.classList.add('hidden');
+                    mobileMenuButton.innerHTML = '<i class="fas fa-bars text-xl"></i>';
+                }
+            });
+        }
+
+        // Accordion functionality
+        document.querySelectorAll('.accordion-header').forEach(header => {
+            header.addEventListener('click', () => {
+                const accordionItem = header.parentElement;
+                const accordionContent = header.nextElementSibling;
+                const accordionIcon = header.querySelector('i');
+                
+                accordionContent.classList.toggle('active');
+                accordionIcon.classList.toggle('rotate-180');
+                
+                // Close other open accordion items
+                document.querySelectorAll('.accordion-item').forEach(item => {
+                    if (item !== accordionItem) {
+                        item.querySelector('.accordion-content').classList.remove('active');
+                        item.querySelector('.accordion-header i').classList.remove('rotate-180');
+                    }
+                });
+            });
+        });
+
+        // Modal toggles
+        document.getElementById('register-button')?.addEventListener('click', function(e) {
+            e.preventDefault();
+            const registerModal = new HSOverlay('#register-modal');
+            registerModal.open();
+        });
+        
+        document.getElementById('apply-scholarship-1')?.addEventListener('click', function(e) {
+            e.preventDefault();
+            document.getElementById('modal-apply-scholarship-1').classList.remove('hidden');
+        });
+        document.getElementById('apply-scholarship-2')?.addEventListener('click', function(e) {
+            e.preventDefault();
+            document.getElementById('modal-apply-scholarship-2').classList.remove('hidden');
+        });
+        document.getElementById('apply-scholarship-3')?.addEventListener('click', function(e) {
+            e.preventDefault();
+            document.getElementById('modal-apply-scholarship-3').classList.remove('hidden');
+        });
+        document.getElementById('learnmore-scholarship-1')?.addEventListener('click', function(e) {
+            e.preventDefault();
+            document.getElementById('modal-learnmore-scholarship-1').classList.remove('hidden');
+        });
+        document.getElementById('learnmore-scholarship-2')?.addEventListener('click', function(e) {
+            e.preventDefault();
+            document.getElementById('modal-learnmore-scholarship-2').classList.remove('hidden');
+        });
+        document.getElementById('learnmore-scholarship-3')?.addEventListener('click', function(e) {
+            e.preventDefault();
+            document.getElementById('modal-learnmore-scholarship-3').classList.remove('hidden');
+        });
+        
+        document.getElementById('register-link')?.addEventListener('click', function(e) {
+            e.preventDefault();
+            const loginModal = HSOverlay.getInstance('#login-modal');
+            const registerModal = HSOverlay.getInstance('#register-modal');
+            loginModal.close();
+            registerModal.open();
+        });
+        
+        document.getElementById('login-link')?.addEventListener('click', function(e) {
+            e.preventDefault();
+            const loginModal = HSOverlay.getInstance('#login-modal');
+            const registerModal = HSOverlay.getInstance('#register-modal');
+            registerModal.close();
+            loginModal.open();
+        });
+
+      
+    </script>
+</body>
+</html>

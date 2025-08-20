@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <base target="_self">
+    <title>Augustine Udefa Foundation - Education Empowerment</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="shortcut icon" href="img/imgg.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+   
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@preline/preline@2.0.0/dist/preline.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="script.js"></script>
+       <link rel="stylesheet" href="main.css">
+    
+   
+</head>
+<body class="bg-white dark:bg-gray-900 transition-colors duration-300 font-sans">
+    <!-- Navigation -->
+    <!-- Navigation -->
+    <header class="sticky top-0 z-50 bg-white/90 dark:bg-gray-900/90 backdrop-blur-md border-b border-gray-200 dark:border-gray-800">
+       <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  <div class="flex justify-between h-20 items-center">
+    <div class="flex items-center flex-shrink-0">
+      <a href="#" id="logo-link">
+        <img
+          src="img/logo.PNG"
+          alt="Logo"
+          class="h-8 w-auto sm:h-10 md:h-12 lg:h-16 object-contain"
+        >
+      </a>
+    </div>
+    <div class="hidden md:flex items-center space-x-8">
+         <a href="index.html" class="nav-link text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white" id="home-link">Home</a>
+      <a href="about.html" class="nav-link text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white" id="about-link">About</a>
+      
+      <a href="program.html" class="nav-link text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white" id="programs-link">Programs</a>
+      <a href="event.html" class="nav-link text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white" id="events-link">Events</a>
+      <a href="volunteer.html" class="nav-link text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white" id="trustees-link">Volunteer</a>
+      <a href="donate.html" class="nav-link text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white" id="donate-link">Donate</a>
+    </div>
+    <button class="md:hidden text-gray-500 dark:text-gray-400" id="mobile-menu-button">
+      <i class="fas fa-bars text-xl"></i>
+    </button>
+  </div>
+</nav>
+
+        
+        <!-- Mobile menu -->
+        <div class="hidden md:hidden bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                 <a href="index.html" class="block px-3 py-2 rounded-md text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800" id="mobile-home-link">Home</a>
+                <a href="about.html" class="block px-3 py-2 rounded-md text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800" id="mobile-about-link">About</a>
+                
+                <a href="program.html" class="block px-3 py-2 rounded-md text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800" id="mobile-programs-link">Programs</a>
+                <a href="event.html" class="block px-3 py-2 rounded-md text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800" id="mobile-events-link">Events</a>
+                <a href="volunteer.html" class="block px-3 py-2 rounded-md text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800" id="mobile-trustees-link">Volunteer</a>
+                <a href="donate.html" class="block px-3 py-2 rounded-lg  text-grey-700  hover:bg-gray-100 id="mobile-donate-link">Donate</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section with Video -->
+    <section class="relative h-screen flex items-center overflow-hidden">
+        <video autoplay loop muted playsinline class="hero-video">
+            <source src="https://assets.mixkit.co/videos/preview/mixkit-happy-african-american-student-holding-books-20621-large.mp4" type="video/mp4">
+        </video>
+        <div class="absolute inset-0 bg-gradient-to-r from-gray-900 to-transparent z-10"></div>
+        <div class="relative z-10 px-4 max-w-3xl ml-4 sm:ml-12 md:ml-20">
+            <h1 class="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">Empowering Nigeria's Future Through Education</h1>
+            <p class="text-xl md:text-2xl text-gray-200 mb-8">The Augustine Udefa Foundation provides scholarships, resources, and opportunities to bright students across Nigeria.</p>
+            <div class="flex flex-col sm:flex-row gap-4">
+                <a href="program.html" class="px-6 py-3 bg-blue-900 text-white rounded-lg hover:bg-blue-900 transition-colors font-medium" id="apply-link">Apply for Scholarship</a>
+                <a href="donate.html" class="px-6 py-3 bg-gold-500 text-white rounded-lg hover:bg-gray-100 transition-colors font-medium" id="support-link">Support Our Cause</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white dark:bg-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">About the Foundation</h2>
+                <div class="w-20 h-1 bg-gold-500 mx-auto"></div>
+            </div>
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="order-2 md:order-1">
+                    <h3 class="text-2xl font-semibold text-gray-900 dark:text-white mb-4">Our Vision</h3>
+                    <p class="text-gray-600 dark:text-gray-300 mb-6">The Augustine Udefa Foundation is committed to improving the lives of people, especially those with the fewest resources, by providing opportunities for them to access free education and quality health services.   </p>
+                  
+                    <!-- <div class="grid grid-cols-2 gap-4 mt-8">
+                        <div class="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
+                            <div class="text-3xl font-bold text-blue-900 mb-2">1,200+</div>
+                            <div class="text-gray-600 dark:text-gray-300">Scholarships Awarded</div>
+                        </div>
+                        <div class="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
+                            <div class="text-3xl font-bold text-blue-900 mb-2">15K+</div>
+                            <div class="text-gray-600 dark:text-gray-300">Students Impacted</div>
+                        </div>
+                    </div> -->
+                </div>
+                <div class="order-1 md:order-2 rounded-xl overflow-hidden shadow-xl">
+                    <img src="https://images.unsplash.com/flagged/photo-1579133311477-9121405c78dd?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+                         alt="African students in classroom" 
+                         class="w-full h-auto object-cover">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Board of Trustees Section -->
+    <section id="trustees" class="py-20 bg-gray-50 dark:bg-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">Board of Trustees</h2>
+                <p class="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">Our distinguished board members guide the foundation's vision and ensure our programs create maximum impact.</p>
+                <div class="w-20 h-1 bg-gold-500 mx-auto mt-4"></div>
+            </div>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Trustee 1 -->
+                <div class="bg-white dark:bg-gray-900 rounded-xl shadow-md overflow-hidden transition-all duration-300 trustee-card cursor-pointer" onclick="openTrusteeModal('augustine')">
+                    <div class="overflow-hidden h-64">
+                        <img src="img/upclose.jpg" 
+                             alt="Augustine Udefa" 
+                             class="w-full h-full object-cover transition-transform duration-300">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-1">Augustine Lishilinimye Udefa</h3>
+                        <p class="text-gold-500 font-medium mb-3">Founder and Chairman of Board of Trustees.</p>
+                        <!-- <p class="text-gray-600 dark:text-gray-300 text-sm">Former CEO of Udefa Holdings, philanthropist with 20+ years in education advocacy.</p> -->
+                    </div>
+                </div>
+                
+                <!-- Trustee 2 -->
+                <div class="bg-white dark:bg-gray-900 rounded-xl shadow-md overflow-hidden transition-all duration-300 trustee-card cursor-pointer" onclick="openTrusteeModal('precious')">
+                    <div class="overflow-hidden h-64">
+                        <img src="img/esther.jpeg" 
+                             alt="Precious Uyowfam Udefa" 
+                             class="w-full h-full object-cover transition-transform duration-300">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-1">Precious Uyowfam<br> Udefa</h3>
+                        <p class="text-gold-500 font-medium mb-3">Cofounder and member of Board of Trustees.</p>
+                        <!-- <p class="text-gray-600 dark:text-gray-300 text-sm">Professor of Education at University of Lagos, specializing in curriculum development.</p> -->
+                    </div>
+                </div>
+                
+                <!-- Trustee 3 -->
+                <div class="bg-white dark:bg-gray-900 rounded-xl shadow-md overflow-hidden transition-all duration-300 trustee-card cursor-pointer" onclick="openTrusteeModal('sunday')">
+                    <div class="overflow-hidden h-64">
+                        <img src="img/sunday.jpeg" 
+                             alt="Sunday Okpa" 
+                             class="w-full h-full object-cover transition-transform duration-300">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-1">Sunday Okpa <br></h3>
+                        <p class="text-gold-500 font-medium mb-3">Secretary of Board of Trustees</p>
+                        <!-- <p class="text-gray-600 dark:text-gray-300 text-sm">Chartered accountant with expertise in nonprofit financial management.</p> -->
+                    </div>
+                </div>
+                
+                <!-- Trustee 4 -->
+                <div class="bg-white dark:bg-gray-900 rounded-xl shadow-md overflow-hidden transition-all duration-300 trustee-card cursor-pointer" onclick="openTrusteeModal('charles')">
+                    <div class="overflow-hidden h-64">
+                        <img src="img/charles.jpeg" 
+                             alt="charles" 
+                             class="w-full h-full object-cover transition-transform duration-300">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-1">Charles Utete <br>Udefa</h3>
+                        <p class="text-gold-500 font-medium mb-3"> Member of Board of Trustees</p>
+                        <!-- <p class="text-gray-600 dark:text-gray-300 text-sm">Social entrepreneur with extensive experience in youth development programs.</p> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trustee Modals -->
+    <!-- Augustine Udefa Modal -->
+    <div id="augustine-modal" class="fixed inset-0 z-50 flex items-center justify-center hidden modal-overlay">
+        <div class="bg-white dark:bg-gray-900 rounded-xl shadow-2xl w-full max-w-2xl mx-4 modal-content">
+            <div class="p-6">
+                <div class="flex justify-between items-start mb-6">
+                    <div>
+                        <h3 class="text-2xl font-bold text-gray-900 dark:text-white">Augustine Udefa</h3>
+                        <p class="text-gold-500 font-medium">Founder & Chairman</p>
+                    </div>
+                    <button onclick="closeModal('augustine-modal')" class="text-gray-400 hover:text-gray-500 dark:hover:text-gray-300">
+                        <i class="fas fa-times text-xl"></i>
+                    </button>
+                </div>
+                <div class="grid md:grid-cols-3 gap-6 mb-6">
+                    <div class="md:col-span-1">
+                        <img src="img/upclose.jpg" 
+                             alt="Augustine Udefa" 
+                             class="w-full rounded-lg">
+                    </div>
+                    <div class="md:col-span-2">
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">
+                           Augustine Udefa is a teacher, researcher, and philanthropist. He began his elementary education at Command Children’s School, Calabar; started his secondary education at Stella Maris Seminary, Uyanga, and completed it at St. Patrick’s College, Calabar, all in Nigeria.
+                        </p>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">
+                           Augustine attended the University of Calabar, Nigeria, where he obtained a bachelor’s degree in physiology, a master’s degree in physiology, and a post graduate diploma in education. He is currently pursuing a doctoral degree in nutrition and exercise physiology at the University of Missouri-Columbia. 
+                        </p>
+
+                         <p class="text-gray-600 dark:text-gray-300 mb-4">
+                         Augustine is a charismatic individual with a love for humanitarian service. He founded the Augustine Udefa Foundation because of his love for humanity. Augustine believes that the world would be a better place if every privileged person gave a helping hand to one or two people in need. 
+                        </p>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">
+                       His burning desire for service to humanity led to the establishment of the Foundation because he believes that, through this Foundation, many people, especially those with the fewest resources, will have access to free education and quality health services.
+                        </p>
+                         <div class="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
+                            <h4 class="font-semibold text-gray-900 dark:text-white mb-2">Profile Links</h4>
+         <ul class="list-disc list-inside text-gray-600 dark:text-gray-300 space-y-1">
+        <li><a href="https:// www.linkedin.com/in/augustine-udefa-156790127"><i class="fa-brands fa-linkedin"></i> linkedin</a></li>
+  <li><a href=" https://www.researchgate.net/profile/Augustine-Udefa?ev=hdr_xprf"><i class="fa-brands fa-researchgate"></i></i>Research Gate</a></li>
+<li><a href="https://scholar.google.com/citations?hl=en&user=vyaYBZkAAAAJ"><i class="fa-brands fa-googlescholar"></i>Google Scholar</a></li>
+   <li><a href="https://www.facebook.com/share/1Za5VAXoUH/?mibextid=wwXIfr"><i class="fa-brands fa-facebook"></i>Facebook</a></li>
+ <li><a href="https://www.instagram.com/udefaaugustine?igsh=MWZvdWR1OG1hcm9lcw=="><i class=" fa-brands fa-instagram"></i>Instagram</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex justify-end">
+                    <button onclick="closeModal('augustine-modal')" class="px-4 py-2 bg-blue-900 text-white rounded-lg hover:bg-blue-900 transition-colors">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--  precious  Modal -->
+    <div id="precious-modal" class="fixed inset-0 z-50 flex items-center justify-center hidden modal-overlay">
+        <div class="bg-white dark:bg-gray-900 rounded-xl shadow-2xl w-full max-w-2xl mx-4 modal-content">
+            <div class="p-6">
+                <div class="flex justify-between items-start mb-6">
+                    <div>
+                        <h3 class="text-2xl font-bold text-gray-900 dark:text-white">Precious Uyowfam Udefa</h3>
+                        <!-- <p class="text-gold-500 font-medium">Education Director</p> -->
+                    </div>
+                    <button onclick="closeModal('precious-modal')" class="text-gray-400 hover:text-gray-500 dark:hover:text-gray-300">
+                        <i class="fas fa-times text-xl"></i>
+                    </button>
+                </div>
+                <div class="grid md:grid-cols-3 gap-6 mb-6">
+                    <div class="md:col-span-1">
+                        <img src="img/esther.jpeg" 
+                             alt="Precious Uyowfam Udefa" 
+                             class="w-full rounded-lg">
+                    </div>
+                    <div class="md:col-span-2">
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">
+                          
+Precious Udefa is a co-founder of the Augustine Udefa Foundation. She holds a bachelor’s degree in industrial biochemistry from the University of Cross River State, Nigeria. Precious believes that generosity has no boundaries. She is kindhearted, with a passion for giving, and takes immense joy in spreading love and positivity wherever she goes. With an open heart, Precious embodies the spirit of kindness and generosity and looks forward to touching the lives of people and leaving a lasting impact on them.  
+                        </p>
+                     
+                        <div class="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
+                            <h4 class="font-semibold text-gray-900 dark:text-white mb-2">Profile Links</h4>
+         <ul class="list-disc list-inside text-gray-600 dark:text-gray-300 space-y-1">
+        <li><a href="https://www.linkedin.com/in/precious-udefa-21973833b"><i class="fa-brands fa-linkedin"></i> linkedin</a></li>
+
+
+   <li><a href="https://www.facebook.com/share/16qJe9CGtw/?mibextid=wwXIfr"><i class="fa-brands fa-facebook"></i>Facebook</a></li>
+ <li><a href="https://www.instagram.com/udefaprecious?igsh=MXFxYm95bm5tbHBsdQ=="><i class=" fa-brands fa-instagram"></i>Instagram</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex justify-end">
+                    <button onclick="closeModal('precious-modal')" class="px-4 py-2 bg-blue-900 text-white rounded-lg hover:bg-blue-900 transition-colors">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- sunday Eze Modal -->
+    <div id="sunday-modal" class="fixed inset-0 z-50 flex items-center justify-center hidden modal-overlay">
+        <div class="bg-white dark:bg-gray-900 rounded-xl shadow-2xl w-full max-w-2xl mx-4 modal-content">
+            <div class="p-6">
+                <div class="flex justify-between items-start mb-6">
+                    <div>
+                        <h3 class="text-2xl font-bold text-gray-900 dark:text-white">Sunday Okpa</h3>
+                        <!-- <p class="text-gold-500 font-medium">Finance Director</p> -->
+                    </div>
+                    <button onclick="closeModal('sunday-modal')" class="text-gray-400 hover:text-gray-500 dark:hover:text-gray-300">
+                        <i class="fas fa-times text-xl"></i>
+                    </button>
+                </div>
+                <div class="grid md:grid-cols-3 gap-6 mb-6">
+                    <div class="md:col-span-1">
+                        <img src="img/sunday.jpeg" 
+                             alt="sunday Eze" 
+                             class="w-full rounded-lg">
+                    </div>
+                    <div class="md:col-span-2">
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">
+                          Sunday Okpa is the site coordinator for the International Centre for the Study of Breast cancer subtypes (ICSBCS), University of Calabar Teaching Hospital (UCTH) study site. He is a REDcap/ data analyst. He has improved greatly, patient’s enrollment and overall general output of ICSBCS activities by over 80 % in UCTH site.  He attended the 7th and 8th annual international symposium of ICSBCS on improving gynecological cancer management in low and middle countries held in Calabar, Nigeria and Kumasi, Ghana respectively. 
+Sunday holds bachelor’s and master’s degrees in physiology from the University of Calabar, Cross River State, Nigeria. He is very passionate about genomics and its impact on breast cancer subtypes.
+                        </p>
+                        <div class="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
+                            <h4 class="font-semibold text-gray-900 dark:text-white mb-2">Profile Links</h4>
+                            <ul class="list-disc list-inside text-gray-600 dark:text-gray-300 space-y-1">
+                                <li><a href="https://www.facebook.com/share/16w18UYz3C/?mibextid=wwXIfr"><i class="fa-brands fa-facebook"></i>Facebook</a></li>
+ <li><a href="https://www.tiktok.com/@sundayokpa210?_t=ZM-8xfyBWwQVfC&_r=1"><i class=" fa-brands fa-tiktok"></i>TikTok</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex justify-end">
+                    <button onclick="closeModal('sunday-modal')" class="px-4 py-2 bg-blue-900 text-white rounded-lg hover:bg-blue-900 transition-colors">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- charles Udefa Modal -->
+    <div id="charles-modal" class="fixed inset-0 z-50 flex items-center justify-center hidden modal-overlay">
+        <div class="bg-white dark:bg-gray-900 rounded-xl shadow-2xl w-full max-w-2xl mx-4 modal-content">
+            <div class="p-6">
+                <div class="flex justify-between items-start mb-6">
+                    <div>
+                        <h3 class="text-2xl font-bold text-gray-900 dark:text-white">Charles Udefa</h3>
+                        <!-- <p class="text-blue-900 font-medium">Program</p> -->
+                    </div>
+                    <button onclick="closeModal('charles-modal')" class="text-gray-400 hover:text-gray-500 dark:hover:text-gray-300">
+                        <i class="fas fa-times text-xl"></i>
+                    </button>
+                </div>
+                <div class="grid md:grid-cols-3 gap-6 mb-6">
+                    <div class="md:col-span-1">
+                        <img src="img/charles.jpeg" 
+                             alt="charles Udefa" 
+                             class="w-full rounded-lg">
+                    </div>
+                    <div class="md:col-span-2">
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">
+                         Charles Udefa is a stakeholder in the Augustine Udefa Foundation, and he believes that helping even one person can go a long way. He’s from Obudu Local Government Area, Cross River State, Nigeria, and holds a bachelor’s degree in physical oceanography (physics) from the University of Calabar. Charles also holds other professional certifications. What matters more to him is giving back to society. Education changed the course of his life, so being part of a foundation that helps young people through scholarships feels personal. He doesn’t care about being seen, he just wants to see more young people rise, have a chance, and rewrite their own stories. 
+                        </p>
+                        <div class="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
+                            <h4 class="font-semibold text-gray-900 dark:text-white mb-2">Profile Links</h4>
+                            <ul class="list-disc list-inside text-gray-600 dark:text-gray-300 space-y-1">
+                                <li><a href="https://www.facebook.com/share/16w18UYz3C/?mibextid=wwXIfr"><i class="fa-brands fa-twitter"></i>Twitter</a></li>
+                                 <li><a href="https://www.facebook.com/share/16w18UYz3C/?mibextid=wwXIfr"><i class="fa-brands fa-instagram"></i>Instagram</a></li>
+ <li><a href="https://www.tiktok.com/@sundayokpa210?_t=ZM-8xfyBWwQVfC&_r=1"><i class=" fa-brands fa-tiktok"></i>TikTok</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex justify-end">
+                    <button onclick="closeModal('charles-modal')" class="px-4 py-2 bg-blue-900 text-white rounded-lg hover:bg-blue-900 transition-colors">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Events Section -->
+    <section id="events" class="py-20 bg-white dark:bg-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">Our Recent Initiatives</h2>
+                <p class="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">Discover our latest projects and events making an impact in Nigerian education.</p>
+                <div class="w-20 h-1 bg-gold-500 mx-auto mt-4"></div>
+            </div>
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Mosquito Net Donation Event -->
+                <div class="relative bg-gray-50 dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg">
+                  
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">Mosquito Net Donation Drive</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-6">In partnership with Government College Nigeria, we distributed 400 long-lasting insecticide-treated mosquito nets to boarding students to combat malaria and improve school attendance.</p>
+                        <div class="flex items-center">
+                            <div class="flex-shrink-0 mr-4">
+                                <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                                     alt="Mosquito nets" 
+                                     class="w-16 h-16 rounded-full object-cover">
+                            </div>
+                            <div>
+                                <p class="text-sm text-gray-500 dark:text-gray-400">Impact:</p>
+                                <p class="font-medium text-gray-900 dark:text-white">Reduced malaria cases by 60% among recipients</p>
+                            </div>
+                              <div class="event-date">May 2017</div>
+                        </div>
+                    </div>
+                    
+                </div>
+                
+                <!-- Scholarship Award Ceremony -->
+                <div class="relative bg-gray-50 dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg">
+                    <div class="event-date">March 2017</div>
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">Annual Scholarship Awards</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-6">Celebrated 75 new scholarship recipients at our annual awards ceremony in Lagos. This year's cohort includes students from 12 states across Nigeria.</p>
+                        <div class="flex items-center">
+                            <div class="flex-shrink-0 mr-4">
+                                <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                                     alt="Scholarship awards" 
+                                     class="w-16 h-16 rounded-full object-cover">
+                            </div>
+                            <div>
+                                <p class="text-sm text-gray-500 dark:text-gray-400">Impact:</p>
+                                <p class="font-medium text-gray-900 dark:text-white">₦25 million in scholarships awarded</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-12">
+                <a href="event.html" class="px-6 py-3  text-gold-500 rounded-lg bg-white transition-colors font-medium inline-flex items-center" id="all-events-link">
+                    View All Events
+                    <i class="fas fa-calendar-alt ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Programs Section -->
+    <section id="programs" class="py-20 bg-gray-50 dark:bg-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">Scholarship Programs</h2>
+                <p class="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">We offer comprehensive support to students at all academic levels.</p>
+                <div class="w-20 h-1 bg-gold-500 mx-auto mt-4"></div>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white dark:bg-gray-900 rounded-xl shadow-md overflow-hidden transition-all duration-300 card-hover flex flex-col">
+                    <div class="p-8 flex flex-col flex-1">
+                        <div class="w-14 h-14 bg-blue-100 dark:bg-blue-900 rounded-full flex items-center justify-center mb-6">
+                            <i class="fas fa-school text-blue-900 text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">Augustine Udefa Speaking Scholarship</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-6">The Augustine Udefa Speaking Scholarship is awarded to students in Nigerian educational institutions, who can demonstrate good public speaking skills and critical thinking ability.</p>
+                        <ul class="space-y-2 mb-6">
+                            <li class="flex items-center text-gray-600 dark:text-gray-300">
+                            <i class="fas fa-check-circle text-blue-900 mr-2"></i>
+                             Full tuition fee support for the period of your program.
+                        </li>
+                        <li class="flex items-center text-gray-600 dark:text-gray-300">
+                            <i class="fas fa-check-circle text-blue-900 mr-2"></i>
+                            Minimum CGPA for this one is 4.30 out of 5.0 or 3.30 out of 4.0
+                        </li>
+                        </ul>
+                        <div class="mt-auto">
+                            <a href="program.html" class="text-gold-500 hover:text-blue-900 font-medium inline-flex items-center" id="secondary-link">
+                                Apply now
+                                <i class="fas fa-arrow-right ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white dark:bg-gray-900 rounded-xl shadow-md overflow-hidden transition-all duration-300 card-hover transform scale-105 flex flex-col">
+                    <div class="p-8 flex flex-col flex-1">
+                        <div class="w-14 h-14 bg-blue-100 dark:bg-blue-900 rounded-full flex items-center justify-center mb-6">
+                            <i class="fas fa-university text-blue-900 text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">Augustine Udefa Orphan Scholarship</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-6">The Augustine Udefa Orphan Scholarship is awarded to people who have lost both parents and do not have any sponsor to support their education</p>
+                        <ul class="space-y-2 mb-6">
+                            <li class="flex items-center text-gray-600 dark:text-gray-300">
+                            <i class="fas fa-check-circle text-blue-900 mt-1 mr-2"></i>
+                            For Secondary & university students
+                        </li>
+                        
+                        <li class="flex items-center text-gray-600 dark:text-gray-300">
+                            <i class="fas fa-check-circle text-blue-900 mt-1 mr-2"></i>
+                            minimum cumulative grade point average (CGPA) of 3.5 on a 5.0 scale or 2.5 on a 4.0 scale
+                        </li>
+                        </ul>
+                        <div class="mt-auto">
+                            <a href="#" class="text-gold-500 hover:text-blue-900 font-medium inline-flex items-center" id="university-link">
+                                Apply now
+                                <i class="fas fa-arrow-right ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white dark:bg-gray-900 rounded-xl shadow-md overflow-hidden transition-all duration-300 card-hover flex flex-col">
+                    <div class="p-8 flex flex-col flex-1">
+                        <div class="w-14 h-14 bg-blue-100 dark:bg-blue-900 rounded-full flex items-center justify-center mb-6">
+                            <i class="fas fa-graduation-cap text-blue-900 text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">Augustine Udefa Excellence Scholarship</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-6">The Augustine Udefa Excellence Scholarship is a highly competitive scholarship awarded to students with excellent academic profile.</p>
+                        <ul class="space-y-2 mb-6">
+                           <li class="flex items-center text-gray-600 dark:text-gray-300">
+                            <i class="fas fa-check-circle text-blue-900 mt-1 mr-2"></i>
+                            Minimum CGPA of 4.30 out of 5.0 or 3.30 out of 4.0
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-blue-900 mt-1 mr-2"></i>
+                            Full tuition coverage + stipend
+                        </li>
+                        </ul>
+                        <div class="mt-auto">
+                            <a href="#" class="text-gold-500 hover:text-blue-900 font-medium inline-flex items-center" id="postgrad-link">
+                                Apply now
+                                <i class="fas fa-arrow-right ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </section>
+
+ 
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Augustine Udefa Foundation</h3>
+                    <p class="text-gray-400">Empowering Nigerian youth through education since 2025.</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="about.html" class="text-gray-400 hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="programs.html" class="text-gray-400 hover:text-white transition-colors">Programs</a></li>
+                        <li><a href="events.html" class="text-gray-400 hover:text-white transition-colors">Events</a></li>
+                        <li><a href="donate.html" class="text-gray-400 hover:text-white transition-colors">Donate</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Contact</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li class="flex items-center"><i class="fas fa-map-marker-alt mr-2"></i> 15 Education Way, Lagos</li>
+                        <li class="flex items-center"><i class="fas fa-phone-alt mr-2"></i> +234 803 123 4567</li>
+                        <li class="flex items-center"><i class="fas fa-envelope mr-2"></i> augustineudefafoundation@gmail.com</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Follow Us</h3>
+                    <div class="flex space-x-4">
+                        <a href="https://www.facebook.com/share/1CYdGtH2dk/?mibextid=wwXIfr" class="text-gray-400 hover:text-white transition-colors text-xl"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors text-xl"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/augustineudefafoundation?igsh=eWsybWllYXlyMDB6&utm_source=qr" class="text-gray-400 hover:text-white transition-colors text-xl"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors text-xl"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 Augustine Udefa Foundation. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script>     // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        if (mobileMenuButton && mobileMenu) {
+            mobileMenuButton.addEventListener('click', function() {
+                const isHidden = mobileMenu.classList.contains('hidden');
+                if (isHidden) {
+                    mobileMenu.classList.remove('hidden');
+                    mobileMenuButton.innerHTML = '<i class="fas fa-times text-xl"></i>';
+                } else {
+                    mobileMenu.classList.add('hidden');
+                    mobileMenuButton.innerHTML = '<i class="fas fa-bars text-xl"></i>';
+                }
+            });
+        }
+        </script>
+</body>
+</html>
