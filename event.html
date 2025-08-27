@@ -18,54 +18,57 @@
 <body class="bg-white dark:bg-gray-900 transition-colors duration-300 font-sans">
     <!-- Navigation -->
      <!-- Navigation -->
-    <header class="sticky top-0 z-50 bg-white/90 dark:bg-gray-900/90 backdrop-blur-md border-b border-gray-200 dark:border-gray-800">
-       <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-  <div class="flex justify-between h-20 items-center">
-    <div class="flex items-center flex-shrink-0">
-      <a href="#" id="logo-link">
-        <img
-          src="img/imgg.png"
-          alt="Logo"
-          class="h-8 w-auto sm:h-10 md:h-12 lg:h-16 object-contain"
-        >
-      </a>
-    </div>
-    <div class="hidden md:flex items-center space-x-8">
-         <a href="index.html" class="nav-link text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white" id="home-link">Home</a>
-      <a href="about.html" class="nav-link text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white" id="about-link">About</a>
-      
-      <a href="program.html" class="nav-link text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white" id="programs-link">Programs</a>
-      <a href="event.html" class="nav-link text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white" id="events-link">Events</a>
-      <a href="volunteer.html" class="nav-link text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white" id="trustees-link">Volunteer</a>
-      <a href="donate.html" class="nav-link text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white" id="donate-link">Donate</a>
-    </div>
-    <button class="md:hidden text-gray-500 dark:text-gray-400" id="mobile-menu-button">
-      <i class="fas fa-bars text-xl"></i>
-    </button>
-  </div>
+<header class="sticky top-0 z-50 bg-white/90 dark:bg-gray-900/90 backdrop-blur-md border-b border-gray-200 dark:border-gray-800">
+<nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex justify-between h-20 items-center">
+<!-- Logo + title -->
+<div class="flex items-center flex-shrink-0">
+<!-- Updated logo markup: image + text are aligned using flex and spacing. Text is hidden on very small screens. -->
+<a href="#" id="logo-link" class="flex items-center space-x-3 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500" aria-label="Augustine Udefa Foundation home">
+<img src="img/logo.PNG" alt="Augustine Udefa Foundation logo" class="h-10 w-auto sm:h-12 md:h-14 object-contain rounded-md shadow-sm" />
+<!-- Visible on sm and up to save space on mobile -->
+<span class="hidden sm:inline-block text-lg md:text-xl font-semibold text-gray-900 dark:text-white">Augustine Udefa Foundation</span>
+</a>
+</div>
+
+
+<!-- Desktop links -->
+<div class="hidden md:flex items-center space-x-8">
+<a href="index.html" class="nav-link text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white" id="home-link">Home</a>
+<a href="about.html" class="nav-link text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white" id="about-link">About</a>
+<a href="program.html" class="nav-link text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white" id="programs-link">Programs</a>
+<a href="event.html" class="nav-link text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white" id="events-link">Events</a>
+<a href="volunteer.html" class="nav-link text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white" id="trustees-link">Volunteer</a>
+<a href="donate.html" class="nav-link text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white" id="donate-link">Donate</a>
+</div>
+
+
+<!-- Mobile toggle button -->
+<button class="md:hidden text-gray-500 dark:text-gray-400 p-2 rounded-md" id="mobile-menu-button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Toggle menu">
+<i class="fas fa-bars text-xl"></i>
+</button>
+</div>
 </nav>
 
-        
-        <!-- Mobile menu -->
-        <div class="hidden md:hidden bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800" id="mobile-menu">
-            <div class="px-2 pt-2 pb-3 space-y-1">
-                 <a href="index.html" class="block px-3 py-2 rounded-md text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800" id="mobile-home-link">Home</a>
-                <a href="about.html" class="block px-3 py-2 rounded-md text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800" id="mobile-about-link">About</a>
-                
-                <a href="program.html" class="block px-3 py-2 rounded-md text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800" id="mobile-programs-link">Programs</a>
-                <a href="event.html" class="block px-3 py-2 rounded-md text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800" id="mobile-events-link">Events</a>
-                <a href="volunteer.html" class="block px-3 py-2 rounded-md text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800" id="mobile-trustees-link">Volunteer</a>
-                <a href="donate.html" class="block px-3 py-2 rounded-lg  text-grey-700  hover:bg-gray-100 id="mobile-donate-link">Donate</a>
-            </div>
-        </div>
-    </header>
 
+<!-- Mobile menu -->
+<div class="hidden md:hidden bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800" id="mobile-menu">
+<div class="px-2 pt-2 pb-3 space-y-1">
+<a href="index.html" class="block px-3 py-2 rounded-md text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800" id="mobile-home-link">Home</a>
+<a href="about.html" class="block px-3 py-2 rounded-md text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800" id="mobile-about-link">About</a>
+<a href="program.html" class="block px-3 py-2 rounded-md text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800" id="mobile-programs-link">Programs</a>
+<a href="event.html" class="block px-3 py-2 rounded-md text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800" id="mobile-events-link">Events</a>
+<a href="volunteer.html" class="block px-3 py-2 rounded-md text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800" id="mobile-trustees-link">Volunteer</a>
+<a href="donate.html" class="block px-3 py-2 rounded-md text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800" id="mobile-donate-link">Donate</a>
+</div>
+</div>
+</header>
     <!-- Hero Section -->
     <section class="relative h-96 flex items-center justify-center bg-gray-900 overflow-hidden">
         <div class="absolute inset-0 bg-gradient-to-r from-gray-900 to-transparent z-10"></div>
         <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
              alt="Event attendees" 
-             class="absolute inset-0 w-full h-full object-cover">
+             class="absolute inset-0 w-full h-full object-cover object-top">
         <div class="relative z-20 text-center px-4">
             <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">Our Events</h1>
             <p class="text-xl text-gray-300 max-w-2xl mx-auto">Celebrating our impact through meaningful initiatives and community engagements.</p>
@@ -84,9 +87,9 @@
             <div class="grid md:grid-cols-2 gap-8">
                 <!-- Event 1 -->
                 <div class="bg-gray-50 dark:bg-gray-800 rounded-xl shadow-md overflow-hidden transition-all duration-300 event-card">
-                    <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                    <img src="img/five.jpg" 
                          alt="Mosquito nets donation" 
-                         class="w-full h-48 object-cover">
+                         class="w-full h-48 object-cover object-top clickable-image rounded-t-lg cursor-pointer">
                     <div class="p-6">
                         <div class="flex items-center text-sm text-gray-500 dark:text-gray-400 mb-3">
                             <i class="fas fa-calendar-day mr-2 text-gold-500"></i>
@@ -103,7 +106,7 @@
                           <div class="aspect-w-16 aspect-h-9 w-full rounded-lg shadow-md">
                             <iframe width="100%" height="360" src="https://www.youtube.com/embed/m6CHB8OeKY4?feature=shared" title="Mosquito Nets Event" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen class="rounded-lg"></iframe>
                           </div>
-                     
+                      
                     </div>   <div class="flex flex-wrap gap-2">
                             <span class="px-3 py-1 bg-gold-500/10 text-gold-600 dark:text-gold-400 rounded-full text-xs font-medium">Health</span>
                             <span class="px-3 py-1 bg-gold-500/10 text-gold-600 dark:text-gold-400 rounded-full text-xs font-medium">Education</span>
@@ -114,9 +117,9 @@
                 
                 <!-- Event 2 -->
                 <div class="bg-gray-50 dark:bg-gray-800 rounded-xl shadow-md overflow-hidden transition-all duration-300 event-card">
-                    <img src="https://images.unsplash.com/photo-1588072432836-e10032774350?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1472&q=80" 
+                    <img src="img/three.jpg" 
                          alt="School desks donation" 
-                         class="w-full h-48 object-cover">
+                         class="w-full h-48 object-cover object-top clickable-image rounded-t-lg cursor-pointer">
                     <div class="p-6">
                         <div class="flex items-center text-sm text-gray-500 dark:text-gray-400 mb-3">
                             <i class="fas fa-calendar-day mr-2 text-gold-500"></i>
@@ -137,9 +140,9 @@
                 
                 <!-- Event 3 -->
               <div class="bg-gray-50 dark:bg-gray-800 rounded-xl shadow-md overflow-hidden transition-all duration-300 event-card">
-                    <img src="https://images.unsplash.com/photo-1588072432836-e10032774350?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1472&q=80" 
+                    <img src="img/four.jpg " style="object-fit: cover; background-position: top;" 
                          alt="School desks donation" 
-                         class="w-full h-48 object-cover">
+                         class="w-full h-48 object-cover object-top clickable-image rounded-t-lg cursor-pointer">
                     <div class="p-6">
                         <div class="flex items-center text-sm text-gray-500 dark:text-gray-400 mb-3">
                             <i class="fas fa-calendar-day mr-2 text-gold-500"></i>
@@ -167,7 +170,7 @@
                 <div>
                     <img src="img/augustine.jpeg"
                          alt="Teaching and Awards"
-                         class="rounded-xl shadow-md w-full h-64 object-cover mb-6 md:mb-0">
+                         class="rounded-xl shadow-md w-full h-64 object-cover object-top mb-6 md:mb-0 clickable-image cursor-pointer">
                 </div>
                 <div>
                     <h2 class="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-4">Academic Excellence & Awards</h2>
@@ -179,8 +182,8 @@
                     </p>
                     <!-- Academic Awards Images -->
                     <div class="flex flex-col md:flex-row gap-4 mt-6">
-                        <img src="img/award.png" alt="Academic Award 1" class="rounded-xl shadow-md w-full md:w-1/2 h-64 object-cover">
-                        <img src="img/arward2.png" alt="Academic Award 2" class="rounded-xl shadow-md w-full md:w-1/2 h-64 object-cover">
+                        <img src="img/award.png" alt="Academic Award 1" class="rounded-xl shadow-md w-full md:w-1/2 h-64 object-cover object-top clickable-image cursor-pointer">
+                        <img src="img/arward2.png" alt="Academic Award 2" class="rounded-xl shadow-md w-full md:w-1/2 h-64 object-cover object-top clickable-image cursor-pointer">
                     </div>
                     </p>
                     <div class="flex flex-wrap gap-2">
@@ -255,32 +258,15 @@
         </div>
     </section>
 
-    <!-- Upcoming Events -->
-    <!-- <section class="py-20 bg-white dark:bg-gray-900">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">Upcoming Events</h2>
-                <p class="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">Join us in our upcoming initiatives and programs.</p>
-                <div class="w-20 h-1 bg-gold-500 mx-auto mt-4"></div>
-            </div>
-            
-            <div class="bg-gray-50 dark:bg-gray-800 rounded-xl shadow-md p-8">
-                <div class="text-center py-12">
-                    <i class="fas fa-calendar-plus text-5xl text-gray-300 dark:text-gray-600 mb-4"></i>
-                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">More Events Coming Soon</h3>
-                    <p class="text-gray-600 dark:text-gray-300 max-w-lg mx-auto">
-                        We're planning more impactful events and initiatives. Check back later or subscribe to our newsletter to stay updated.
-                    </p>
-                    <div class="mt-6">
-                        <a href="#" class="px-6 py-3 bg-gold-500 text-white rounded-lg hover:bg-gold-600 transition-colors font-medium inline-flex items-center">
-                            Subscribe to Newsletter
-                            <i class="fas fa-envelope ml-2"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
+    <!-- Image modal (reusable for all clickable images) -->
+    <div id="image-modal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black bg-opacity-75 p-4">
+        <div class="relative max-w-6xl w-full max-h-[90vh]">
+            <button id="modal-close" class="absolute top-2 right-2 z-50 bg-white/90 dark:bg-gray-800 rounded-full p-2 shadow hover:bg-white focus:outline-none">
+                <i class="fas fa-times text-gray-800"></i>
+            </button>
+            <img id="modal-image" src="" alt="" class="w-full h-auto max-h-[90vh] object-contain rounded-lg shadow-lg mx-auto">
         </div>
-    </section> -->
+    </div>
 
     <!-- Footer -->
     <footer class="bg-gray-900 text-white py-12">
@@ -341,6 +327,46 @@
             });
         }
 
+        // Image modal logic
+        const modal = document.getElementById('image-modal');
+        const modalImg = document.getElementById('modal-image');
+        const modalClose = document.getElementById('modal-close');
+
+        function openImageModal(src, alt) {
+            modalImg.src = src;
+            modalImg.alt = alt || 'Event image';
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeImageModal() {
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+            modalImg.src = '';
+            document.body.style.overflow = '';
+        }
+
+        // Attach click listeners to all images with the clickable-image class
+        document.querySelectorAll('.clickable-image').forEach(img => {
+            img.addEventListener('click', () => openImageModal(img.src, img.alt));
+        });
+
+        // close on button
+        modalClose.addEventListener('click', closeImageModal);
+
+        // close on overlay click (but not when clicking the image itself)
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) closeImageModal();
+        });
+
+        // close on Escape
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+                closeImageModal();
+            }
+        });
+
         // Smooth scrolling for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
@@ -354,7 +380,6 @@
             });
         });
 
-      
     </script>
 </body>
 </html>
