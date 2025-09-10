@@ -534,7 +534,7 @@
         // Form submission handler
         // EmailJS integration for contact form
         (function(){
-          emailjs.init("OVe_xXvQFu7Rl_q5Q"); // your public key
+          emailjs.init("Hp8-g_JbMoY33XsD_"); // your public key
         })();
 
         document.addEventListener('DOMContentLoaded', () => {
@@ -547,7 +547,7 @@
             form.addEventListener('submit', function(e) {
               e.preventDefault();
               loading.classList.remove('hidden');
-              emailjs.sendForm("service_b6zbahp", "template_cgydb0j", this)
+              emailjs.sendForm("service_hxc7wck", "template_z7rz2mi", this)
                 .then(() => {
                   loading.classList.add('hidden');
                   success.classList.remove('hidden');

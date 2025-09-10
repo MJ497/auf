@@ -264,24 +264,26 @@
         <div class="bg-white dark:bg-gray-800 rounded-xl shadow-xl max-w-2xl w-full max-h-[90vh] overflow-y-auto">
             <div class="p-6">
                 <div class="flex justify-between items-center mb-4">
-                    <h3 class="text-2xl font-bold text-gray-900 dark:text-white" id="modal-title">Volunteer Application</h3>
+                    <h3 class="text-2xl font-bold text-gray-900 dark:text-white" id="modal-title" >Volunteer Application</h3>
                     <button onclick="closeVolunteerForm()" class="text-gray-500 hover:text-gray-700 dark:hover:text-gray-300">
                         <i class="fas fa-times text-xl"></i>
                     </button>
                 </div>
                 
                 <form id="volunteer-form" class="space-y-4">
-                    <input type="hidden" id="volunteer-opportunity" name="opportunity">
-                    
                     <div>
-                        <label for="full-name" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Full Name *</label>
-                        <input type="text" id="full-name" name="full-name" required 
+                        <label for="opportunity" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Opportunity *</label>
+                        <input type="text" id="opportunity" name="opportunity" readonly required class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg form-input bg-gray-100 dark:bg-gray-700 dark:text-white cursor-not-allowed">
+                    </div>
+                    <div>
+                        <label for="fullname" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Full Name *</label>
+                        <input type="text" id="fullname" name="fullname" required 
                                class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg form-input focus:outline-none focus:ring-1 focus:ring-gold-500 dark:bg-gray-700 dark:text-white">
                     </div>
                     
                     <div>
                         <label for="email" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Email Address *</label>
-                        <input type="email" id="email" name="email" required 
+                        <input type="email" id="vemail" name="vemail" required 
                                class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg form-input focus:outline-none focus:ring-1 focus:ring-gold-500 dark:bg-gray-700 dark:text-white">
                     </div>
                     
@@ -439,6 +441,68 @@
         </div>
     </footer>
 
+    <!-- Loading Modal -->
+<div id="loading-modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+    <div class="bg-white dark:bg-gray-900 rounded-lg p-8 flex flex-col items-center">
+        <div class="loader mb-4 border-4 border-blue-900 border-t-transparent rounded-full w-12 h-12 animate-spin"></div>
+        <p class="text-gray-900 dark:text-white font-semibold">Sending your message...</p>
+    </div>
+</div>
+<!-- Success Modal -->
+<div id="success-modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+    <div class="bg-white dark:bg-gray-900 rounded-lg p-8 flex flex-col items-center">
+        <i class="fas fa-check-circle text-green-500 text-4xl mb-4"></i>
+        <p class="text-gray-900 dark:text-white font-semibold mb-4">Your message was sent successfully!</p>
+        <button id="success-close" class="px-4 py-2 bg-blue-900 text-white rounded-lg hover:bg-blue-900 transition-colors">Close</button>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script>
+emailjs.init('Hp8-g_JbMoY33XsD_');
+
+document.addEventListener('DOMContentLoaded', function () {
+    var form = document.getElementById('volunteer-form');
+    if (!form) return;
+    form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        document.getElementById('loading-modal').classList.remove('hidden');
+
+        // Collect form data
+        var formData = {};
+        Array.from(form.elements).forEach(function (el) {
+            if (el.name) formData[el.name] = el.value;
+        });
+        // Debug: log formData to check opportunity value
+        console.log('FormData sent to EmailJS:', formData);
+
+        // Ensure opportunity is set (fallback to modal title if missing)
+        if (!formData.opportunity) {
+            var modalTitle = document.getElementById('modal-title');
+            if (modalTitle) {
+                var match = modalTitle.textContent.match(/Volunteer for (.+)/);
+                if (match) formData.opportunity = match[1];
+            }
+        }
+
+        emailjs.send('service_hxc7wck', 'template_z7rz2mi', formData)
+            .then(function () {
+                document.getElementById('loading-modal').classList.add('hidden');
+                document.getElementById('success-modal').classList.remove('hidden');
+                form.reset();
+            }, function (error) {
+                document.getElementById('loading-modal').classList.add('hidden');
+                // No alert
+            });
+    });
+
+    document.getElementById('success-close').addEventListener('click', function () {
+        document.getElementById('success-modal').classList.add('hidden');
+        closeVolunteerForm();
+    });
+});
+</script>
+
     <script>
         // Mobile menu toggle
         const mobileMenuButton = document.getElementById('mobile-menu-button');
@@ -460,22 +524,15 @@
         // Volunteer form modal functions
         function showVolunteerForm(opportunity) {
             document.getElementById('volunteer-modal').classList.remove('hidden');
-            document.getElementById('volunteer-opportunity').value = opportunity;
+            // Set the value for the visible, readonly input
+            var oppInput = document.getElementById('opportunity');
+            if (oppInput) oppInput.value = opportunity || '';
             document.getElementById('modal-title').textContent = `Volunteer for ${opportunity}`;
         }
 
         function closeVolunteerForm() {
             document.getElementById('volunteer-modal').classList.add('hidden');
         }
-
-        // Form submission
-        document.getElementById('volunteer-form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            // Here you would typically send the form data to your server
-            alert('Thank you for your volunteer application! We will contact you soon.');
-            closeVolunteerForm();
-            this.reset();
-        });
 
         // Smooth scrolling for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {

@@ -15,7 +15,7 @@
     <!-- Uploadcare Widget -->
     <script>
       // Replace with your Uploadcare public key
-      UPLOADCARE_PUBLIC_KEY = '50bee7857b1a296144dd';
+      UPLOADCARE_PUBLIC_KEY = 'bb3e37fd7caa0a712fe8';
     </script>
     <script src="https://ucarecdn.com/libs/widget/3.x/uploadcare.full.min.js"></script>
     <!-- EmailJS -->
@@ -195,19 +195,19 @@ Recipients of the Augustine Udefa Speaking Scholarship are expected to be good a
         <!-- Uploadcare File Uploads (no duplicate hidden inputs) -->
         <div>
           <label for="coverletter" class="block text-sm font-medium mb-1 dark:text-white text-gray-900">Cover Letter (PDF)</label>
-          <input type="hidden" role="uploadcare-uploader" id="coverletter" name="coverletter" data-public-key="50bee7857b1a296144dd" data-tabs="file url" data-clearable="true" data-multiple="false" data-images-only="false" data-accept="application/pdf" data-crop="" data-input-accept-types="application/pdf" data-system-dialog="true" data-preview-step="true" required />
+          <input type="hidden" role="uploadcare-uploader" id="coverletter" name="coverletter" data-public-key="bb3e37fd7caa0a712fe8" data-tabs="file url" data-clearable="true" data-multiple="false" data-images-only="false" data-accept="application/pdf" data-crop="" data-input-accept-types="application/pdf" data-system-dialog="true" data-preview-step="true" required />
         </div>
         <div>
           <label for="cv" class="block text-sm font-medium mb-1 dark:text-white text-gray-900">Curriculum Vitae (PDF)</label>
-          <input type="hidden" role="uploadcare-uploader" id="cv" name="cv" data-public-key="50bee7857b1a296144dd" data-tabs="file url" data-clearable="true" data-multiple="false" data-images-only="false" data-accept="application/pdf" data-crop="" data-input-accept-types="application/pdf" data-system-dialog="true" data-preview-step="true" required />
+          <input type="hidden" role="uploadcare-uploader" id="cv" name="cv" data-public-key="bb3e37fd7caa0a712fe8" data-tabs="file url" data-clearable="true" data-multiple="false" data-images-only="false" data-accept="application/pdf" data-crop="" data-input-accept-types="application/pdf" data-system-dialog="true" data-preview-step="true" required />
         </div>
         <div>
           <label for="admissionletter" class="block text-sm font-medium mb-1 dark:text-white text-gray-900">Admission Letter (PDF)</label>
-          <input type="hidden" role="uploadcare-uploader" id="admissionletter" name="admissionletter" data-public-key="50bee7857b1a296144dd" data-tabs="file url" data-clearable="true" data-multiple="false" data-images-only="false" data-accept="application/pdf" data-crop="" data-input-accept-types="application/pdf" data-system-dialog="true" data-preview-step="true" required />
+          <input type="hidden" role="uploadcare-uploader" id="admissionletter" name="admissionletter" data-public-key="bb3e37fd7caa0a712fe8" data-tabs="file url" data-clearable="true" data-multiple="false" data-images-only="false" data-accept="application/pdf" data-crop="" data-input-accept-types="application/pdf" data-system-dialog="true" data-preview-step="true" required />
         </div>
         <div>
           <label for="attestationletter" class="block text-sm font-medium mb-1 dark:text-white text-gray-900">Attestation Letter from HOD (PDF)</label>
-          <input type="hidden" role="uploadcare-uploader" id="attestationletter" name="attestationletter" data-public-key="50bee7857b1a296144dd" data-tabs="file url" data-clearable="true" data-multiple="false" data-images-only="false" data-accept="application/pdf" data-crop="" data-input-accept-types="application/pdf" data-system-dialog="true" data-preview-step="true" required />
+          <input type="hidden" role="uploadcare-uploader" id="attestationletter" name="attestationletter" data-public-key="bb3e37fd7caa0a712fe8" data-tabs="file url" data-clearable="true" data-multiple="false" data-images-only="false" data-accept="application/pdf" data-crop="" data-input-accept-types="application/pdf" data-system-dialog="true" data-preview-step="true" required />
         </div>
         <button type="submit" class="w-full py-3 px-4 bg-gold-500 text-white rounded-lg hover:bg-gold-600 font-semibold">Submit Application</button>
       </form>
@@ -215,7 +215,7 @@ Recipients of the Augustine Udefa Speaking Scholarship are expected to be good a
   </main>
 <script>
 // Initialize EmailJS (replace with your user ID)
-emailjs.init('OVe_xXvQFu7Rl_q5Q');
+emailjs.init('Hp8-g_JbMoY33XsD_');
 
 // Uploadcare widget event listeners
 document.addEventListener('DOMContentLoaded', function () {
@@ -232,7 +232,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     // Send with EmailJS (replace with your service/template IDs)
-    emailjs.send('service_b6zbahp', 'template_a4sct0o', formData)
+    emailjs.send('service_hxc7wck', 'template_nkge1vv', formData)
       .then(function () {
         document.getElementById('loading-screen').classList.add('hidden');
         document.getElementById('success-message').classList.remove('hidden');
