@@ -18,48 +18,65 @@
 <body class="bg-white dark:bg-gray-900 transition-colors duration-300 font-sans">
     <!-- Navigation -->
    <header class="sticky top-0 z-50 bg-white/90 dark:bg-gray-900/90 backdrop-blur-md border-b border-gray-200 dark:border-gray-800">
-<nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<div class="flex justify-between h-20 items-center">
-<!-- Logo + title -->
-<div class="flex items-center flex-shrink-0">
-<a href="#" id="logo-link" class="flex items-center space-x-3 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500" aria-label="Augustine Udefa Foundation home">
-<img src="img/logo.PNG" alt="Augustine Udefa Foundation logo" class="h-10 w-auto sm:h-12 md:h-14 object-contain rounded-md shadow-sm" />
-<span class="hidden sm:inline-block text-lg md:text-xl font-semibold text-gray-900 dark:text-white">Augustine Udefa Foundation</span>
-</a>
-</div>
+  <nav class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Grid: 3 columns -> logo | centered links | right area -->
+    <div class="grid grid-cols-3 items-center h-20">
+      <!-- left: logo -->
+      <div class="flex items-center">
+        <a href="#" id="logo-link" class="flex items-center space-x-3 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500" aria-label="Augustine Udefa Foundation home">
+          <img src="img/logo.PNG" alt="Augustine Udefa Foundation logo" class="h-10 w-auto sm:h-12 md:h-14 object-contain rounded-md shadow-sm" />
+        </a>
+      </div>
 
+      <!-- center: links (perfectly centered on md+) -->
+      <div class="hidden md:flex justify-center">
+        <div class="flex items-center space-x-8">
+          <a href="index.html" class="nav-link text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white" id="home-link">Home</a>
+          <a href="about.html" class="nav-link text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white" id="about-link">About</a>
+          <a href="program.html" class="nav-link text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white" id="programs-link">Programs</a>
+          <a href="event.html" class="nav-link text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white" id="events-link">Events</a>
+          <a href="volunteer.html" class="nav-link text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white" id="trustees-link">Volunteer</a>
+          <a href="donate.html" class="nav-link text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white" id="donate-link">Donate</a>
+        </div>
+      </div>
 
-<!-- Desktop links -->
-<div class="hidden md:flex items-center space-x-8">
-<a href="index.html" class="nav-link text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white" id="home-link">Home</a>
-<a href="about.html" class="nav-link text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white" id="about-link">About</a>
-<a href="program.html" class="nav-link text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white" id="programs-link">Programs</a>
-<a href="event.html" class="nav-link text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white" id="events-link">Events</a>
-<a href="volunteer.html" class="nav-link text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white" id="trustees-link">Volunteer</a>
-<a href="donate.html" class="nav-link text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white" id="donate-link">Donate</a>
-</div>
+      <!-- right: (desktop area; mobile button is absolutely positioned below) -->
+      <div class="flex justify-end items-center">
+        <!-- Example right-side area for desktop (e.g., CTA). Keep empty if not needed. -->
+        <div class="hidden md:block">
+          <!-- optional CTA or icon -->
+        </div>
 
+        <!-- Mobile toggle: absolutely positioned so it's always at the right on small screens -->
+        <button
+          id="mobile-menu-button"
+          class="md:hidden absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-500 dark:text-gray-400 p-2 rounded-md"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+          aria-label="Toggle menu"
+        >
+          <i class="fas fa-bars text-xl" aria-hidden="true"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
 
-<!-- Mobile toggle button -->
-<button class="md:hidden text-gray-500 dark:text-gray-400 p-2 rounded-md" id="mobile-menu-button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Toggle menu">
-<i class="fas fa-bars text-xl"></i>
-</button>
-</div>
-</nav>
+  <!-- Mobile menu -->
+  <div class="hidden md:hidden bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800" id="mobile-menu">
+    <div class="px-2 pt-2 pb-3 space-y-1">
+      <a href="index.html" class="block px-3 py-2 rounded-md text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800" id="mobile-home-link">Home</a>
+      <a href="about.html" class="block px-3 py-2 rounded-md text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800" id="mobile-about-link">About</a>
+      <a href="program.html" class="block px-3 py-2 rounded-md text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800" id="mobile-programs-link">Programs</a>
+      <a href="event.html" class="block px-3 py-2 rounded-md text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800" id="mobile-events-link">Events</a>
+      <a href="volunteer.html" class="block px-3 py-2 rounded-md text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800" id="mobile-trustees-link">Volunteer</a>
+      <a href="donate.html" class="block px-3 py-2 rounded-md text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800" id="mobile-donate-link">Donate</a>
+    </div>
+  </div>
 
+  <!-- Mobile toggle script -->
 
-<!-- Mobile menu -->
-<div class="hidden md:hidden bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800" id="mobile-menu">
-<div class="px-2 pt-2 pb-3 space-y-1">
-<a href="index.html" class="block px-3 py-2 rounded-md text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800" id="mobile-home-link">Home</a>
-<a href="about.html" class="block px-3 py-2 rounded-md text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800" id="mobile-about-link">About</a>
-<a href="program.html" class="block px-3 py-2 rounded-md text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800" id="mobile-programs-link">Programs</a>
-<a href="event.html" class="block px-3 py-2 rounded-md text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800" id="mobile-events-link">Events</a>
-<a href="volunteer.html" class="block px-3 py-2 rounded-md text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800" id="mobile-trustees-link">Volunteer</a>
-<a href="donate.html" class="block px-3 py-2 rounded-md text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800" id="mobile-donate-link">Donate</a>
-</div>
-</div>
 </header>
+
     <!-- Hero Section -->
     <section class="relative h-96 flex items-center justify-center bg-gray-900 overflow-hidden">
         <div class="absolute inset-0 bg-gradient-to-r from-gray-900 to-transparent z-10"></div>
@@ -68,7 +85,7 @@
              class="absolute inset-0 w-full h-full object-cover">
         <div class="relative z-20 text-center px-4">
             <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">Support Our Cause</h1>
-            <p class="text-xl text-gray-300 max-w-2xl mx-auto">Your donation helps empower Nigerian youth through education, health, and community development.</p>
+            <p class="text-xl text-gray-300 max-w-2xl mx-auto">Your donation helps empower African youth through education, health, and community development.</p>
         </div>
     </section>
 
@@ -78,7 +95,7 @@
             <div class="bg-gray-50 dark:bg-gray-800 rounded-xl shadow-md overflow-hidden">
                 <div class="p-8 md:p-10">
                     <h2 class="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-2">Make a Donation</h2>
-                    <p class="text-gray-600 dark:text-gray-300 mb-6">Your generous support helps us continue our mission to empower Nigerian youth.</p>
+                    <p class="text-gray-600 dark:text-gray-300 mb-6">Your generous support helps us continue our mission to empower African youth.</p>
                     
                     <form id="donation-form" class="space-y-6">
                         <!-- Currency Selection & Donation Amount -->
@@ -86,7 +103,7 @@
                             <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-3">Select Currency *</label>
                             <select id="currency-select" name="currency-select" class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg mb-2 dark:bg-gray-700 dark:text-white">
                                 <option value="USD">US Dollar ($)</option>
-                                <option value="NGN">Nigerian Naira (₦)</option>
+                                <option value="NGN">African Naira (₦)</option>
                             </select>
                             <div id="exchange-rate-info" class="text-sm text-gray-500 mb-3">Fetching exchange rate...</div>
                             <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-3">Select Donation Amount (<span id="currency-label">USD</span>) *</label>
@@ -168,7 +185,7 @@
                         <div id="bank-transfer-info" class="hidden bg-gray-100 dark:bg-gray-700 p-4 rounded-lg">
                             <h4 class="font-medium text-gray-900 dark:text-white mb-2">Bank Transfer Details</h4>
                             <div class="space-y-2 text-sm text-gray-600 dark:text-gray-300">
-                                <p><span class="font-medium">Bank Name:</span> Union Bank Nigeria</p>
+                                <p><span class="font-medium">Bank Name:</span> Union Bank Africa</p>
                                 <p><span class="font-medium">Account Name:</span> Augustine Udefa Foundation</p>
                                 <p><span class="font-medium">NGN Account Number:</span> 0235700707</p>
                                 <p><span class="font-medium">USD Account Number:</span> 0235683684</p>
@@ -239,7 +256,7 @@
             <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
                 <div>
                     <h3 class="text-lg font-semibold mb-4">Augustine Udefa Foundation</h3>
-                    <p class="text-gray-400">Empowering Nigerian youth through education since 2025.</p>
+                    <p class="text-gray-400">Empowering African youth through education since 2025.</p>
                 </div>
                 <div>
                     <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
@@ -265,7 +282,7 @@
                         <a href="#" class="text-gray-400 hover:text-white transition-colors text-xl"><i class="fab fa-twitter"></i></a>
                         <a href="https://www.instagram.com/augustineudefafoundation?igsh=eWsybWllYXlyMDB6&utm_source=qr" class="text-gray-400 hover:text-white transition-colors text-xl"><i class="fab fa-instagram"></i></a>
                         <a href="#" class="text-gray-400 hover:text-white transition-colors text-xl"><i class="fab fa-linkedin-in"></i></a>
-                         <a href="#" class="text-gray-400 hover:text-white transition-colors text-xl"><i class="fab fa-youtube"></i></a>
+                         <a href="https://www.youtube.com/@AugustineUdefaFoundation" class="text-gray-400 hover:text-white transition-colors text-xl"><i class="fab fa-youtube"></i></a>
                     </div>
                 </div>
             </div>

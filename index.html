@@ -23,50 +23,65 @@
     <!-- Navigation -->
   <!-- Navigation -->
 <header class="sticky top-0 z-50 bg-white/90 dark:bg-gray-900/90 backdrop-blur-md border-b border-gray-200 dark:border-gray-800">
-<nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<div class="flex justify-between h-20 items-center">
-<!-- Logo + title -->
-<div class="flex items-center flex-shrink-0">
-<!-- Updated logo markup: image + text are aligned using flex and spacing. Text is hidden on very small screens. -->
-<a href="#" id="logo-link" class="flex items-center space-x-3 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500" aria-label="Augustine Udefa Foundation home">
-<img src="img/logo.PNG" alt="Augustine Udefa Foundation logo" class="h-10 w-auto sm:h-12 md:h-14 object-contain rounded-md shadow-sm" />
-<!-- Visible on sm and up to save space on mobile -->
-<span class="hidden sm:inline-block text-lg md:text-xl font-semibold text-gray-900 dark:text-white">Augustine Udefa Foundation</span>
-</a>
-</div>
+  <nav class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Grid: 3 columns -> logo | centered links | right area -->
+    <div class="grid grid-cols-3 items-center h-20">
+      <!-- left: logo -->
+      <div class="flex items-center">
+        <a href="#" id="logo-link" class="flex items-center space-x-3 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500" aria-label="Augustine Udefa Foundation home">
+          <img src="img/logo.PNG" alt="Augustine Udefa Foundation logo" class="h-10 w-auto sm:h-12 md:h-14 object-contain rounded-md shadow-sm" />
+        </a>
+      </div>
 
+      <!-- center: links (perfectly centered on md+) -->
+      <div class="hidden md:flex justify-center">
+        <div class="flex items-center space-x-8">
+          <a href="index.html" class="nav-link text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white" id="home-link">Home</a>
+          <a href="about.html" class="nav-link text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white" id="about-link">About</a>
+          <a href="program.html" class="nav-link text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white" id="programs-link">Programs</a>
+          <a href="event.html" class="nav-link text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white" id="events-link">Events</a>
+          <a href="volunteer.html" class="nav-link text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white" id="trustees-link">Volunteer</a>
+          <a href="donate.html" class="nav-link text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white" id="donate-link">Donate</a>
+        </div>
+      </div>
 
-<!-- Desktop links -->
-<div class="hidden md:flex items-center space-x-8">
-<a href="index.html" class="nav-link text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white" id="home-link">Home</a>
-<a href="about.html" class="nav-link text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white" id="about-link">About</a>
-<a href="program.html" class="nav-link text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white" id="programs-link">Programs</a>
-<a href="event.html" class="nav-link text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white" id="events-link">Events</a>
-<a href="volunteer.html" class="nav-link text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white" id="trustees-link">Volunteer</a>
-<a href="donate.html" class="nav-link text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white" id="donate-link">Donate</a>
-</div>
+      <!-- right: (desktop area; mobile button is absolutely positioned below) -->
+      <div class="flex justify-end items-center">
+        <!-- Example right-side area for desktop (e.g., CTA). Keep empty if not needed. -->
+        <div class="hidden md:block">
+          <!-- optional CTA or icon -->
+        </div>
 
+        <!-- Mobile toggle: absolutely positioned so it's always at the right on small screens -->
+        <button
+          id="mobile-menu-button"
+          class="md:hidden absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-500 dark:text-gray-400 p-2 rounded-md"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+          aria-label="Toggle menu"
+        >
+          <i class="fas fa-bars text-xl" aria-hidden="true"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
 
-<!-- Mobile toggle button -->
-<button class="md:hidden text-gray-500 dark:text-gray-400 p-2 rounded-md" id="mobile-menu-button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Toggle menu">
-<i class="fas fa-bars text-xl"></i>
-</button>
-</div>
-</nav>
+  <!-- Mobile menu -->
+  <div class="hidden md:hidden bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800" id="mobile-menu">
+    <div class="px-2 pt-2 pb-3 space-y-1">
+      <a href="index.html" class="block px-3 py-2 rounded-md text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800" id="mobile-home-link">Home</a>
+      <a href="about.html" class="block px-3 py-2 rounded-md text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800" id="mobile-about-link">About</a>
+      <a href="program.html" class="block px-3 py-2 rounded-md text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800" id="mobile-programs-link">Programs</a>
+      <a href="event.html" class="block px-3 py-2 rounded-md text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800" id="mobile-events-link">Events</a>
+      <a href="volunteer.html" class="block px-3 py-2 rounded-md text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800" id="mobile-trustees-link">Volunteer</a>
+      <a href="donate.html" class="block px-3 py-2 rounded-md text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800" id="mobile-donate-link">Donate</a>
+    </div>
+  </div>
 
+  <!-- Mobile toggle script -->
 
-<!-- Mobile menu -->
-<div class="hidden md:hidden bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800" id="mobile-menu">
-<div class="px-2 pt-2 pb-3 space-y-1">
-<a href="index.html" class="block px-3 py-2 rounded-md text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800" id="mobile-home-link">Home</a>
-<a href="about.html" class="block px-3 py-2 rounded-md text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800" id="mobile-about-link">About</a>
-<a href="program.html" class="block px-3 py-2 rounded-md text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800" id="mobile-programs-link">Programs</a>
-<a href="event.html" class="block px-3 py-2 rounded-md text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800" id="mobile-events-link">Events</a>
-<a href="volunteer.html" class="block px-3 py-2 rounded-md text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800" id="mobile-trustees-link">Volunteer</a>
-<a href="donate.html" class="block px-3 py-2 rounded-md text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800" id="mobile-donate-link">Donate</a>
-</div>
-</div>
 </header>
+
     <!-- Hero Section with Video -->
     <section class="relative h-screen flex items-center overflow-hidden">
         <video autoplay loop muted playsinline class="hero-video">
@@ -74,8 +89,8 @@
         </video>
         <div class="absolute inset-0 bg-gradient-to-r from-gray-900 to-transparent z-10"></div>
         <div class="relative z-10 px-4 max-w-3xl ml-4 sm:ml-12 md:ml-20">
-            <h1 class="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">Empowering Nigeria's Future Through Education</h1>
-            <p class="text-xl md:text-2xl text-gray-200 mb-8">The Augustine Udefa Foundation provides scholarships, resources, and opportunities to bright students across Nigeria.</p>
+            <h1 class="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">Empowering Africa's Future Through Education</h1>
+            <p class="text-xl md:text-2xl text-gray-200 mb-8">The Augustine Udefa Foundation provides scholarships, resources, and opportunities to bright students across Africa.</p>
             <div class="flex flex-col sm:flex-row gap-4">
                 <a href="program.html" class="px-6 py-3 bg-blue-900 text-white rounded-lg hover:bg-blue-900 transition-colors font-medium" id="apply-link">Apply for Scholarship</a>
                 <a href="donate.html" class="px-6 py-3 bg-gold-500 text-white rounded-lg hover:bg-gray-100 transition-colors font-medium" id="support-link">Support Our Cause</a>
@@ -114,7 +129,7 @@
                     </div> -->
                 </div>
                 <div class="order-1 md:order-2 rounded-xl overflow-hidden shadow-xl">
-                    <img src="https://images.unsplash.com/flagged/photo-1579133311477-9121405c78dd?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+                    <img src="img/IMG_1076.JPG" 
                          alt="African students in classroom" 
                          class="w-full h-auto object-cover">
                 </div>
@@ -227,7 +242,7 @@
                          <div class="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
                             <h4 class="font-semibold text-gray-900 dark:text-white mb-2">Profile Links</h4>
          <ul class="list-disc list-inside text-gray-600 dark:text-gray-300 space-y-1">
-        <li><a href="https:// www.linkedin.com/in/augustine-udefa-156790127"><i class="fa-brands fa-linkedin"></i> linkedin</a></li>
+        <li><a href="https://www.linkedin.com/in/augustine-udefa-156790127?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"><i class="fa-brands fa-linkedin"></i> linkedin</a></li>
   <li><a href=" https://www.researchgate.net/profile/Augustine-Udefa?ev=hdr_xprf"><i class="fa-brands fa-researchgate"></i></i>Research Gate</a></li>
 <li><a href="https://scholar.google.com/citations?hl=en&user=vyaYBZkAAAAJ"><i class="fa-brands fa-googlescholar"></i>Google Scholar</a></li>
    <li><a href="https://www.facebook.com/share/1Za5VAXoUH/?mibextid=wwXIfr"><i class="fa-brands fa-facebook"></i>Facebook</a></li>
@@ -442,7 +457,7 @@ Sunday holds bachelor’s and master’s degrees in physiology from the Universi
                             <i class="fas fa-school text-blue-900 text-2xl"></i>
                         </div>
                         <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">Augustine Udefa Speaking Scholarship</h3>
-                        <p class="text-gray-600 dark:text-gray-300 mb-6">The Augustine Udefa Speaking Scholarship is awarded to students in Nigerian educational institutions, who can demonstrate good public speaking skills and critical thinking ability.</p>
+                        <p class="text-gray-600 dark:text-gray-300 mb-6">The Augustine Udefa Speaking Scholarship is awarded to students in African educational institutions, who can demonstrate good public speaking skills and critical thinking ability.</p>
                         <ul class="space-y-2 mb-6">
                             <li class="flex items-center text-gray-600 dark:text-gray-300">
                             <i class="fas fa-check-circle text-blue-900 mr-2"></i>
@@ -480,7 +495,7 @@ Sunday holds bachelor’s and master’s degrees in physiology from the Universi
                         </li>
                         </ul>
                         <div class="mt-auto">
-                            <a href="#" class="text-gold-500 hover:text-blue-900 font-medium inline-flex items-center" id="university-link">
+                            <a href="program.html" class="text-gold-500 hover:text-blue-900 font-medium inline-flex items-center" id="university-link">
                                 Apply now
                                 <i class="fas fa-arrow-right ml-2"></i>
                             </a>
@@ -505,13 +520,45 @@ Sunday holds bachelor’s and master’s degrees in physiology from the Universi
                         </li>
                         </ul>
                         <div class="mt-auto">
-                            <a href="#" class="text-gold-500 hover:text-blue-900 font-medium inline-flex items-center" id="postgrad-link">
+                            <a href="program.html" class="text-gold-500 hover:text-blue-900 font-medium inline-flex items-center" id="postgrad-link">
                                 Apply now
                                 <i class="fas fa-arrow-right ml-2"></i>
                             </a>
                         </div>
                     </div>
                 </div>
+  <div class="bg-white dark:bg-gray-900 rounded-xl shadow-md overflow-hidden transition-all duration-300 card-hover flex flex-col">
+                    <div class="p-8 flex flex-col flex-1">
+                        <div class="w-14 h-14 bg-blue-100 dark:bg-blue-900 rounded-full flex items-center justify-center mb-6">
+                            <i class="fas fa-graduation-cap text-blue-900 text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">AUSMP — Augustine Udefa Scholarship Mentorship Program</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-6">  Mentorship & full-scholarship preparation for excellent but underfunded applicants from Africa seeking graduate study in the United States.
+   .</p>
+    
+                        <ul class="space-y-2 mb-6">
+                           <li class="flex items-center text-gray-600 dark:text-gray-300">
+                            <i class="fas fa-check-circle text-blue-900 mt-1 mr-2"></i>
+                          Application deadline: 31 March.
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-blue-900 mt-1 mr-2"></i>
+                         Mentorship & preparation: 15 April – 30 October.
+                        </li>
+                           <li class="flex items-start">
+                            <i class="fas fa-check-circle text-blue-900 mt-1 mr-2"></i>
+                         Scholarship start: Fall or Spring semester (depending on award).
+                        </li>
+                        </ul>
+                        <div class="mt-auto">
+                            <a href="program.html" class="text-gold-500 hover:text-blue-900 font-medium inline-flex items-center" id="postgrad-link">
+                                Apply now
+                                <i class="fas fa-arrow-right ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
             </div>
             </div>
         </div>
@@ -524,7 +571,7 @@ Sunday holds bachelor’s and master’s degrees in physiology from the Universi
             <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
                 <div>
                     <h3 class="text-lg font-semibold mb-4">Augustine Udefa Foundation</h3>
-                    <p class="text-gray-400">Empowering Nigerian youth through education since 2025.</p>
+                    <p class="text-gray-400">Empowering African youth through education since 2025.</p>
                 </div>
                 <div>
                     <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
@@ -550,7 +597,7 @@ Sunday holds bachelor’s and master’s degrees in physiology from the Universi
                         <a href="#" class="text-gray-400 hover:text-white transition-colors text-xl"><i class="fab fa-twitter"></i></a>
                         <a href="https://www.instagram.com/augustineudefafoundation?igsh=eWsybWllYXlyMDB6&utm_source=qr" class="text-gray-400 hover:text-white transition-colors text-xl"><i class="fab fa-instagram"></i></a>
                         <a href="#" class="text-gray-400 hover:text-white transition-colors text-xl"><i class="fab fa-linkedin-in"></i></a>
-                         <a href="#" class="text-gray-400 hover:text-white transition-colors text-xl"><i class="fab fa-youtube"></i></a>
+                         <a href="https://www.youtube.com/@AugustineUdefaFoundation" class="text-gray-400 hover:text-white transition-colors text-xl"><i class="fab fa-youtube"></i></a>
                     </div>
                 </div>
             </div>
