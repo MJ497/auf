@@ -39,56 +39,10 @@
     <div style="width:2.5rem;"></div> <!-- Spacer to balance flex -->
   </header>
 
-  <main class="max-w-3xl mx-auto py-10 px-4">
+  <main class="max-w-4xl mx-auto py-10 px-4">
     <h1 class="text-3xl font-bold text-gray-900 dark:text-white mb-6">AUSMP — Augustine Udefa Scholarship Mentorship Program</h1>
 
-    <section class="prose prose-lg text-gray-700 dark:text-gray-300 space-y-4 mb-8">
-      <p>
-        The AUSMP is a program administered by the Augustine Udefa Foundation in which applicants with excellent grades,
-        but lacking funding, are mentored and prepared for the award of fully funded scholarships to pursue graduate studies
-        in the United States (U.S.). Accepted applicants are expected to demonstrate enthusiasm to pursue graduate study and
-        devote their time to the mentorship and preparations for the award of the scholarships.
-      </p>
-
-      <p>
-        Prior to submitting their applications, applicants should appraise themselves with the institution they wish to attend
-        in the U.S. and the programs they wish to pursue in those institutions. Applicants should have all the requirements of
-        their proposed institutions before applying for the AUSMP. The AUSMP is open to applicants from Africa who can demonstrate
-        that they meet the eligibility criteria and lack funding to pursue graduate studies in the U.S.
-      </p>
-
-      <h2 class="text-lg font-semibold">Eligibility</h2>
-      <ul class="list-disc ml-6">
-        <li>You are an individual of African descent.</li>
-        <li>You have a minimum cumulative grade point average (CGPA) of 4.00 on a 5.00 scale or 3.00 on a 4.00 scale at both bachelor’s (and master’s, if applicable) levels.</li>
-        <li>You must demonstrate lack of funding to pursue graduate studies in the U.S.</li>
-      </ul>
-
-      <h2 class="text-lg font-semibold">Application requirements</h2>
-      <ul class="list-disc ml-6">
-        <li>Personal statement</li>
-        <li>Unofficial academic transcript(s)</li>
-        <li>Cover letter</li>
-        <li>Curriculum vitae</li>
-        <li>Three letters of recommendation from academic referees</li>
-        <li>IELTS or TOEFL scores (if available)</li>
-        <li>GRE scores (if available)</li>
-      </ul>
-
-      <h2 class="text-lg font-semibold">How to apply</h2>
-      <p>Complete the AUSMP application form below and upload all required documents via the form.</p>
-
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-        <div><strong>Application deadline:</strong></div>
-        <div class="md:col-span-2">31 March</div>
-
-        <div><strong>Mentorship & preparation:</strong></div>
-        <div class="md:col-span-2">April 15 – October 30</div>
-
-        <div><strong>Scholarship start date:</strong></div>
-        <div class="md:col-span-2">Fall or Spring semester (depends on award)</div>
-      </div>
-    </section>
+    <section class="prose prose-lg text-gray-700 dark:text-gray-300 space-y-4 mb-8"> <p> The AUSMP is a program administered by the Augustine Udefa Foundation in which applicants with excellent grades, but lacking funding, are mentored and prepared for the award of fully funded scholarships to pursue graduate studies in the United States (U.S.). Accepted applicants are expected to demonstrate enthusiasm to pursue graduate study and devote their time to the mentorship and preparations for the award of the scholarships. </p> <p> Prior to submitting their applications, applicants should appraise themselves with the institution they wish to attend in the U.S. and the programs they wish to pursue in those institutions. Applicants should have all the requirements of their proposed institutions before applying for the AUSMP. The AUSMP is open to applicants from Africa who can demonstrate that they meet the eligibility criteria and lack funding to pursue graduate studies in the U.S. </p> <h2 class="text-lg font-semibold">Eligibility</h2> <ul class="list-disc ml-6"> <li>You are an individual of African descent.</li> <li>You have a minimum cumulative grade point average (CGPA) of 4.00 on a 5.00 scale or 3.00 on a 4.00 scale at both bachelor’s (and master’s, if applicable) levels.</li> <li>You must demonstrate lack of funding to pursue graduate studies in the U.S.</li> </ul> <h2 class="text-lg font-semibold">Application requirements</h2> <ul class="list-disc ml-6"> <li>Personal statement</li> <li>Unofficial academic transcript(s)</li> <li>Cover letter</li> <li>Curriculum vitae</li> <li>Three letters of recommendation from academic referees</li> <li>IELTS or TOEFL scores (if available)</li> <li>GRE scores (if available)</li> </ul> <h2 class="text-lg font-semibold">How to apply</h2> <p>Complete the AUSMP application form below and upload all required documents via the form.</p> <div class="grid grid-cols-1 md:grid-cols-3 gap-4"> <div><strong>Application deadline:</strong></div> <div class="md:col-span-2">31 March</div> <div><strong>Mentorship & preparation:</strong></div> <div class="md:col-span-2">April 15 – October 30</div> <div><strong>Scholarship start date:</strong></div> <div class="md:col-span-2">Fall or Spring semester (depends on award)</div> </div> </section>
 
     <!-- FORM -->
     <div class="mt-8">
@@ -112,108 +66,198 @@
 
       <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">Application form for AUSMP</h2>
 
-      <form id="ausmp-form" class="space-y-4 bg-gray-50 dark:bg-gray-800 p-6 rounded-xl shadow-md" novalidate>
-        <!-- Basic info -->
-        <div>
-          <label for="fullName" class="block text-sm font-medium mb-1 text-gray-900 dark:text-white">Full name</label>
-          <input type="text" id="fullName" name="fullName" required class="w-full px-4 py-2 border rounded-lg dark:bg-gray-900 dark:border-gray-700 dark:text-gray-400">
-        </div>
+      <form id="ausmp-form" class="space-y-6 bg-gray-50 dark:bg-gray-800 p-6 rounded-xl shadow-md" novalidate>
+        <!-- PERSONAL DETAILS -->
+        <fieldset class="border border-gray-200 dark:border-gray-700 p-4 rounded-lg">
+          <legend class="px-2 text-lg font-semibold text-gray-900 dark:text-white">Personal details</legend>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-3">
+            <div>
+              <label for="fullName" class="block text-sm font-medium mb-1 text-gray-900 dark:text-white">Full name</label>
+              <input type="text" id="fullName" name="fullName" required class="w-full px-4 py-2 border rounded-lg dark:bg-gray-900 dark:border-gray-700 dark:text-gray-400">
+            </div>
+            <div>
+              <label for="dob" class="block text-sm font-medium mb-1 text-gray-900 dark:text-white">Date of birth</label>
+              <input type="date" id="dob" name="dob" required class="w-full px-4 py-2 border rounded-lg dark:bg-gray-900 dark:border-gray-700 dark:text-gray-400">
+            </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-          <div>
-            <label for="dob" class="block text-sm font-medium mb-1 text-gray-900 dark:text-white">Date of birth</label>
-            <input type="date" id="dob" name="dob" required class="w-full px-4 py-2 border rounded-lg dark:bg-gray-900 dark:border-gray-700 dark:text-gray-400">
+            <div>
+              <label for="sex" class="block text-sm font-medium mb-1 text-gray-900 dark:text-white">Sex</label>
+              <select id="sex" name="sex" required class="w-full px-4 py-2 border rounded-lg dark:bg-gray-900 dark:border-gray-700 dark:text-gray-400">
+                <option value="">Select</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+                <option value="prefer_not">Prefer not to say</option>
+              </select>
+            </div>
+            <div>
+              <label for="nationality" class="block text-sm font-medium mb-1 text-gray-900 dark:text-white">Nationality</label>
+              <input type="text" id="nationality" name="nationality" required class="w-full px-4 py-2 border rounded-lg dark:bg-gray-900 dark:border-gray-700 dark:text-gray-400">
+            </div>
+
+            <div>
+              <label for="stateOfOrigin" class="block text-sm font-medium mb-1 text-gray-900 dark:text-white">State of origin</label>
+              <input type="text" id="stateOfOrigin" name="stateOfOrigin" class="w-full px-4 py-2 border rounded-lg dark:bg-gray-900 dark:border-gray-700 dark:text-gray-400">
+            </div>
+            <div>
+              <label for="religion" class="block text-sm font-medium mb-1 text-gray-900 dark:text-white">Religion</label>
+              <input type="text" id="religion" name="religion" class="w-full px-4 py-2 border rounded-lg dark:bg-gray-900 dark:border-gray-700 dark:text-gray-400">
+            </div>
+
+            <div>
+              <label for="contact" class="block text-sm font-medium mb-1 text-gray-900 dark:text-white">Contact number</label>
+              <input type="tel" id="contact" name="contact" required class="w-full px-4 py-2 border rounded-lg dark:bg-gray-900 dark:border-gray-700 dark:text-gray-400">
+            </div>
+            <div>
+              <label for="email" class="block text-sm font-medium mb-1 text-gray-900 dark:text-white">Email address</label>
+              <input type="email" id="email" name="email" required class="w-full px-4 py-2 border rounded-lg dark:bg-gray-900 dark:border-gray-700 dark:text-gray-400">
+            </div>
+
+            <div class="md:col-span-2">
+              <label for="permanentAddress" class="block text-sm font-medium mb-1 text-gray-900 dark:text-white">Permanent address</label>
+              <textarea id="permanentAddress" name="permanentAddress" rows="2" class="w-full px-4 py-2 border rounded-lg dark:bg-gray-900 dark:border-gray-700 dark:text-gray-400"></textarea>
+            </div>
           </div>
+        </fieldset>
 
-          <div>
-            <label for="sex" class="block text-sm font-medium mb-1 text-gray-900 dark:text-white">Sex</label>
-            <select id="sex" name="sex" required class="w-full px-4 py-2 border rounded-lg dark:bg-gray-900 dark:border-gray-700 dark:text-gray-400">
-              <option value="">Select</option>
-              <option value="male">Male</option>
-              <option value="female">Female</option>
-              <option value="other">Other</option>
-            </select>
+        <!-- ACADEMIC DETAILS -->
+        <fieldset class="border border-gray-200 dark:border-gray-700 p-4 rounded-lg">
+          <legend class="px-2 text-lg font-semibold text-gray-900 dark:text-white">Academic information</legend>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-3">
+            <div>
+              <label for="institutionsAttended" class="block text-sm font-medium mb-1 text-gray-900 dark:text-white">Institution(s) attended</label>
+              <input type="text" id="institutionsAttended" name="institutionsAttended" placeholder="List institutions (comma separated)" class="w-full px-4 py-2 border rounded-lg dark:bg-gray-900 dark:border-gray-700 dark:text-gray-400">
+            </div>
+            <div>
+              <label for="courseOfStudy" class="block text-sm font-medium mb-1 text-gray-900 dark:text-white">Course of study</label>
+              <input type="text" id="courseOfStudy" name="courseOfStudy" class="w-full px-4 py-2 border rounded-lg dark:bg-gray-900 dark:border-gray-700 dark:text-gray-400">
+            </div>
+
+            <div>
+              <label for="durationOfCourse" class="block text-sm font-medium mb-1 text-gray-900 dark:text-white">Duration of course</label>
+              <input type="text" id="durationOfCourse" name="durationOfCourse" placeholder="e.g. 2 years, 4 years" class="w-full px-4 py-2 border rounded-lg dark:bg-gray-900 dark:border-gray-700 dark:text-gray-400">
+            </div>
+            <div>
+              <label for="degreeObtained" class="block text-sm font-medium mb-1 text-gray-900 dark:text-white">Degree obtained</label>
+              <input type="text" id="degreeObtained" name="degreeObtained" placeholder="e.g. B.Sc, M.Sc" class="w-full px-4 py-2 border rounded-lg dark:bg-gray-900 dark:border-gray-700 dark:text-gray-400">
+            </div>
+
+            <div>
+              <label for="cgpa" class="block text-sm font-medium mb-1 text-gray-900 dark:text-white">CGPA</label>
+              <input type="text" id="cgpa" name="cgpa" placeholder="e.g. 4.00 / 5.00" class="w-full px-4 py-2 border rounded-lg dark:bg-gray-900 dark:border-gray-700 dark:text-gray-400">
+            </div>
+
+            <div>
+              <label for="publications" class="block text-sm font-medium mb-1 text-gray-900 dark:text-white">Publications (list out your research publications, if any)</label>
+              <textarea id="publications" name="publications" rows="3" placeholder="Title (Year) — Journal/Conference; short description" class="w-full px-4 py-2 border rounded-lg dark:bg-gray-900 dark:border-gray-700 dark:text-gray-400"></textarea>
+            </div>
           </div>
+        </fieldset>
 
-          <div>
-            <label for="nationality" class="block text-sm font-medium mb-1 text-gray-900 dark:text-white">Nationality</label>
-            <input type="text" id="nationality" name="nationality" required class="w-full px-4 py-2 border rounded-lg dark:bg-gray-900 dark:border-gray-700 dark:text-gray-400">
+        <!-- PROPOSED INSTITUTIONS -->
+        <fieldset class="border border-gray-200 dark:border-gray-700 p-4 rounded-lg">
+          <legend class="px-2 text-lg font-semibold text-gray-900 dark:text-white">Proposed institutions & programs (list up to 5)</legend>
+          <p class="text-sm text-gray-600 dark:text-gray-300 mt-2">Please list the school and program you intend to apply to (Institution — Program)</p>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-3">
+            <div>
+              <label class="block text-sm font-medium mb-1 text-gray-900 dark:text-white">Institution 1</label>
+              <input type="text" id="inst1" name="inst1" placeholder="Institution name" class="w-full px-4 py-2 border rounded-lg dark:bg-gray-900 dark:border-gray-700 dark:text-gray-400">
+            </div>
+            <div>
+              <label class="block text-sm font-medium mb-1 text-gray-900 dark:text-white">Program 1</label>
+              <input type="text" id="prog1" name="prog1" placeholder="Program (e.g. MSc Computer Science)" class="w-full px-4 py-2 border rounded-lg dark:bg-gray-900 dark:border-gray-700 dark:text-gray-400">
+            </div>
+
+            <div>
+              <label class="block text-sm font-medium mb-1 text-gray-900 dark:text-white">Institution 2</label>
+              <input type="text" id="inst2" name="inst2" placeholder="Institution name" class="w-full px-4 py-2 border rounded-lg dark:bg-gray-900 dark:border-gray-700 dark:text-gray-400">
+            </div>
+            <div>
+              <label class="block text-sm font-medium mb-1 text-gray-900 dark:text-white">Program 2</label>
+              <input type="text" id="prog2" name="prog2" placeholder="Program" class="w-full px-4 py-2 border rounded-lg dark:bg-gray-900 dark:border-gray-700 dark:text-gray-400">
+            </div>
+
+            <div>
+              <label class="block text-sm font-medium mb-1 text-gray-900 dark:text-white">Institution 3</label>
+              <input type="text" id="inst3" name="inst3" placeholder="Institution name" class="w-full px-4 py-2 border rounded-lg dark:bg-gray-900 dark:border-gray-700 dark:text-gray-400">
+            </div>
+            <div>
+              <label class="block text-sm font-medium mb-1 text-gray-900 dark:text-white">Program 3</label>
+              <input type="text" id="prog3" name="prog3" placeholder="Program" class="w-full px-4 py-2 border rounded-lg dark:bg-gray-900 dark:border-gray-700 dark:text-gray-400">
+            </div>
+
+            <div>
+              <label class="block text-sm font-medium mb-1 text-gray-900 dark:text-white">Institution 4</label>
+              <input type="text" id="inst4" name="inst4" placeholder="Institution name" class="w-full px-4 py-2 border rounded-lg dark:bg-gray-900 dark:border-gray-700 dark:text-gray-400">
+            </div>
+            <div>
+              <label class="block text-sm font-medium mb-1 text-gray-900 dark:text-white">Program 4</label>
+              <input type="text" id="prog4" name="prog4" placeholder="Program" class="w-full px-4 py-2 border rounded-lg dark:bg-gray-900 dark:border-gray-700 dark:text-gray-400">
+            </div>
+
+            <div>
+              <label class="block text-sm font-medium mb-1 text-gray-900 dark:text-white">Institution 5</label>
+              <input type="text" id="inst5" name="inst5" placeholder="Institution name" class="w-full px-4 py-2 border rounded-lg dark:bg-gray-900 dark:border-gray-700 dark:text-gray-400">
+            </div>
+            <div>
+              <label class="block text-sm font-medium mb-1 text-gray-900 dark:text-white">Program 5</label>
+              <input type="text" id="prog5" name="prog5" placeholder="Program" class="w-full px-4 py-2 border rounded-lg dark:bg-gray-900 dark:border-gray-700 dark:text-gray-400">
+            </div>
           </div>
-        </div>
+        </fieldset>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-          <div>
-            <label for="stateOfOrigin" class="block text-sm font-medium mb-1 text-gray-900 dark:text-white">State of origin</label>
-            <input type="text" id="stateOfOrigin" name="stateOfOrigin" class="w-full px-4 py-2 border rounded-lg dark:bg-gray-900 dark:border-gray-700 dark:text-gray-400">
+        <!-- DOCUMENT UPLOADS -->
+        <fieldset class="border border-gray-200 dark:border-gray-700 p-4 rounded-lg">
+          <legend class="px-2 text-lg font-semibold text-gray-900 dark:text-white">Document upload (PDFs unless otherwise stated)</legend>
+          <p class="text-sm text-gray-600 dark:text-gray-300 mt-2">Upload PDFs for documents. Photograph should be a JPG/PNG.</p>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-3">
+            <div>
+              <label for="coverLetter" class="block text-sm font-medium mb-1 text-gray-900 dark:text-white">Cover letter (PDF)</label>
+              <input type="hidden" role="uploadcare-uploader" id="coverLetter" name="coverLetter" data-public-key="bb3e37fd7caa0a712fe8" data-tabs="file url" data-clearable="true" data-accept="application/pdf" data-preview-step="true" />
+            </div>
+
+            <div>
+              <label for="cvUpload" class="block text-sm font-medium mb-1 text-gray-900 dark:text-white">Curriculum vitae (PDF)</label>
+              <input type="hidden" role="uploadcare-uploader" id="cvUpload" name="cvUpload" data-public-key="bb3e37fd7caa0a712fe8" data-tabs="file url" data-clearable="true" data-accept="application/pdf" data-preview-step="true" />
+            </div>
+
+            <div>
+              <label for="personalStatementUpload" class="block text-sm font-medium mb-1 text-gray-900 dark:text-white">Personal statement (PDF)</label>
+              <input type="hidden" role="uploadcare-uploader" id="personalStatementUpload" name="personalStatementUpload" data-public-key="bb3e37fd7caa0a712fe8" data-tabs="file url" data-clearable="true" data-accept="application/pdf" data-preview-step="true" />
+            </div>
+
+            <div>
+              <label for="unofficialTranscript" class="block text-sm font-medium mb-1 text-gray-900 dark:text-white">Unofficial transcript (PDF)</label>
+              <input type="hidden" role="uploadcare-uploader" id="unofficialTranscript" name="unofficialTranscript" data-public-key="bb3e37fd7caa0a712fe8" data-tabs="file url" data-clearable="true" data-accept="application/pdf" data-preview-step="true" />
+            </div>
+
+            <div>
+              <label for="recommendation1" class="block text-sm font-medium mb-1 text-gray-900 dark:text-white">Recommendation letter 1 (PDF)</label>
+              <input type="hidden" role="uploadcare-uploader" id="recommendation1" name="recommendation1" data-public-key="bb3e37fd7caa0a712fe8" data-tabs="file url" data-clearable="true" data-accept="application/pdf" data-preview-step="true" />
+            </div>
+
+            <div>
+              <label for="recommendation2" class="block text-sm font-medium mb-1 text-gray-900 dark:text-white">Recommendation letter 2 (PDF)</label>
+              <input type="hidden" role="uploadcare-uploader" id="recommendation2" name="recommendation2" data-public-key="bb3e37fd7caa0a712fe8" data-tabs="file url" data-clearable="true" data-accept="application/pdf" data-preview-step="true" />
+            </div>
+
+            <div>
+              <label for="recommendation3" class="block text-sm font-medium mb-1 text-gray-900 dark:text-white">Recommendation letter 3 (PDF)</label>
+              <input type="hidden" role="uploadcare-uploader" id="recommendation3" name="recommendation3" data-public-key="bb3e37fd7caa0a712fe8" data-tabs="file url" data-clearable="true" data-accept="application/pdf" data-preview-step="true" />
+            </div>
+
+            <div>
+              <label for="photoUpload" class="block text-sm font-medium mb-1 text-gray-900 dark:text-white">Photograph (JPG/PNG)</label>
+              <input type="hidden" role="uploadcare-uploader" id="photoUpload" name="photoUpload" data-public-key="bb3e37fd7caa0a712fe8" data-tabs="file url camera" data-clearable="true" data-accept="image/*" data-images-only="true" data-preview-step="true" />
+            </div>
           </div>
+        </fieldset>
 
-          <div>
-            <label for="religion" class="block text-sm font-medium mb-1 text-gray-900 dark:text-white">Religion</label>
-            <input type="text" id="religion" name="religion" class="w-full px-4 py-2 border rounded-lg dark:bg-gray-900 dark:border-gray-700 dark:text-gray-400">
-          </div>
-
-          <div>
-            <label for="contact" class="block text-sm font-medium mb-1 text-gray-900 dark:text-white">Contact number</label>
-            <input type="tel" id="contact" name="contact" required class="w-full px-4 py-2 border rounded-lg dark:bg-gray-900 dark:border-gray-700 dark:text-gray-400">
-          </div>
-        </div>
-
-        <div>
-          <label for="email" class="block text-sm font-medium mb-1 text-gray-900 dark:text-white">Email address</label>
-          <input type="email" id="email" name="email" required class="w-full px-4 py-2 border rounded-lg dark:bg-gray-900 dark:border-gray-700 dark:text-gray-400">
-        </div>
-
-        <div>
-          <label for="permanentAddress" class="block text-sm font-medium mb-1 text-gray-900 dark:text-white">Permanent address</label>
-          <textarea id="permanentAddress" name="permanentAddress" rows="2" class="w-full px-4 py-2 border rounded-lg dark:bg-gray-900 dark:border-gray-700 dark:text-gray-400"></textarea>
-        </div>
-
-        <div>
-          <label for="institutionsAttended" class="block text-sm font-medium mb-1 text-gray-900 dark:text-white">Institution(s) attended</label>
-          <input type="text" id="institutionsAttended" name="institutionsAttended" class="w-full px-4 py-2 border rounded-lg dark:bg-gray-900 dark:border-gray-700 dark:text-gray-400" placeholder="List institutions (comma separated)">
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-          <div>
-            <label for="courseOfStudy" class="block text-sm font-medium mb-1 text-gray-900 dark:text-white">Course of study</label>
-            <input type="text" id="courseOfStudy" name="courseOfStudy" class="w-full px-4 py-2 border rounded-lg dark:bg-gray-900 dark:border-gray-700 dark:text-gray-400">
-          </div>
-
-          <div>
-            <label for="durationOfCourse" class="block text-sm font-medium mb-1 text-gray-900 dark:text-white">Duration of course</label>
-            <input type="text" id="durationOfCourse" name="durationOfCourse" class="w-full px-4 py-2 border rounded-lg dark:bg-gray-900 dark:border-gray-700 dark:text-gray-400" placeholder="e.g. 2 years, 4 years">
-          </div>
-
-          <div>
-            <label for="degreeObtained" class="block text-sm font-medium mb-1 text-gray-900 dark:text-white">Degree obtained</label>
-            <input type="text" id="degreeObtained" name="degreeObtained" class="w-full px-4 py-2 border rounded-lg dark:bg-gray-900 dark:border-gray-700 dark:text-gray-400" placeholder="e.g. B.Sc, M.Sc">
-          </div>
-        </div>
-
-        <div>
-          <label for="cgpa" class="block text-sm font-medium mb-1 text-gray-900 dark:text-white">CGPA</label>
-          <input type="text" id="cgpa" name="cgpa" class="w-full px-4 py-2 border rounded-lg dark:bg-gray-900 dark:border-gray-700 dark:text-gray-400" placeholder="e.g. 4.00 / 5.00">
-        </div>
-
-        <hr class="border-gray-200 dark:border-gray-700">
-
-        <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Document upload</h3>
-        <p class="text-sm text-gray-600 dark:text-gray-300 mb-2">Upload PDFs only (Cover letter, CV, Personal statement).</p>
-
-        <!-- Uploadcare widgets (hidden inputs) -->
-        <div>
-          <label for="coverLetter" class="block text-sm font-medium mb-1 text-gray-900 dark:text-white">Cover letter (PDF)</label>
-          <input type="hidden" role="uploadcare-uploader" id="coverLetter" name="coverLetter" data-public-key="bb3e37fd7caa0a712fe8" data-tabs="file url" data-clearable="true" data-accept="application/pdf" data-preview-step="true" required />
-        </div>
-
-        <div>
-          <label for="cvUpload" class="block text-sm font-medium mb-1 text-gray-900 dark:text-white">Curriculum vitae (PDF)</label>
-          <input type="hidden" role="uploadcare-uploader" id="cvUpload" name="cvUpload" data-public-key="bb3e37fd7caa0a712fe8" data-tabs="file url" data-clearable="true" data-accept="application/pdf" data-preview-step="true" required />
-        </div>
-
-        <div>
-          <label for="personalStatementUpload" class="block text-sm font-medium mb-1 text-gray-900 dark:text-white">Personal statement (PDF)</label>
-          <input type="hidden" role="uploadcare-uploader" id="personalStatementUpload" name="personalStatementUpload" data-public-key="bb3e37fd7caa0a712fe8" data-tabs="file url" data-clearable="true" data-accept="application/pdf" data-preview-step="true" required />
+        <div class="flex items-center gap-3">
+          <input id="declaration" name="declaration" type="checkbox" required class="w-4 h-4 text-gold-600 border-gray-300 rounded focus:ring-gold-500">
+          <label for="declaration" class="text-sm text-gray-700 dark:text-gray-300">I declare that the information I have provided is true and complete to the best of my knowledge.</label>
         </div>
 
         <div>
@@ -227,12 +271,12 @@
     // Initialize EmailJS (replace with your user ID)
     emailjs.init('Hp8-g_JbMoY33XsD_');
 
-    // Small helper to get uploadcare file URLs if present (Uploadcare widget fills input value with a file uuid or full URL)
+    // Helper to read uploadcare widget value (the widget stores a value string)
     function getUploadcareValue(input) {
-      // input.value may be a URL or a file UUID - for sending via email we'll forward whatever value uploadcare provides
       return input && input.value ? input.value : '';
     }
 
+    // Collect form and send via EmailJS
     window.addEventListener('DOMContentLoaded', function () {
       var form = document.getElementById('ausmp-form');
       if (!form) return;
@@ -240,7 +284,7 @@
       form.addEventListener('submit', function (e) {
         e.preventDefault();
 
-        // Basic front-end validation (ensures required inputs are filled)
+        // Basic front-end validation
         if (!form.checkValidity()) {
           form.reportValidity();
           return;
@@ -248,22 +292,25 @@
 
         document.getElementById('loading-screen').classList.remove('hidden');
 
-        // Collect form data
         var formData = {};
+        // Collect standard inputs
         Array.from(form.elements).forEach(function (el) {
           if (!el.name) return;
-          // For uploadcare inputs use helper to get value
+          // Uploadcare inputs have role attribute
           if (el.getAttribute('role') === 'uploadcare-uploader') {
             formData[el.name] = getUploadcareValue(el);
+          } else if (el.type === 'checkbox') {
+            formData[el.name] = el.checked ? 'yes' : 'no';
           } else {
             formData[el.name] = el.value;
           }
         });
 
-        // Add a subject to email
+        // Add subject and summary fields for email template
         formData.subject = 'AUSMP Application — ' + (formData.fullName || 'Applicant');
+        formData.summary = 'AUSMP applicant: ' + (formData.fullName || '') + ' | Email: ' + (formData.email || '');
 
-        // Send via EmailJS (update service/template IDs as needed)
+        // Send submission via EmailJS (update service/template IDs if needed)
         emailjs.send('service_hxc7wck', 'template_nkge1vv', formData)
           .then(function () {
             document.getElementById('loading-screen').classList.add('hidden');
@@ -286,6 +333,9 @@
             alert('Submission failed. Please try again.');
           });
       });
+
+      // Optional: attach uploadcare widgets and show previews inline (Uploadcare handles UI automatically)
+      // Example: you can access widget instance via uploadcare.Widget('#coverLetter') etc. if you want custom behavior.
     });
   </script>
 
