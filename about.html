@@ -235,7 +235,7 @@
                 </div>
                 <!-- Team Member 5: Otubonchi Macjohnson Odu -->
                 <div class="bg-gray-50 dark:bg-gray-800 rounded-xl shadow-md overflow-hidden transition-all duration-300 team-card cursor-pointer" onclick="openTeamModal('otubonchi')">
-                    <div class="overflow-hidden h-64 flex items-center justify-center" style="background-color: #f3f4f6;">
+                    <div class="overflow-hidden h-64"style="background-image: url(img/port.png); background-size: cover; object-fit: cover; background-position: center; background-position-y: 2%;">
                         <!-- <img src="img/otubonchi.jpg" alt="Otubonchi Macjohnson Odu" class="w-32 h-32 rounded-full object-cover"> -->
                     </div>
                     <div class="p-6 ">
@@ -250,163 +250,164 @@
                     </div>
                 </div>
     <!-- Team Member Modals -->
-    <div id="archie-modal" class="fixed inset-0 z-50 flex items-center justify-center hidden modal-overlay">
-        <div class="bg-white dark:bg-gray-900 w-full h-full flex items-center justify-center modal-content">
-            <div class="w-full max-w-4xl mx-auto rounded-xl shadow-2xl flex flex-col md:flex-row p-0 md:p-8">
-                <div class="flex flex-col md:flex-row w-full">
-                    <div class="flex-shrink-0 flex items-center justify-center bg-gray-100 dark:bg-gray-800 md:rounded-l-xl md:rounded-r-none p-6 md:p-0" style="min-width:220px;">
-                        <img src="img/archie.JPG" alt="archie " class="rounded-lg w-40 h-40 object-cover md:w-56 md:h-56">
-                    </div>
-                    <div class="flex-1 p-6 md:p-8 flex flex-col">
-                        <div class="flex justify-between items-start mb-6">
-                            <div>
-                                <h3 class="text-2xl font-bold text-gray-900 dark:text-white">Efiok Archibong, Ph.D.</h3>
+  
+     <div id="archie-modal" class="fixed inset-0 z-50 flex items-center justify-center hidden modal-overlay">
+        <div class="bg-white dark:bg-gray-900 rounded-xl shadow-2xl w-full max-w-2xl mx-4 modal-content">
+            <div class="p-6">
+                <div class="flex justify-between items-start mb-6">
+                    <div>
+                          <h3 class="text-2xl font-bold text-gray-900 dark:text-white">Efiok Archibong, Ph.D.</h3>
                                 <p class="text-gold-500 font-medium">Program Director</p>
-                            </div>
-                            <button onclick="closeTeamModal('archie-modal')" class="text-gray-400 hover:text-gray-500 dark:hover:text-gray-300">
-                                <i class="fas fa-times text-xl"></i>
-                            </button>
-                        </div>
-                        <div class="mb-4">
-                            <p class="text-gray-600 dark:text-gray-300 mb-2">Efiok Archibong, Ph.D., is a lecturer and researcher at David Umahi Federal University of Health Sciences. He holds a bachelor’s degree in physiology, a master’s degree in blood physiology, and a Ph.D. degree in cardiovascular physiology, all from the University of Calabar, Africa. </p>
+                    </div>
+                    <button onclick="closeModal('archie-modal')" class="text-gray-400 hover:text-gray-500 dark:hover:text-gray-300">
+                        <i class="fas fa-times text-xl"></i>
+                    </button>
+                </div>
+                <div class="grid md:grid-cols-3 gap-6 mb-6">
+                    <div class="md:col-span-1">
+                        <img src="img/archie.JPG" 
+                             alt="charles Udefa" 
+                             class="w-full rounded-lg">
+                    </div>
+                    <div class="md:col-span-2">
+                        <p class="text-gray-600 dark:text-gray-300 mb-2">Efiok Archibong, Ph.D., is a lecturer and researcher at David Umahi Federal University of Health Sciences. He holds a bachelor’s degree in physiology, a master’s degree in blood physiology, and a Ph.D. degree in cardiovascular physiology, all from the University of Calabar, Africa. </p>
                             <p class="text-gray-600 dark:text-gray-300">Efiok is a resourceful fellow with good leadership skills and exceptional ability to engage in rigorous and meaningful activities. He has performed research copiously and presented excellent seminar and conference papers. He possesses an investigative mindset and passion for the scientific process, in addition to his great problem-solving skills and cognitive skills. He is always willing to offer his time, skills, expertise, resources and support in the service to humanity. Efiok is doing his best to create an environment for significant positive change, helping the less privileged and promoting education and health. </p>
-                            <a href="mailto:efioka@augustineudefafoundation.com" class="text-gold-500 hover:text-gold-500 social-icon"><i class="fa-solid fa-envelope"></i>efioka@augustineudefafoundation.com</a>
-                            
-                        </div>
-                        <div class="flex justify-end mt-auto">
-                            <button onclick="closeTeamModal('archie-modal')" class="px-4 py-2 bg-blue-900 text-white rounded-lg hover:bg-blue-900 transition-colors">Close</button>
-                        </div>
+                        <a href="efioka@augustineudefafoundation.com" class="text-gold-500 hover:text-gold-500 social-icon"><i class="fa-solid fa-envelope"></i>efioka@augustineudefafoundation.com</a>
                     </div>
+                </div>
+                <div class="flex justify-end">
+                    <button onclick="closeModal('archie-modal')" class="px-4 py-2 bg-blue-900 text-white rounded-lg hover:bg-blue-900 transition-colors">Close</button>
                 </div>
             </div>
         </div>
     </div>
-    <div id="Charles-modal" class="fixed inset-0 z-50 flex items-center justify-center hidden modal-overlay">
-        <div class="bg-white dark:bg-gray-900 w-full h-full flex items-center justify-center modal-content">
-            <div class="w-full max-w-4xl mx-auto rounded-xl shadow-2xl flex flex-col md:flex-row p-0 md:p-8">
-                <div class="flex flex-col md:flex-row w-full">
-                    <div class="flex-shrink-0 flex items-center justify-center bg-gray-100 dark:bg-gray-800 md:rounded-l-xl md:rounded-r-none p-6 md:p-0" style="min-width:220px;">
-                        <img src="img/charlesvic.jpg" alt="Charles-Vic Anyati" class="rounded-lg w-40 h-40 object-cover md:w-56 md:h-56">
+  
+      <div id="Charles-modal" class="fixed inset-0 z-50 flex items-center justify-center hidden modal-overlay">
+        <div class="bg-white dark:bg-gray-900 rounded-xl shadow-2xl w-full max-w-2xl mx-4 modal-content">
+            <div class="p-6">
+                <div class="flex justify-between items-start mb-6">
+                    <div>
+                          <h3 class="text-2xl font-bold text-gray-900 dark:text-white">Charles-Vic Anyati</h3>
+                                <p class="text-gold-500 font-medium">Graphic Designer and Director of Publicity</p>
                     </div>
-                    <div class="flex-1 p-6 md:p-8 flex flex-col">
-                        <div class="flex justify-between items-start mb-6">
-                            <div>
-                                <h3 class="text-2xl font-bold text-gray-900 dark:text-white">Charles-Vic Anyati</h3>
-                                <p class="text-gold-500 font-medium"> Graphic Designer and Director of Publicity</p>
-                            </div>
-                            <button onclick="closeTeamModal('Charles-modal')" class="text-gray-400 hover:text-gray-500 dark:hover:text-gray-300">
-                                <i class="fas fa-times text-xl"></i>
-                            </button>
-                        </div>
-                        <div class="mb-4">
-                            <p class="text-gray-600 dark:text-gray-300 mb-2">Anyati, Charles-Vic is a forward-thinking visual artist and technologist who blends creativity with innovation to craft impactful visual experiences. Born in Obudu, Cross River State, he holds a Bachelor of Arts degree from the University of Cross River State, where he developed a strong foundation in design, visual storytelling, and creative technology.</p>
+                    <button onclick="closeModal('Charles-modal')" class="text-gray-400 hover:text-gray-500 dark:hover:text-gray-300">
+                        <i class="fas fa-times text-xl"></i>
+                    </button>
+                </div>
+                <div class="grid md:grid-cols-3 gap-6 mb-6">
+                    <div class="md:col-span-1">
+                        <img src="img/charlesvic.jpg" 
+                             alt="charles Udefa" 
+                             class="w-full rounded-lg">
+                    </div>
+                    <div class="md:col-span-2">
+                        <p class="text-gray-600 dark:text-gray-300 mb-2">Anyati, Charles-Vic is a forward-thinking visual artist and technologist who blends creativity with innovation to craft impactful visual experiences. Born in Obudu, Cross River State, he holds a Bachelor of Arts degree from the University of Cross River State, where he developed a strong foundation in design, visual storytelling, and creative technology.</p>
                             <p class="text-gray-600 dark:text-gray-300">With expertise in branding, printing, and digital design, Charles-Vic brings stories to life through art that resonates, engages, and inspires. As the founder of a growing creative business, Charles-Vic is passionate about using visual language to solve problems, spark emotion, and elevate brands. His work bridges aesthetics with function driven by a deep belief in the power of creativity to transform ideas into lasting impressions.</p>
-                             <a href="mailto:charlevic@augustineudefafoundation.com" class="text-gold-500 hover:text-gold-500 social-icon"><i class="fa-solid fa-envelope"></i>charlesvica@augustineudefafoundation.com</a>
-                            
-                        </div>
-                        <div class="flex justify-end mt-auto">
-                            <button onclick="closeTeamModal('Charles-modal')" class="px-4 py-2 bg-blue-900 text-white rounded-lg hover:bg-blue-900 transition-colors">Close</button>
-                        </div>
+                        <a href="mailto:charlesvica@augustineudefafoundation.com" class="text-gold-500 hover:text-gold-500 social-icon"><i class="fa-solid fa-envelope"></i>charlesvica@augustineudefafoundation.com</a>
                     </div>
+                </div>
+                <div class="flex justify-end">
+                    <button onclick="closeModal('Charles-modal')" class="px-4 py-2 bg-blue-900 text-white rounded-lg hover:bg-blue-900 transition-colors">Close</button>
                 </div>
             </div>
         </div>
     </div>
+
     <div id="Esther-modal" class="fixed inset-0 z-50 flex items-center justify-center hidden modal-overlay">
-        <div class="bg-white dark:bg-gray-900 w-full h-full flex items-center justify-center modal-content">
-            <div class="w-full max-w-4xl mx-auto rounded-xl shadow-2xl flex flex-col md:flex-row p-0 md:p-8">
-                <div class="flex flex-col md:flex-row w-full">
-                    <div class="flex-shrink-0 flex items-center justify-center bg-gray-100 dark:bg-gray-800 md:rounded-l-xl md:rounded-r-none p-6 md:p-0" style="min-width:220px;">
-                        <img src="img/esther.jpg" alt="Esther Oluebube Orindu" class="rounded-lg w-40 h-40 object-cover md:w-56 md:h-56">
-                    </div>
-                    <div class="flex-1 p-6 md:p-8 flex flex-col">
-                        <div class="flex justify-between items-start mb-6">
-                            <div>
-                                <h3 class="text-2xl font-bold text-gray-900 dark:text-white">Esther Oluebube Orindu</h3>
+        <div class="bg-white dark:bg-gray-900 rounded-xl shadow-2xl w-full max-w-2xl mx-4 modal-content">
+            <div class="p-6">
+                <div class="flex justify-between items-start mb-6">
+                    <div>
+                          <h3 class="text-2xl font-bold text-gray-900 dark:text-white">Esther Oluebube Orindu</h3>
                                 <p class="text-gold-500 font-medium">Programs Review Writer</p>
-                            </div>
-                            <button onclick="closeTeamModal('Esther-modal')" class="text-gray-400 hover:text-gray-500 dark:hover:text-gray-300">
-                                <i class="fas fa-times text-xl"></i>
-                            </button>
-                        </div>
-                        <div class="mb-4">
-                            <p class="text-gray-600 dark:text-gray-300 mb-2">Orindu Esther Oluebube, a bright and compassionate young woman pursuing her passion for healthcare as a nursing student. With a strong desire to make a positive impact on people's lives, she's dedicated to her studies and clinical rotations. Her empathetic nature and excellent communication skills make her a valuable asset to the people around her  especially her colleagues. As she navigates the challenges of nursing school, she's driven by her commitment to delivering high-quality patient care and making a difference in her community.</p>
-                            
-                            <a href="mailto:esthero@augustineudefafoundation.com" class="text-gold-500 hover:text-gold-500 social-icon"><i class="fa-solid fa-envelope"></i>esthero@augustineudefafoundation.com</a>
-                        </div>
-                        <div class="flex justify-end mt-auto">
-                            <button onclick="closeTeamModal('Esther-modal')" class="px-4 py-2 bg-blue-900 text-white rounded-lg hover:bg-blue-900 transition-colors">Close</button>
-                        </div>
                     </div>
+                    <button onclick="closeModal('Esther-modal')" class="text-gray-400 hover:text-gray-500 dark:hover:text-gray-300">
+                        <i class="fas fa-times text-xl"></i>
+                    </button>
+                </div>
+                <div class="grid md:grid-cols-3 gap-6 mb-6">
+                    <div class="md:col-span-1">
+                        <img src="img/esther.jpg" 
+                             alt="charles Udefa" 
+                             class="w-full rounded-lg">
+                    </div>
+                    <div class="md:col-span-2">
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">
+                     Orindu Esther Oluebube, a bright and compassionate young woman pursuing her passion for healthcare as a nursing student. With a strong desire to make a positive impact on people's lives, she's dedicated to her studies and clinical rotations. Her empathetic nature and excellent communication skills make her a valuable asset to the people around her  especially her colleagues. As she navigates the challenges of nursing school, she's driven by her commitment to delivering high-quality patient care and making a difference in her community.
+                        </p>
+                        <a href="mailto:esthero@augustineudefafoundation.com" class="text-gold-500 hover:text-gold-500 social-icon"><i class="fa-solid fa-envelope"></i>esthero@augustineudefafoundation.com</a>
+                    </div>
+                </div>
+                <div class="flex justify-end">
+                    <button onclick="closeModal('Esther-modal')" class="px-4 py-2 bg-blue-900 text-white rounded-lg hover:bg-blue-900 transition-colors">Close</button>
                 </div>
             </div>
         </div>
     </div>
 
-    <div id="emmanuel-modal" class="fixed inset-0 z-50 flex items-center justify-center hidden modal-overlay">
-        <div class="bg-white dark:bg-gray-900 w-full h-full flex items-center justify-center modal-content">
-            <div class="w-full max -w-4xl mx-auto rounded-xl shadow-2xl flex flex-col md:flex-row p-0 md:p-8">
-                <div class="flex flex-col md:flex-row w-full">
-                    <div class="flex-shrink-0 flex items-center justify-center bg-gray-100 dark:bg-gray-800 md:rounded-l-xl md:rounded-r-none p-6 md:p-0" style="min-width:220px;">
-                        <img src="img/emmanuel.jpg" alt="Emmanuel Effiom" class="rounded-lg w-40 h-40 object-cover md:w-56 md:h-56">
-                        </div>
-                    <div class="flex-1 p-6 md:p-8 flex flex-col">
-                        <div class="flex justify-between items-start mb-6">
-                            <div>
-                                <h3 class="text-2xl font-bold text-gray-900 dark:text-white">Emmanuel Effiom</h3>
-                                <p class="text-gold-500 font-medium">Technical Staff</p>
-                            </div>
-                            <button onclick="closeTeamModal('emmanuel-modal')" class="text-gray-400 hover:text-gray-500 dark:hover:text-gray-300">
-                                <i class="fas fa-times text-xl"></i>
-                            </button>
-                            </div>
-                        <div class="mb-4">
-                            <p class="text-gray-600 dark:text-gray-300 mb-2">Emmanuel Effiom is a passionate developer focused on building scalable web applications and collaborating with teams to deliver impactful solutions. With a strong foundation in computer science and hands-on experience in various programming languages and frameworks, Emmanuel thrives in dynamic environments where innovation and creativity are encouraged. He is committed to continuous learning and staying updated with the latest industry trends to ensure that his work remains relevant and effective. Emmanuel's dedication to excellence and problem-solving skills make him a valuable asset to any development team.
-
-                            </p>
-                            <a href="mailto:esthero@augustineudefafoundation.com" class="text-gold-500 hover:text-gold-500 social-icon"><i class="fa-solid fa-envelope"></i>emmanueleffiom@gmail.com</a>
-                                </div>
-                        <div class="flex justify-end mt-auto">
-                            <button onclick="closeTeamModal('emmanuel-modal')" class="px-4 py-2 bg-blue-900 text-white rounded-lg hover:bg-blue-900 transition-colors">Close</button>
-                            </div>
-                            </div>
-
-                            </div>
-                            </div>
-                            </div>
-                            </div>
-
-
-    <div id="otubonchi-modal" class="fixed inset-0 z-50 flex items-center justify-center hidden modal-overlay">
-        <div class="bg-white dark:bg-gray-900 w-full h-full flex items-center justify-center modal-content">
-            <div class="w-full max -w-4xl mx-auto rounded-xl shadow-2xl flex flex-col md:flex-row p-0 md:p-8">
-                <div class="flex flex-col md:flex-row w-full">
-                    <div class="flex-shrink-0 flex items-center justify-center bg-gray-100 dark:bg-gray-800 md:rounded-l-xl md:rounded-r-none p-6 md:p-0" style="min-width:220px;">
-                        <img src="img/otubonchi.jpg" alt="Otubonchi Macjohnson Odu" class="rounded-lg w-40 h-40 object-cover md:w-56 md:h-56">
+ <div id="emmanuel-modal" class="fixed inset-0 z-50 flex items-center justify-center hidden modal-overlay">
+        <div class="bg-white dark:bg-gray-900 rounded-xl shadow-2xl w-full max-w-2xl mx-4 modal-content">
+            <div class="p-6">
+                <div class="flex justify-between items-start mb-6">
+                    <div>
+                        <h3 class="text-2xl font-bold text-gray-900 dark:text-white">Emmanuel Effiom   </h3>
+                        <!-- <p class="text-blue-900 font-medium">Program</p> -->
                     </div>
-                    <div class="flex-1 p-6 md:p-8 flex flex-col">
-                        <div class="flex justify-between items-start mb-6">
-                            <div>
-                                <h3 class="text-2xl font-bold text-gray-900 dark:text-white">Otubonchi Macjohnson Odu</h3>
-                                <p class="text-gold-500 font-medium">Technical Staff</p>
-                            </div>
-                            <button onclick="closeTeamModal('otubonchi-modal')" class="text-gray-400 hover:text-gray-500 dark:hover:text-gray-300">
-                                <i class="fas fa-times text-xl"></i>
-                            </button>
-                        </div>
-                        <div class="mb-4">
-                            <p class="text-gray-600 dark:text-gray-300 mb-2">Otubonchi Macjohnson Odu is a dedicated developer focused on innovative solutions and committed to continuous learning in technology. With a strong foundation in computer science and hands-on experience in various programming languages and frameworks, Otubonchi thrives in dynamic environments where creativity and problem-solving are encouraged. He is passionate about leveraging technology to create impactful applications that meet user needs and drive positive change. Otubonchi's enthusiasm for learning and growth makes him a valuable asset to any development team.</p>
-
-                            <a href="mailto:macj497@gmail.com" class="text-gold-500 hover:text-gold-500 social-icon"><i class="fa-solid fa-envelope"></i>macj497@gmail.com</a>
-                        </div>
-                        <div class="flex justify-end mt-auto">
-                            <button onclick="closeTeamModal('otubonchi-modal')" class="px-4 py-2 bg-blue-900 text-white rounded-lg hover:bg-blue-900 transition-colors">Close</button>
-                        </div>
+                    <button onclick="closeModal('emmanuel-modal')" class="text-gray-400 hover:text-gray-500 dark:hover:text-gray-300">
+                        <i class="fas fa-times text-xl"></i>
+                    </button>
+                </div>
+                <div class="grid md:grid-cols-3 gap-6 mb-6">
+                    <div class="md:col-span-1">
+                        <img src="img/port.png" 
+                             alt="charles Udefa" 
+                             class="w-full rounded-lg">
+                    </div>
+                    <div class="md:col-span-2">
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">
+                       Emmanuel Effiom is a passionate developer focused on building scalable web applications and collaborating with teams to deliver impactful solutions. With a strong foundation in computer science and hands-on experience in various programming languages and frameworks, Emmanuel thrives in dynamic environments where innovation and creativity are encouraged. He is committed to continuous learning and staying updated with the latest industry trends to ensure that his work remains relevant and effective. Emmanuel's dedication to excellence and problem-solving skills make him a valuable asset to any development team.
+                        </p>
+                        <a href="mailto:esthero@augustineudefafoundation.com" class="text-gold-500 hover:text-gold-500 social-icon"><i class="fa-solid fa-envelope"></i>emmanueleffiom@gmail.com</a>
                     </div>
                 </div>
+                <div class="flex justify-end">
+                    <button onclick="closeModal('emmanuel-modal')" class="px-4 py-2 bg-blue-900 text-white rounded-lg hover:bg-blue-900 transition-colors">Close</button>
                 </div>
+            </div>
+        </div>
+    </div>
+
+   <div id="otubonchi-modal" class="fixed inset-0 z-50 flex items-center justify-center hidden modal-overlay">
+        <div class="bg-white dark:bg-gray-900 rounded-xl shadow-2xl w-full max-w-2xl mx-4 modal-content">
+            <div class="p-6">
+                <div class="flex justify-between items-start mb-6">
+                    <div>
+                        <h3 class="text-2xl font-bold text-gray-900 dark:text-white">Otubonchi macjohnson Odu   </h3>
+                        <!-- <p class="text-blue-900 font-medium">Program</p> -->
+                    </div>
+                    <button onclick="closeModal('otubonchi-modal')" class="text-gray-400 hover:text-gray-500 dark:hover:text-gray-300">
+                        <i class="fas fa-times text-xl"></i>
+                    </button>
                 </div>
+                <div class="grid md:grid-cols-3 gap-6 mb-6">
+                    <div class="md:col-span-1">
+                        <img src="img/port.png" 
+                             alt="charles Udefa" 
+                             class="w-full rounded-lg">
+                    </div>
+                    <div class="md:col-span-2">
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">
+                         Charles Udefa is a stakeholder in the Augustine Udefa Foundation, and he believes that helping even one person can go a long way. He’s from Obudu Local Government Area, Cross River State, Nigeria, and holds a bachelor’s degree in physical oceanography (physics) from the University of Calabar. Charles also holds other professional certifications. What matters more to him is giving back to society. Education changed the course of his life, so being part of a foundation that helps young people through scholarships feels personal. He doesn’t care about being seen, he just wants to see more young people rise, have a chance, and rewrite their own stories. 
+                        </p>
+                        <a href="mailto:esthero@augustineudefafoundation.com" class="text-gold-500 hover:text-gold-500 social-icon"><i class="fa-solid fa-envelope"></i>macj497@gmail.com</a>
+                    </div>
                 </div>
+                <div class="flex justify-end">
+                    <button onclick="closeModal('otubonchi-modal')" class="px-4 py-2 bg-blue-900 text-white rounded-lg hover:bg-blue-900 transition-colors">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
     
             </div>
         </div>
