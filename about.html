@@ -108,7 +108,7 @@
     <!-- Hero Section -->
     <section class="relative h-96 flex items-center justify-center bg-gray-900 overflow-hidden">
         <div class="absolute inset-0 bg-gradient-to-r from-gray-900 to-transparent z-10"></div>
-        <img src="img/IMG_1045.jpg" 
+        <img src="img/group.jpg" 
              alt="Students learning" 
              class="absolute inset-0 w-full h-full object-cover">
         <div class="relative z-20 text-center px-4">
@@ -217,6 +217,38 @@
                         </div>
                     </div>
                 </div>
+                <!-- Team Member 4: Emmanuel Effiom -->
+                <div class="bg-gray-50 dark:bg-gray-800 rounded-xl shadow-md overflow-hidden transition-all duration-300 team-card cursor-pointer" onclick="openTeamModal('emmanuel')">
+                    <div class="overflow-hidden h-64"style="background-image: url(img/esther.jpg); background-size: cover; object-fit: cover; background-position: center; background-position-y: 30%;">
+                        <!-- <img src="img/emmanuel.jpg" alt="Emmanuel Effiom" class="w-32 h-32 rounded-full object-cover"> -->
+                    </div>
+                    <div class="p-6 ">
+                        <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-1">Emmanuel Effiom</h3>
+                        <p class="text-gold-500 font-medium mb-3">Technical Staff</p>
+                        <p class="text-gray-600 dark:text-gray-300 text-sm mb-4">Developer passionate about building scalable web applications and collaborating with teams to deliver impactful solutions.</p>
+                        <div class="flex  space-x-3">
+                            <a href="https://instagram.com/emmanuel" target="_blank" class="text-gray-500 hover:text-gold-500 social-icon"><i class="fab fa-instagram"></i></a>
+                            <a href="https://emmanuel-portfolio.com" target="_blank" class="text-gray-500 hover:text-gold-500 social-icon"><i class="fas fa-globe"></i></a>
+                            <a href="https://github.com/emmanueleffiom" target="_blank" class="text-gray-500 hover:text-gold-500 social-icon"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Team Member 5: Otubonchi Macjohnson Odu -->
+                <div class="bg-gray-50 dark:bg-gray-800 rounded-xl shadow-md overflow-hidden transition-all duration-300 team-card cursor-pointer" onclick="openTeamModal('otubonchi')">
+                    <div class="overflow-hidden h-64 flex items-center justify-center" style="background-color: #f3f4f6;">
+                        <!-- <img src="img/otubonchi.jpg" alt="Otubonchi Macjohnson Odu" class="w-32 h-32 rounded-full object-cover"> -->
+                    </div>
+                    <div class="p-6 ">
+                        <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-1">Otubonchi Macjohnson Odu</h3>
+                        <p class="text-gold-500 font-medium mb-3">Technical Staff</p>
+                        <p class="text-gray-600 dark:text-gray-300 text-sm mb-4">Developer focused on innovative solutions and committed to continuous learning in technology.</p>
+                        <div class="flex  space-x-3">
+                            <a href="https://instagram.com/bonchi.ui" target="_blank" class="text-gray-500 hover:text-gold-500 social-icon"><i class="fab fa-instagram"></i></a>
+                            <a href="https://otubonchi-portfolio.com" target="_blank" class="text-gray-500 hover:text-gold-500 social-icon"><i class="fas fa-globe"></i></a>
+                            <a href="https://github.com/otubonchi" target="_blank" class="text-gray-500 hover:text-gold-500 social-icon"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                </div>
     <!-- Team Member Modals -->
     <div id="archie-modal" class="fixed inset-0 z-50 flex items-center justify-center hidden modal-overlay">
         <div class="bg-white dark:bg-gray-900 w-full h-full flex items-center justify-center modal-content">
@@ -310,6 +342,72 @@
             </div>
         </div>
     </div>
+
+    <div id="emmanuel-modal" class="fixed inset-0 z-50 flex items-center justify-center hidden modal-overlay">
+        <div class="bg-white dark:bg-gray-900 w-full h-full flex items-center justify-center modal-content">
+            <div class="w-full max -w-4xl mx-auto rounded-xl shadow-2xl flex flex-col md:flex-row p-0 md:p-8">
+                <div class="flex flex-col md:flex-row w-full">
+                    <div class="flex-shrink-0 flex items-center justify-center bg-gray-100 dark:bg-gray-800 md:rounded-l-xl md:rounded-r-none p-6 md:p-0" style="min-width:220px;">
+                        <img src="img/emmanuel.jpg" alt="Emmanuel Effiom" class="rounded-lg w-40 h-40 object-cover md:w-56 md:h-56">
+                        </div>
+                    <div class="flex-1 p-6 md:p-8 flex flex-col">
+                        <div class="flex justify-between items-start mb-6">
+                            <div>
+                                <h3 class="text-2xl font-bold text-gray-900 dark:text-white">Emmanuel Effiom</h3>
+                                <p class="text-gold-500 font-medium">Technical Staff</p>
+                            </div>
+                            <button onclick="closeTeamModal('emmanuel-modal')" class="text-gray-400 hover:text-gray-500 dark:hover:text-gray-300">
+                                <i class="fas fa-times text-xl"></i>
+                            </button>
+                            </div>
+                        <div class="mb-4">
+                            <p class="text-gray-600 dark:text-gray-300 mb-2">Emmanuel Effiom is a passionate developer focused on building scalable web applications and collaborating with teams to deliver impactful solutions. With a strong foundation in computer science and hands-on experience in various programming languages and frameworks, Emmanuel thrives in dynamic environments where innovation and creativity are encouraged. He is committed to continuous learning and staying updated with the latest industry trends to ensure that his work remains relevant and effective. Emmanuel's dedication to excellence and problem-solving skills make him a valuable asset to any development team.
+
+                            </p>
+                            <a href="mailto:esthero@augustineudefafoundation.com" class="text-gold-500 hover:text-gold-500 social-icon"><i class="fa-solid fa-envelope"></i>emmanueleffiom@gmail.com</a>
+                                </div>
+                        <div class="flex justify-end mt-auto">
+                            <button onclick="closeTeamModal('emmanuel-modal')" class="px-4 py-2 bg-blue-900 text-white rounded-lg hover:bg-blue-900 transition-colors">Close</button>
+                            </div>
+                            </div>
+
+                            </div>
+                            </div>
+                            </div>
+                            </div>
+
+
+    <div id="otubonchi-modal" class="fixed inset-0 z-50 flex items-center justify-center hidden modal-overlay">
+        <div class="bg-white dark:bg-gray-900 w-full h-full flex items-center justify-center modal-content">
+            <div class="w-full max -w-4xl mx-auto rounded-xl shadow-2xl flex flex-col md:flex-row p-0 md:p-8">
+                <div class="flex flex-col md:flex-row w-full">
+                    <div class="flex-shrink-0 flex items-center justify-center bg-gray-100 dark:bg-gray-800 md:rounded-l-xl md:rounded-r-none p-6 md:p-0" style="min-width:220px;">
+                        <img src="img/otubonchi.jpg" alt="Otubonchi Macjohnson Odu" class="rounded-lg w-40 h-40 object-cover md:w-56 md:h-56">
+                    </div>
+                    <div class="flex-1 p-6 md:p-8 flex flex-col">
+                        <div class="flex justify-between items-start mb-6">
+                            <div>
+                                <h3 class="text-2xl font-bold text-gray-900 dark:text-white">Otubonchi Macjohnson Odu</h3>
+                                <p class="text-gold-500 font-medium">Technical Staff</p>
+                            </div>
+                            <button onclick="closeTeamModal('otubonchi-modal')" class="text-gray-400 hover:text-gray-500 dark:hover:text-gray-300">
+                                <i class="fas fa-times text-xl"></i>
+                            </button>
+                        </div>
+                        <div class="mb-4">
+                            <p class="text-gray-600 dark:text-gray-300 mb-2">Otubonchi Macjohnson Odu is a dedicated developer focused on innovative solutions and committed to continuous learning in technology. With a strong foundation in computer science and hands-on experience in various programming languages and frameworks, Otubonchi thrives in dynamic environments where creativity and problem-solving are encouraged. He is passionate about leveraging technology to create impactful applications that meet user needs and drive positive change. Otubonchi's enthusiasm for learning and growth makes him a valuable asset to any development team.</p>
+
+                            <a href="mailto:macj497@gmail.com" class="text-gold-500 hover:text-gold-500 social-icon"><i class="fa-solid fa-envelope"></i>macj497@gmail.com</a>
+                        </div>
+                        <div class="flex justify-end mt-auto">
+                            <button onclick="closeTeamModal('otubonchi-modal')" class="px-4 py-2 bg-blue-900 text-white rounded-lg hover:bg-blue-900 transition-colors">Close</button>
+                        </div>
+                    </div>
+                </div>
+                </div>
+                </div>
+                </div>
+    
             </div>
         </div>
     </section>
