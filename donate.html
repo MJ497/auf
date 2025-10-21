@@ -185,7 +185,7 @@
                         <div id="bank-transfer-info" class="hidden bg-gray-100 dark:bg-gray-700 p-4 rounded-lg">
                             <h4 class="font-medium text-gray-900 dark:text-white mb-2">Bank Transfer Details</h4>
                             <div class="space-y-2 text-sm text-gray-600 dark:text-gray-300">
-                                <p><span class="font-medium">Bank Name:</span> Union Bank Africa</p>
+                                <p><span class="font-medium">Bank Name:</span> Union Bank of Nigeria</p>
                                 <p><span class="font-medium">Account Name:</span> Augustine Udefa Foundation</p>
                                 <p><span class="font-medium">NGN Account Number:</span> 0235700707</p>
                                 <p><span class="font-medium">USD Account Number:</span> 0235683684</p>
@@ -279,9 +279,9 @@
                     <h3 class="text-lg font-semibold mb-4">Follow Us</h3>
                     <div class="flex space-x-4">
                           <a href="https://www.facebook.com/share/1CYdGtH2dk/?mibextid=wwXIfr" class="text-gray-400 hover:text-white transition-colors text-xl"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="text-gray-400 hover:text-white transition-colors text-xl"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors text-xl"><img width="24" height="24" src="img/icons8-twitter-48.png" alt="twitterx--v2"/></a>
                         <a href="https://www.instagram.com/augustineudefafoundation?igsh=eWsybWllYXlyMDB6&utm_source=qr" class="text-gray-400 hover:text-white transition-colors text-xl"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="text-gray-400 hover:text-white transition-colors text-xl"><i class="fab fa-linkedin-in"></i></a>
+                           <a href="https://www.linkedin.com/in/augustine-udefa-foundation-a308a038a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" class="text-gray-400 hover:text-white transition-colors text-xl"><i class="fab fa-linkedin-in"></i></a>
                          <a href="https://www.youtube.com/@AugustineUdefaFoundation" class="text-gray-400 hover:text-white transition-colors text-xl"><i class="fab fa-youtube"></i></a>
                     </div>
                 </div>
@@ -436,50 +436,138 @@
         // initialize: fetch exchange rate then update UI
         fetchExchangeRate();
 
-        // Form submission: uses Paystack for payments (keys must be replaced with real ones)
-        document.getElementById('donation-form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            if (!donationAmountInput.value) {
-                alert('Please select or enter a donation amount');
-                return;
-            }
-            const email = document.getElementById('email').value;
-            const firstName = document.getElementById('first-name').value;
-            const lastName = document.getElementById('last-name').value;
-            if (!email || !firstName || !lastName) {
-                alert('Please fill in all required donor information');
-                return;
-            }
-            const currency = currencySelect.value;
-            let amount = parseInt(donationAmountInput.value);
-            // Paystack expects amount in kobo (NGN) or cents (USD)
-            let paystackAmount = amount * 100;
-            // Use your Paystack public key
-            let paystackKey = (currency === 'NGN') ? 'pk_test_xxxx' : 'pk_test_xxxx'; // Replace with your real keys
-            var handler = PaystackPop.setup({
-                key: paystackKey,
-                email: email,
-                amount: paystackAmount,
-                currency: currency,
-                firstname: firstName,
-                lastname: lastName,
-                callback: function(response){
-                    alert('Payment complete! Reference: ' + response.reference);
-                    document.getElementById('donation-form').reset();
-                    donationOptions[0].classList.add('selected');
-                    paymentMethods[0].classList.add('selected');
-                    frequencyOptions[0].classList.add('selected');
-                    cardPaymentForm.classList.remove('hidden');
-                    bankTransferInfo.classList.add('hidden');
-                },
-                onClose: function(){
-                    alert('Transaction was not completed, window closed.');
-                }
-            });
-            handler.openIframe();
-        });
+      
+/* ====== PAYSTACK CLIENT INTEGRATION (drop-in) ======
+   Replace PAYSTACK_PUBLIC_KEY with your live public key (pk_live_xxx).
+   This code opens the Paystack inline modal and then calls your server to verify the payment.
+====================================================*/
+const PAYSTACK_PUBLIC_KEY = 'pk_live_8fa5f1e498bc04f8c8ac4165f0904406d7dd215d'; 
+// front-end API host resolution (dev vs production)
+const isLocalHost = location.hostname === 'localhost' || location.hostname === '127.0.0.1' || location.protocol === 'file:';
+const API_HOST = isLocalHost ? 'http://localhost:3000' : '';
+const VERIFY_ENDPOINT = API_HOST ? `${API_HOST}/verify-payment` : '/api/verify-payment';
 
-        // small formatting helpers (card number, expiry) — unchanged
+
+document.getElementById('donation-form').addEventListener('submit', async function(e) {
+  e.preventDefault();
+
+  // minimal client-side validation (keeps existing UX)
+  if (!document.getElementById('donation-amount').value) {
+    alert('Please select or enter a donation amount');
+    return;
+  }
+  const email = document.getElementById('email').value.trim();
+  const firstName = document.getElementById('first-name').value.trim();
+  const lastName = document.getElementById('last-name').value.trim();
+  if (!email || !firstName || !lastName) {
+    alert('Please fill in all required donor information');
+    return;
+  }
+
+  const currency = document.getElementById('currency-select').value; // 'NGN' or 'USD'
+  const amountNum = parseFloat(document.getElementById('donation-amount').value);
+  if (!amountNum || amountNum <= 0) {
+    alert('Invalid donation amount');
+    return;
+  }
+
+  // Paystack expects the amount in the smallest currency unit:
+  // - NGN: kobo (multiply by 100)
+  // - USD: cents (multiply by 100)
+  const paystackAmount = Math.round(amountNum * 100);
+
+  // show loading UI while setting up (optional)
+  document.querySelector('button[type="submit"]').setAttribute('disabled', 'disabled');
+
+  // Prepare metadata we want back from Paystack (optional)
+  const metadata = {
+    first_name: firstName,
+    last_name: lastName,
+    // you can add more custom metadata here if desired
+  };
+
+  // Setup Paystack inline
+  const handler = PaystackPop.setup({
+    key: PAYSTACK_PUBLIC_KEY,
+    email: email,
+    amount: paystackAmount,
+    currency: currency,
+    firstname: firstName,
+    lastname: lastName,
+    metadata: {
+      custom_fields: [
+        { display_name: "Donor Name", variable_name: "donor_name", value: `${firstName} ${lastName}` },
+        { display_name: "Donation Frequency", variable_name: "frequency", value: document.getElementById('donation-frequency').value || 'one-time' }
+      ]
+    },
+ callback: function (response) {
+  console.log("Payment complete! Reference:", response.reference);
+
+  // use variables that are in scope: email, currency, paystackAmount
+  // NOTE: paystackAmount is already in smallest unit (kobo/cents)
+  verifyPaymentOnServer(response.reference, email, currency, paystackAmount)
+    .then(result => {
+      document.querySelector('button[type="submit"]').removeAttribute('disabled');
+
+      if (result && (result.verified || result.success)) {
+        // Payment verified on server
+        alert('✅ Payment verified! Reference: ' + response.reference);
+
+        // optional: show your success UI, reset form
+        document.getElementById('donation-form').reset();
+        // restore UI selections
+        document.querySelectorAll('.donation-option')[0]?.classList.add('selected');
+        document.querySelectorAll('.payment-method')[0]?.classList.add('selected');
+        document.querySelectorAll('.frequency-option')[0]?.classList.add('selected');
+        document.getElementById('card-payment-form').classList.remove('hidden');
+        document.getElementById('bank-transfer-info').classList.add('hidden');
+
+        // TODO: run any post-payment logic: save to DB (server), send receipt, analytics, etc.
+      } else {
+        // server said not verified
+        alert('⚠️ Payment could not be verified. If your card was charged we will reconcile and contact you.');
+        console.warn('Server verification response:', result);
+      }
+    })
+    .catch(err => {
+      document.querySelector('button[type="submit"]').removeAttribute('disabled');
+      console.error('Error verifying payment on server', err);
+      alert('❌ Error verifying payment. Please contact support.');
+    });
+},
+
+
+    onClose: function() {
+      document.querySelector('button[type="submit"]').removeAttribute('disabled');
+      // user closed the payment modal
+    }
+  });
+
+  handler.openIframe();
+});
+
+// helper: verify payment with server (POST verifies using Paystack secret key)
+async function verifyPaymentOnServer(reference, email, currency, amountInSmallestUnit) {
+  try {
+    const res = await fetch(VERIFY_ENDPOINT, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ reference, email, currency, amount: amountInSmallestUnit })
+    });
+    if (!res.ok) {
+      const text = await res.text();
+      throw new Error('Server verification failed: ' + text);
+    }
+    const json = await res.json();
+    // expected response: { verified: true, data: {...} }
+    return json;
+  } catch (err) {
+    console.error('verifyPaymentOnServer error', err);
+    throw err;
+  }
+}
+
+   // small formatting helpers (card number, expiry) — unchanged
         document.getElementById('card-number').addEventListener('input', function(e) {
             let value = this.value.replace(/\s+/g, '').replace(/[^0-9]/gi, '');
             let formatted = '';
