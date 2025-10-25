@@ -157,6 +157,10 @@
           <label for="cgpa" class="block text-sm font-medium mb-1 dark:text-white text-gray-900">Current CGPA (if applicable)</label>
           <input type="text" id="ocgpa" name="ocgpa" class="w-full px-4 py-2 border border-gray-300 rounded-lg text-gray-900 dark:bg-gray-900 dark:border-gray-700 dark:text-gray-400" placeholder="e.g. 4.35 / 5.0">
         </div>
+           <div>
+          <label for="admission-letter" class="block text-sm font-medium mb-1 dark:text-white text-gray-900">Upload Photo</label>
+           <input type="hidden" role="uploadcare-uploader" id="photo" name="photo" data-public-key="bb3e37fd7caa0a712fe8" data-tabs="file url" data-clearable="true" data-multiple="false"  data-crop="" data-system-dialog="true" data-preview-step="true" required />
+        </div>
          <div>
           <label for="admissionletter" class="block text-sm font-medium mb-1 dark:text-white text-gray-900">Admission Letter (PDF)</label>
           <input type="hidden" role="uploadcare-uploader" id="oadmissionletter" name="oadmissionletter" data-public-key="bb3e37fd7caa0a712fe8" data-tabs="file url" data-clearable="true" data-multiple="false" data-images-only="false" data-accept="application/pdf" data-crop="" data-input-accept-types="application/pdf" data-system-dialog="true" data-preview-step="true" required />

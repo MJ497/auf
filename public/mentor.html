@@ -102,7 +102,7 @@
           <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-3">
             <div>
               <label for="fullName" class="block text-sm font-medium mb-1 text-gray-900 dark:text-white">Full name</label>
-              <input type="text" id="fullName" name="fullName" required class="w-full px-4 py-2 border rounded-lg dark:bg-gray-900 dark:border-gray-700 dark:text-gray-400">
+              <input type="text" id="applicantname" name="applicantname" required class="w-full px-4 py-2 border rounded-lg dark:bg-gray-900 dark:border-gray-700 dark:text-gray-400">
             </div>
             <div>
               <label for="dob" class="block text-sm font-medium mb-1 text-gray-900 dark:text-white">Date of birth</label>
@@ -111,7 +111,7 @@
 
             <div>
               <label for="sex" class="block text-sm font-medium mb-1 text-gray-900 dark:text-white">Gender</label>
-              <select id="sex" name="sex" required class="w-full px-4 py-2 border rounded-lg dark:bg-gray-900 dark:border-gray-700 dark:text-gray-400">
+              <select id="gender" name="gender" required class="w-full px-4 py-2 border rounded-lg dark:bg-gray-900 dark:border-gray-700 dark:text-gray-400">
                 <option value="">Select</option>
                 <option value="male">Male</option>
                 <option value="female">Female</option>
@@ -126,7 +126,7 @@
 
             <div>
               <label for="stateOfOrigin" class="block text-sm font-medium mb-1 text-gray-900 dark:text-white">State of origin</label>
-              <input type="text" id="stateOfOrigin" name="stateOfOrigin" class="w-full px-4 py-2 border rounded-lg dark:bg-gray-900 dark:border-gray-700 dark:text-gray-400">
+              <input type="text" id="stateoforigin" name="stateoforigin" class="w-full px-4 py-2 border rounded-lg dark:bg-gray-900 dark:border-gray-700 dark:text-gray-400">
             </div>
             <div>
               <label for="religion" class="block text-sm font-medium mb-1 text-gray-900 dark:text-white">Religion</label>
@@ -135,16 +135,16 @@
 
             <div>
               <label for="contact" class="block text-sm font-medium mb-1 text-gray-900 dark:text-white">Contact number</label>
-              <input type="tel" id="contact" name="contact" required class="w-full px-4 py-2 border rounded-lg dark:bg-gray-900 dark:border-gray-700 dark:text-gray-400">
+              <input type="tel" id="contactnumber" name="contactnumber" required class="w-full px-4 py-2 border rounded-lg dark:bg-gray-900 dark:border-gray-700 dark:text-gray-400">
             </div>
             <div>
               <label for="email" class="block text-sm font-medium mb-1 text-gray-900 dark:text-white">Email address</label>
-              <input type="email" id="email" name="email" required class="w-full px-4 py-2 border rounded-lg dark:bg-gray-900 dark:border-gray-700 dark:text-gray-400">
+              <input type="email" id="applicantemail" name="applicantemail" required class="w-full px-4 py-2 border rounded-lg dark:bg-gray-900 dark:border-gray-700 dark:text-gray-400">
             </div>
 
             <div class="md:col-span-2">
               <label for="permanentAddress" class="block text-sm font-medium mb-1 text-gray-900 dark:text-white">Permanent address</label>
-              <textarea id="permanentAddress" name="permanentAddress" rows="2" class="w-full px-4 py-2 border rounded-lg dark:bg-gray-900 dark:border-gray-700 dark:text-gray-400"></textarea>
+              <textarea id="permanentaddress" name="permanentaddress" rows="2" class="w-full px-4 py-2 border rounded-lg dark:bg-gray-900 dark:border-gray-700 dark:text-gray-400"></textarea>
             </div>
           </div>
         </fieldset>
@@ -173,7 +173,7 @@
 
             <div>
               <label for="cgpa" class="block text-sm font-medium mb-1 text-gray-900 dark:text-white">CGPA</label>
-              <input type="text" id="cgpa" name="cgpa" placeholder="e.g. 4.00 / 5.00" class="w-full px-4 py-2 border rounded-lg dark:bg-gray-900 dark:border-gray-700 dark:text-gray-400">
+              <input type="text" id="mcgpa" name="mcgpa" placeholder="e.g. 4.00 / 5.00" class="w-full px-4 py-2 border rounded-lg dark:bg-gray-900 dark:border-gray-700 dark:text-gray-400">
             </div>
 
             <div>
@@ -241,10 +241,15 @@
           <legend class="px-2 text-lg font-semibold text-gray-900 dark:text-white">Document upload (PDFs unless otherwise stated)</legend>
           <p class="text-sm text-gray-600 dark:text-gray-300 mt-2">Upload PDFs for documents. Photograph should be a JPG/PNG.</p>
 
+          
           <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-3">
+               <div>
+          <label for="admission-letter" class="block text-sm font-medium mb-1 dark:text-white text-gray-900">Upload Photo</label>
+           <input type="hidden" role="uploadcare-uploader" id="photo" name="photo" data-public-key="bb3e37fd7caa0a712fe8" data-tabs="file url" data-clearable="true" data-multiple="false"  data-crop="" data-system-dialog="true" data-preview-step="true" required />
+        </div>
             <div>
               <label for="coverLetter" class="block text-sm font-medium mb-1 text-gray-900 dark:text-white">Cover letter (PDF)</label>
-              <input type="hidden" role="uploadcare-uploader" id="coverLetter" name="coverLetter" data-public-key="bb3e37fd7caa0a712fe8" data-tabs="file url" data-clearable="true" data-accept="application/pdf" data-preview-step="true" />
+              <input type="hidden" role="uploadcare-uploader" id="mcoverLetter" name="mcoverLetter" data-public-key="bb3e37fd7caa0a712fe8" data-tabs="file url" data-clearable="true" data-accept="application/pdf" data-preview-step="true" />
             </div>
 
             <div>
@@ -277,10 +282,7 @@
               <input type="hidden" role="uploadcare-uploader" id="recommendation3" name="recommendation3" data-public-key="bb3e37fd7caa0a712fe8" data-tabs="file url" data-clearable="true" data-accept="application/pdf" data-preview-step="true" />
             </div>
 
-            <div>
-              <label for="photoUpload" class="block text-sm font-medium mb-1 text-gray-900 dark:text-white">Photograph (JPG/PNG)</label>
-              <input type="hidden" role="uploadcare-uploader" id="photoUpload" name="photoUpload" data-public-key="bb3e37fd7caa0a712fe8" data-tabs="file url camera" data-clearable="true" data-accept="image/*" data-images-only="true" data-preview-step="true" />
-            </div>
+         
           </div>
         </fieldset>
 
