@@ -288,7 +288,17 @@
                 <form id="volunteer-form" class="space-y-4">
                     <div>
                         <label for="opportunity" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Opportunity *</label>
-                        <input type="text" id="opportunity" name="opportunity" readonly required class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg form-input bg-gray-100 dark:bg-gray-700 dark:text-white cursor-not-allowed">
+                        <select id="opportunity" name="opportunity_display" required class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg form-select bg-white dark:bg-gray-700 dark:text-white">
+                            <option value="">Select an opportunity</option>
+                            <option value="Education Programs">Education Programs</option>
+                            <option value="Health Initiatives">Health Initiatives</option>
+                            <option value="Food Supply Programs">Food Supply Programs</option>
+                            <option value="Event Coordination">Event Coordination</option>
+                            <option value="Fundraising">Fundraising</option>
+                            <option value="Skills-Based Volunteering">Skills-Based Volunteering</option>
+                        </select>
+                        <!-- Hidden input named 'opportunity' is what EmailJS template expects -->
+                        <input type="hidden" id="opportunity-hidden" name="opportunity" value="">
                     </div>
                     <div>
                         <label for="fullname" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Full Name *</label>
@@ -483,31 +493,52 @@ document.addEventListener('DOMContentLoaded', function () {
         e.preventDefault();
         document.getElementById('loading-modal').classList.remove('hidden');
 
-        // Collect form data
-        var formData = {};
-        Array.from(form.elements).forEach(function (el) {
-            if (el.name) formData[el.name] = el.value;
-        });
-        // Debug: log formData to check opportunity value
-        console.log('FormData sent to EmailJS:', formData);
+        // Ensure opportunity is copied into the hidden input (EmailJS expects a field named 'opportunity')
+        var oppDisplay = document.getElementById('opportunity');
+        var oppHidden = document.getElementById('opportunity-hidden');
+        if (oppDisplay && oppHidden) {
+            oppHidden.value = oppDisplay.value || '';
+        }
 
-        // Ensure opportunity is set (fallback to modal title if missing)
-        if (!formData.opportunity) {
+        // Build explicit templateParams for EmailJS (matches your template variables)
+        // Ensure opportunity value is present (hidden input preferred)
+        var opportunityValue = '';
+        if (oppHidden && oppHidden.value) opportunityValue = oppHidden.value;
+        else if (oppDisplay && oppDisplay.value) opportunityValue = oppDisplay.value;
+        // Final fallback to modal title
+        if (!opportunityValue || opportunityValue.trim() === '') {
             var modalTitle = document.getElementById('modal-title');
             if (modalTitle) {
-                var match = modalTitle.textContent.match(/Volunteer for (.+)/);
-                if (match) formData.opportunity = match[1];
+                var match = modalTitle.textContent.match(/Volunteer for\s+(.+)/);
+                if (match) opportunityValue = match[1].trim();
             }
         }
 
-        emailjs.send('service_hxc7wck', 'template_z7rz2mi', formData)
+        var templateParams = {
+            opportunity: opportunityValue || '',
+            vemail: (document.getElementById('vemail') || {value:''}).value,
+            phone: (document.getElementById('phone') || {value:''}).value,
+            location: (document.getElementById('location') || {value:''}).value,
+            availability: (document.getElementById('availability') || {value:''}).value,
+            skills: (document.getElementById('skills') || {value:''}).value,
+            fullname: (document.getElementById('fullname') || {value:''}).value
+        };
+
+        // Keep hidden input in sync
+        if (oppHidden) oppHidden.value = templateParams.opportunity;
+
+        console.log('EmailJS templateParams:', templateParams);
+
+        emailjs.send('service_hxc7wck', 'template_z7rz2mi', templateParams)
             .then(function () {
                 document.getElementById('loading-modal').classList.add('hidden');
                 document.getElementById('success-modal').classList.remove('hidden');
+                // reset form and hidden opportunity
                 form.reset();
+                if (oppHidden) oppHidden.value = '';
             }, function (error) {
                 document.getElementById('loading-modal').classList.add('hidden');
-                // No alert
+                console.error('EmailJS send error:', error);
             });
     });
 
@@ -539,9 +570,9 @@ document.addEventListener('DOMContentLoaded', function () {
         // Volunteer form modal functions
         function showVolunteerForm(opportunity) {
             document.getElementById('volunteer-modal').classList.remove('hidden');
-            // Set the value for the visible, readonly input
-            var oppInput = document.getElementById('opportunity');
-            if (oppInput) oppInput.value = opportunity || '';
+                // Set the value for the visible select
+                var oppSelect = document.getElementById('opportunity');
+                if (oppSelect) oppSelect.value = opportunity || '';
             document.getElementById('modal-title').textContent = `Volunteer for ${opportunity}`;
         }
 
