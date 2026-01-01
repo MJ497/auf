@@ -7,6 +7,7 @@
     <title>Our Programs - Augustine Udefa Foundation</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="shortcut icon" href="img/imgg.png" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/@preline/preline@2.0.0/dist/preline.min.js"></script>
@@ -25,7 +26,7 @@
     <div class="grid grid-cols-3 items-center h-20">
       <!-- left: logo -->
       <div class="flex items-center">
-        <a href="#" id="logo-link" class="flex items-center space-x-3 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500" aria-label="Augustine Udefa Foundation home">
+        <a href="index.html" id="logo-link" class="flex items-center space-x-3 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500" aria-label="Augustine Udefa Foundation home">
           <img src="img/logo.PNG" alt="Augustine Udefa Foundation logo" class="h-10 w-auto sm:h-12 md:h-14 object-contain rounded-md shadow-sm" />
         </a>
       </div>
@@ -39,8 +40,9 @@
           <a href="event.html" class="nav-link text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white" id="events-link">Events</a>
           <a href="volunteer.html" class="nav-link text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white" id="trustees-link">Volunteer</a>
           <a href="donate.html" class="nav-link text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white" id="donate-link">Donate</a>
-        <a href="news.html" class="nav-link text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white" id="donate-link">News</a>
-        
+            <a href="news.html" class="nav-link text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white"
+                id="news-link">News</a>
+            
         </div>
       </div>
 
@@ -74,6 +76,9 @@
       <a href="event.html" class="block px-3 py-2 rounded-md text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800" id="mobile-events-link">Events</a>
       <a href="volunteer.html" class="block px-3 py-2 rounded-md text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800" id="mobile-trustees-link">Volunteer</a>
       <a href="donate.html" class="block px-3 py-2 rounded-md text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800" id="mobile-donate-link">Donate</a>
+      <a href="news.html"
+                class="block px-3 py-2 rounded-md text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800"
+                id="mobile-news-link">News</a>
     </div>
   </div>
 
@@ -161,6 +166,14 @@
                             <i class="fas fa-check text-gold-500 mt-1 mr-2"></i>
                             <span> Full school  fee support for the period of your program.</span>
                         </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-gold-500 mt-1 mr-2"></i>
+                            <span>Application start date: November 17, 2025</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-gold-500 mt-1 mr-2"></i>
+                            <span>Application deadline: December 31, 2025</span>
+                        </li>
                         <!-- <li class="flex items-start">
                             <i class="fas fa-check text-gold-500 mt-1 mr-2"></i>
                             <span>Minimum CGPA for this one is 4.30 out of 5.0 or 3.30 out of 4.0</span>
@@ -171,8 +184,14 @@
                         </li> -->
                     </ul>
                     <div class="flex flex-col space-y-3">
-                        <a href="speakingscholarship.html" class="px-4 py-2 bg-gold-500 text-white rounded-lg hover:bg-gold-600 transition-colors font-medium text-center">Apply Now</a>
-                        <a href="speakingscholarship.html" class="px-4 py-2 border border-gray-300 dark:border-gray-600 text-gray-900 dark:text-white rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors font-medium text-center">Learn More</a>
+                        <!-- <a href="speakingscholarship.html" class="px-4 py-2 bg-gold-500 text-white rounded-lg hover:bg-gold-600 transition-colors font-medium text-center">Apply Now</a>
+                        <a href="speakingscholarship.html" class="px-4 py-2 border border-gray-300 dark:border-gray-600 text-gray-900 dark:text-white rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors font-medium text-center">Learn More</a> -->
+                        <button class="px-4 py-2 bg-gold-500 text-white rounded-lg hover:bg-gold-600 transition-colors font-medium text-center" onclick="document.querySelector('.cancel-modal').classList.remove('hidden')">
+                                                                        Apply Now
+                                                                    </button>
+                        <a href="speak.html"
+                            class="px-4 py-2 border border-gray-300 dark:border-gray-600 text-gray-900 dark:text-white rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors font-medium text-center">Learn
+                            More</a>
                     </div>
                 </div>
                 
@@ -199,8 +218,15 @@
                       
                     </ul>
                     <div class="flex flex-col space-y-3">
-                        <a href="orphanscholarship.html" class="px-4 py-2 bg-gold-500 text-white rounded-lg hover:bg-gold-600 transition-colors font-medium text-center">Apply Now</a>
-                        <a href="orphanscholarship.html" class="px-4 py-2 border border-gray-300 dark:border-gray-600 text-gray-900 dark:text-white rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors font-medium text-center">Learn More</a>
+                        <!-- <a href="orphanscholarship.html" class="px-4 py-2 bg-gold-500 text-white rounded-lg hover:bg-gold-600 transition-colors font-medium text-center">Apply Now</a>
+                        <a href="orphanscholarship.html" class="px-4 py-2 border border-gray-300 dark:border-gray-600 text-gray-900 dark:text-white rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors font-medium text-center">Learn More</a> -->
+                   
+                    <button class="px-4 py-2 bg-gold-500 text-white rounded-lg hover:bg-gold-600 transition-colors font-medium text-center" onclick="document.querySelector('.cancel-modal').classList.remove('hidden')">
+                                                Apply Now
+                                            </button>
+                    <a href="orphan.html"
+                        class="px-4 py-2 border border-gray-300 dark:border-gray-600 text-gray-900 dark:text-white rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors font-medium text-center">Learn
+                        More</a>
                     </div>
                 </div>
                 
@@ -228,14 +254,14 @@
                         </li> -->
                     </ul>
                     <div class="flex flex-col space-y-3">
-                        <!-- <a href="excellence.html" class="px-4 py-2 bg-gold-500 text-white rounded-lg hover:bg-gold-600 transition-colors font-medium text-center">Apply Now</a> -->
-                        <!-- <a href="excellence.html" class="px-4 py-2 border border-gray-300 dark:border-gray-600 text-gray-900 dark:text-white rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors font-medium text-center">Learn More</a> -->
+                        <!-- <a href="excellence.html" class="px-4 py-2 bg-gold-500 text-white rounded-lg hover:bg-gold-600 transition-colors font-medium text-center">Apply Now</a>
+                        <a href="excellence.html" class="px-4 py-2 border border-gray-300 dark:border-gray-600 text-gray-900 dark:text-white rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors font-medium text-center">Learn More</a> -->
                         <button class="px-4 py-2 bg-gold-500 text-white rounded-lg hover:bg-gold-600 transition-colors font-medium text-center" onclick="document.querySelector('.cancel-modal').classList.remove('hidden')">
-                            Apply Now
-                        </button>
-                         <button class="px-4 py-2 border border-gray-300 dark:border-gray-600 text-gray-900 dark:text-white rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors font-medium text-center" onclick="document.querySelector('.cancel-modal').classList.remove('hidden')">
-                           Learn More
-                        </button>
+                                                    Apply Now
+                                                </button>
+                        <a href="excellent.html"
+                            class="px-4 py-2 border border-gray-300 dark:border-gray-600 text-gray-900 dark:text-white rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors font-medium text-center">Learn
+                            More</a>
                     </div>
                 </div>
 
@@ -249,20 +275,24 @@
                      Mentorship & full-scholarship preparation for excellent but underfunded applicants from Africa seeking graduate study in the United States.
      </p>
                     <ul class="text-gray-600 dark:text-gray-300 text-sm mb-6 space-y-2">
+                    
                         <li class="flex items-start">
                             <i class="fas fa-check text-gold-500 mt-1 mr-2"></i>
-                            <span> Application deadline: 31 March.</span>
+                            <span>Application start date: December 1, 2025</span>
                         </li>
-                        
-                        <li class="flex items-start">
+                       
+                            <li class="flex items-start">
+                            <i class="fas fa-check text-gold-500 mt-1 mr-2"></i>
+                            <span> Application deadline: 31 March 2026.</span>
+                        </li>
+                          <!-- <li class="flex items-start">
+                            <i class="fas fa-check text-gold-500 mt-1 mr-2"></i>
+                            <span> Scholarship start: Fall or Spring semester (depending on award).</span>
+                        </li> -->
+                       <li class="flex items-start">
                             <i class="fas fa-check text-gold-500 mt-1 mr-2"></i>
                             <span>   Mentorship & preparation: 15 April – 30 October.</span>
                         </li>
-                          <li class="flex items-start">
-                            <i class="fas fa-check text-gold-500 mt-1 mr-2"></i>
-                            <span> Scholarship start: Fall or Spring semester (depending on award).</span>
-                        </li>
-                      
                     </ul>
                     <div class="flex flex-col space-y-3">
                         <a href="mentor.html" class="px-4 py-2 bg-gold-500 text-white rounded-lg hover:bg-gold-600 transition-colors font-medium text-center">Apply Now</a>
@@ -274,24 +304,25 @@
           
         </div>
     </section>
-
-    <!-- modal message for scholaorship -->
-     <div class="cancel-modal w-full backdrop-blur-md  h-full fixed top-0 left-0 flex items-center justify-center hidden">
-<div class="small-modal p-6 bg-white w-50 text-black flex justify-center align-center text-center flex-col rounded-lg shadow-lg">
-    <i class="fa-solid fa-circle-exclamation text-gold-500 text-4xl"></i>
-    <p>we are currently not accepting applications for this scholaorship.<br> When we begin accepting, an announcement will be made and the application form will be avialiable.</p>
-    <button class="close-modal mt-4 px-1 py-1 bg-gold-500 text-white rounded-lg hover:bg-gold-600 transition-colors font-medium">Close</button>
+<!-- modal message for scholaorship -->
+<div class="cancel-modal w-full backdrop-blur-md  h-full fixed top-0 left-0 flex items-center justify-center hidden">
+    <div
+        class="small-modal p-6 bg-white w-50 text-black flex justify-center align-center text-center flex-col rounded-lg shadow-lg">
+        <i class="fa-solid fa-circle-exclamation text-gold-500 text-4xl"></i>
+        <p>We are currently not accepting applications for this scholarship.<br> When we begin accepting, an announcement will be made and the application form will be available.
+        </p>
+        <button class="close-modal mt-4 px-1 py-1 bg-gold-500 text-white rounded-lg hover:bg-gold-600 transition-colors font-medium">Close</button>
+    </div>
 </div>
-     </div>
 
-     <script>
-        const can_mod = document.querySelector('.cancel-modal');
+<script>
+    const can_mod = document.querySelector('.cancel-modal');
         const close_mod = document.querySelector('.close-modal');
 
         close_mod.addEventListener('click', () => {
             can_mod.classList.add('hidden');
         });
-     </script>
+</script>
     <!-- Health Programs -->
     <section class="py-20 bg-gray-50 dark:bg-gray-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -523,7 +554,7 @@
                             </button>
                             <div class="accordion-content px-6">
                                 <div class="pb-4 text-gray-700 dark:text-gray-300">
-                                    We currently operate in Nigeria with major priorities to areas with the greatest need.
+                                    We currently operate in Africa with major priorities to areas with the greatest need.
                                 </div>
                             </div>
                         </div>
@@ -550,7 +581,7 @@
                                 <div class="pb-4 text-gray-700 dark:text-gray-300">
                                     <ul class="list-disc ml-6">
                                         <li>Visit our website</li>
-                                        <li>Apply for aid or contact info@augustineudefafoundation.com</li>
+                                        <li>Apply for aid or email us at: contact@augustineudefafoundation.com</li>
                                     </ul>
                                 </div>
                             </div>
@@ -686,7 +717,7 @@
                                 <div class="pb-4 text-gray-700 dark:text-gray-300">
                                     <ul class="list-disc ml-6">
                                         <li>Visit our website</li>
-                                        <li>Email us @ info@augustineudefafoundation.com</li>
+                                        <li>Email us @ contact@augustineudefafoundation.com</li>
                                     </ul>
                                 </div>
                             </div>
@@ -826,7 +857,7 @@
                                     <ul class="list-disc ml-6">
                                         <li>Visit our website</li>
                                         <li>Call us or</li>
-                                        <li>Email us @ info@augustineudefafoundation.com</li>
+                                        <li>Email us @ contact@augustineudefafoundation.com</li>
                                     </ul>
                                 </div>
                             </div>
@@ -971,7 +1002,7 @@
                             </button>
                             <div class="accordion-content px-6">
                                 <div class="pb-4 text-gray-700 dark:text-gray-300">
-                                    Email us @ info@augustineudefafoundation.com
+                                    Email us @ contact@augustineudefafoundation.com
                                 </div>
                             </div>
                         </div>
@@ -1150,7 +1181,7 @@
                         </button>
                         <div class="accordion-content px-6">
                             <div class="pb-4 text-gray-700 dark:text-gray-300">
-                                Please email us at <a href="mailto:augustineudefafoundation@gmail.com" class="text-blue-600 hover:underline">augustineudefafoundation@gmail.com</a>.
+                                Please email us at <a href="mailto:contact@augustineudefafoundation.com" class="text-blue-600 hover:underline">contact@augustineudefafoundation.com</a>.
                             </div>
                         </div>
                     </div>
@@ -1182,7 +1213,8 @@
                     <ul class="space-y-2 text-gray-400">
                         <li class="flex items-center"><i class="fas fa-map-marker-alt mr-2"></i>Ikot Nkebre 2, Along Health Centre, 8 Miles, Calabar, Cross River State, Nigeria.</li>
                         <li class="flex items-center"><i class="fas fa-phone-alt mr-2"></i> +234 816 261 5039</li>
-                        <li class="flex items-center"><i class="fas fa-envelope mr-2"></i> augustineudefafoundation@gmail.com</li>
+                        <!-- <li class="flex items-center"><i class="fas fa-envelope mr-2"></i> augustineudefafoundation@gmail.com</li> -->
+                        <li class="flex items-center"><i class="fas fa-envelope mr-2"></i> contact@augustineudefafoundation.com</li>
                     </ul>
                 </div>
                 <div>

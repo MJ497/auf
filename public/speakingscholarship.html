@@ -124,16 +124,23 @@ Recipients of the Augustine Udefa Speaking Scholarship are expected to be good a
         </div>
       </div>
       <!-- Success Message -->
-      <div id="success-message" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
-        <div class="bg-white dark:bg-gray-800 p-8 rounded-lg shadow-lg flex flex-col items-center text-center">
-          <i class="fas fa-check-circle text-green-500 text-4xl mb-4"></i>
-          <span class="text-gray-900 dark:text-white font-semibold">Application submitted successfully. <br>
-    You will now be redirected to upload your required documents <br>
-    Please use the <b>SAME</b> email address.</span>
-          <p class="mt-2">we will get back to you shortly!!</p>
-          <button onclick="window.location.reload()" class="mt-4 px-4 py-2 bg-gold-500 text-white rounded-lg hover:bg-gold-600">Close</button>
+        <div id="success-message" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+            <div class="bg-white dark:bg-gray-800 p-8 rounded-lg shadow-lg flex flex-col items-center text-center">
+                <i class="fas fa-check-circle text-green-500 text-4xl mb-4"></i>
+                <span class="text-gray-900 dark:text-white font-semibold">Application submitted successfully. <br>
+            You will now be redirected to upload your required documents <br>
+            Please use the <b>SAME</b> email address.</span>
+                <p class="mt-2">we will get back to you shortly!!</p>
+                <div class="mt-4 flex flex-col items-center">
+                    <svg class="animate-spin h-8 w-8 text-gold-500 mb-2" xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 24 24">
+                        <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                        <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8z"></path>
+                    </svg>
+                    <p class="text-sm text-gray-600 dark:text-gray-300">Redirecting to upload page...</p>
+                </div>
+            </div>
         </div>
-      </div>
       <form id="scholarship-form" class="space-y-4 bg-gray-50 dark:bg-gray-800 p-6 rounded-xl shadow-md">
         <div>
           <label for="applicantname" class="block text-sm font-medium mb-1 dark:text-white text-gray-900">Full Name</label>
