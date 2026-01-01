@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <base target="_self">
+    <title>Augustine Udefa Foundation - Education Empowerment</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="shortcut icon" href="img/imgg.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Keep a single Font Awesome link (removed duplicate) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- removed preline script (unused) to avoid extra JS load -->
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body class="bg-white dark:bg-gray-900 transition-colors duration-300 font-sans">
+    <!-- Navigation -->
+    <header
+        class="sticky top-0 z-50 bg-white/90 dark:bg-gray-900/90 backdrop-blur-md border-b border-gray-200 dark:border-gray-800">
+        <nav class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-3 items-center h-20">
+                <div class="flex items-center">
+                    <a href="#" id="logo-link"
+                        class="flex items-center space-x-3 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+                        aria-label="Augustine Udefa Foundation home">
+                        <img src="img/logo.PNG" alt="Augustine Udefa Foundation logo" class="h-10 w-auto sm:h-12 md:h-14 object-contain rounded-md shadow-sm" />
+                    </a>
+                </div>
+
+                <div class="hidden md:flex justify-center">
+                    <div class="flex items-center space-x-8">
+                        <a href="index.html"
+                            class="nav-link text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white"
+                            id="home-link">Home</a>
+                        <a href="about.html"
+                            class="nav-link text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white"
+                            id="about-link">About</a>
+                        <a href="program.html"
+                            class="nav-link text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white"
+                            id="programs-link">Programs</a>
+                        <a href="event.html"
+                            class="nav-link text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white"
+                            id="events-link">Events</a>
+                        <a href="volunteer.html"
+                            class="nav-link text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white"
+                            id="trustees-link">Volunteer</a>
+                        <a href="donate.html"
+                            class="nav-link text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white"
+                            id="donate-link">Donate</a>
+                        <a href="news.html"
+                            class="nav-link text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white"
+                            id="news-link">News</a>
+                    </div>
+                </div>
+
+                <div class="flex justify-end items-center">
+                    <div class="hidden md:block"></div>
+
+                    <button
+          id="mobile-menu-button"
+          class="md:hidden absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-500 dark:text-gray-400 p-2 rounded-md"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+          aria-label="Toggle menu"
+        >
+          <i class="fas fa-bars text-xl" aria-hidden="true"></i>
+        </button>
+                </div>
+            </div>
+        </nav>
+
+        <div class="hidden md:hidden bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800"
+            id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="index.html"
+                    class="block px-3 py-2 rounded-md text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800"
+                    id="mobile-home-link">Home</a>
+                <a href="about.html"
+                    class="block px-3 py-2 rounded-md text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800"
+                    id="mobile-about-link">About</a>
+                <a href="program.html"
+                    class="block px-3 py-2 rounded-md text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800"
+                    id="mobile-programs-link">Programs</a>
+                <a href="event.html"
+                    class="block px-3 py-2 rounded-md text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800"
+                    id="mobile-events-link">Events</a>
+                <a href="volunteer.html"
+                    class="block px-3 py-2 rounded-md text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800"
+                    id="mobile-trustees-link">Volunteer</a>
+                <a href="donate.html"
+                    class="block px-3 py-2 rounded-md text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800"
+                    id="mobile-donate-link">Donate</a>
+                <a href="news.html"
+                    class="block px-3 py-2 rounded-md text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800"
+                    id="mobile-news-link">News & Stories</a>
+            </div>
+        </div>
+    </header>
+ <!-- Hero Section -->
+    <section class="relative h-96 flex items-center justify-center bg-gray-900 overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-r from-gray-900 to-transparent z-10"></div>
+        <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+             alt="Students in classroom" 
+             class="absolute inset-0 w-full h-full object-cover">
+        <div class="relative z-20 text-center px-4">
+            <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">Our News & Stories</h1>
+            <p class="text-xl text-gray-300 max-w-2xl mx-auto">Follow us through our journey of transforming lives through education, health, and community support initiatives.</p>
+        </div>
+    </section>
+    <!-- ====== News & Stories Section ====== -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    
+        <section id="news-and-stories" class="prose lg:prose-lg dark:prose-invert mx-auto">
+
+            <!-- First Story: Speaking Scholarship (hero + finalists gallery) -->
+            <article
+                class=" dark:bg-gray-800 border border-gray-100 dark:border-gray-700 rounded-lg shadow-sm overflow-hidden">
+                <div class="md:flex flex flex-col">
+                    <!-- Event image (plain image - no modal) -->
+                    <!-- <div class="w-full">
+                        <img src="img/group.jpg" id="event-main-img" alt="Augustine Udefa Foundation Speaking Scholarship 2025" class="w-full h-32 object-cover sm:h-full" />
+                    </div> -->
+
+                    <!-- Story content -->
+                    <div class="p-6">
+                        <h2 class="text-2xl font-semibold mb-2">Augustine Udefa Speaking Scholarship — Maiden Edition
+                            (2025)</h2>
+                        <p class="text-sm text-gray-600 dark:text-gray-300 mb-4">The Augustine Udefa Foundation is
+                            pleased to announce that the maiden edition of our speaking scholarship competition was a
+                            huge success. (Competition: April 6, 2025 — October 18, 2025. Award ceremony: October 29,
+                            2025.)</p>
+
+                        <div class="text-gray-700 dark:text-gray-200 mb-4">
+                            <p>Our Foundation is pleased to announce that the maiden edition of our speaking scholarship
+                                competition was a huge success. The competition started on April 6, 2025 and ended on
+                                October 18, 2025. The 2025 award ceremony took place on October 29, 2025 in the College
+                                Hall of the College of Medical Sciences at the University of Calabar, Nigeria.</p>
+
+                            <p>We wish to use this medium to thank key players who contributed to the success of the
+                                competition. Our profound gratitude goes to Almighty God for the grace and blessings to
+                                champion this cause. We are grateful to the Founder, Augustine Udefa, and Co-Founder,
+                                Precious Udefa, for the vision to establish this Foundation.</p>
+
+                            <p>The Augustine Udefa Speaking Scholarship competition 2025 would not have been successful
+                                without the support and selfless service of our board and team members. We are very
+                                grateful to Sunday Okpa, Board Secretary; Efiok Archibong, PhD, Programs Director;
+                                Charles Udefa, Board Member; Charles-Vic Anyati, Graphic Designer and Director of
+                                Publicity; and Esther Orindu, Programs Review Writer. These guys have been very
+                                instrumental to the success of the 2025 competition and the smooth running of the
+                                Foundation’s activities. God bless you all. We also thank our technical team for
+                                ensuring that the technical department runs efficiently.</p>
+
+                            <p>We are sincerely grateful to our judges for the significant role they played in the
+                                success of the event. Their feedback and constructive criticism, as well as their
+                                sincere, transparent, and professional judgement were topnotch.</p>
+
+                            <p>Our gratitude goes to the Provost and Deputy Provost of the College of Medical Sciences,
+                                as well as the Dean of the Faculty of Basic Medical Sciences of the University of
+                                Calabar for giving us the opportunity to host our maiden scholarship award ceremony in
+                                the College and for gracing the event. We also thank the Ag Head as well as the Chief
+                                Technologist of the Department of Physiology, the Deputy Director of Students Support
+                                Center, and other academics and non-academics at the University of Calabar who attended
+                                and graced the event.</p>
+
+                            <p>Our gratitude extends to our families, friends, and followers who have been very
+                                supportive. Thank you for your support.</p>
+                        </div>
+
+                        <h3 class="text-lg font-medium mb-2">Scholarship Awards</h3>
+                        <ol class="list-decimal list-inside text-gray-700 dark:text-gray-200 mb-4">
+                            <li><strong>Ibiangake Ezekiel Akpan (Winner)</strong>: Augustine Udefa Speaking Scholarship
+                                + ₦50,000.</li>
+                            <li><strong>Deborah Effiong Ephraim (1st Runner-up)</strong>: One-time scholarship of
+                                ₦100,000.</li>
+                            <li><strong>Nkoyo Asuquo Nyong (2nd Runner-up)</strong>: One-time scholarship of ₦50,000.
+                            </li>
+                        </ol>
+
+                        <p class="text-sm text-gray-500 dark:text-gray-400">Other participants received consolation
+                            prizes.</p>
+                        <!-- Event Gallery: replace image src with local files from `img/` as needed -->
+                        <section class="mt-8">
+                            <h3 class="text-xl font-semibold mb-4">Event Gallery</h3>
+
+                            <div class="flex flex-wrap gap-8">
+                                <!-- Card 1 -->
+                                <article class="flex flex-col  bg-white
+                                 dark:bg-gray-800 p-4 rounded-lg shadow-sm w-full sm:w-[45%] lg:w-[28%]">
+                                    <img src="img/IMG_1468.JPG" data-src="img/IMG_1468.JPG" alt="Opening ceremony" class="event-thumb w-full h-64 md:h-80 lg:h-72 object-cover rounded-md cursor-pointer hover:scale-105 transition-transform" loading="lazy">
+                                    <div class="mt-4">
+                                        <p class="font-semibold text-gray-900 dark:text-gray-100 text-base md:text-lg">Ibiangake Akpan</p>
+                                        <p class="text-sm md:text-base text-gray-600 dark:text-gray-300">Winner of the 2025 Augustine Udefa speaking scholarship and some board members.</p>
+                                    </div>
+                                </article>
+
+                                <!-- Card 2 -->
+                                <article class="flex flex-col bg-white dark:bg-gray-800 p-4 rounded-lg shadow-sm w-full sm:w-[45%] lg:w-[28%]">
+                                    <img src="img/IMG_1374.JPG" data-src="img/IMG_1374.JPG" alt="Judges panel" class="event-thumb w-full h-64 md:h-80 lg:h-72 object-cover rounded-md cursor-pointer hover:scale-105 transition-transform" loading="lazy">
+                                    <div class="mt-4">
+                                        <p class="font-semibold text-gray-900 dark:text-gray-100 text-base md:text-lg">From left to right:</p>
+                                        <p class="text-sm md:text-base text-gray-600 dark:text-gray-300">Dr. Daniel Ikpi, Ag Head of Department (Physiology); Prof. Sunday Bisong, Deputy Provost; Dr. Ernest Amama, Deputy Director of Student Support Center; Mr. Akpan, Chief Technologist, Dept. of Physiology, University of Calabar.</p>
+                                    </div>
+                                </article>
+
+                                <!-- Card 3 -->
+                                <article class="flex flex-col bg-white dark:bg-gray-800 p-4 rounded-lg shadow-sm w-full sm:w-[45%] lg:w-[28%]">
+                                    <img src="img/IMG_1411.JPG" data-src="img/IMG_1411.JPG" alt="Participants speaking" class="event-thumb w-full h-64 md:h-80 lg:h-72 object-cover rounded-md cursor-pointer hover:scale-105 transition-transform" loading="lazy">
+                                    <div class="mt-4">
+                                        <p class="font-semibold text-gray-900 dark:text-gray-100 text-base md:text-lg">Deborah Ephraim</p>
+                                        <p class="text-sm md:text-base text-gray-600 dark:text-gray-300">Deborah Ephraim, the first runner-up addressing the audience at the 2025 award ceremony.</p>
+                                    </div>
+                                </article>
+
+                                <!-- Card 4 -->
+                                <article class="flex flex-col bg-white dark:bg-gray-800 p-4 rounded-lg shadow-sm w-full sm:w-[45%] lg:w-[28%]">
+                                    <img src="img/IMG_1379.JPG" data-src="img/IMG_1379.JPG" alt="Award ceremony" class="event-thumb w-full h-64 md:h-80 lg:h-72 object-cover rounded-md cursor-pointer hover:scale-105 transition-transform" loading="lazy">
+                                    <div class="mt-4">
+                                        <p class="font-semibold text-gray-900 dark:text-gray-100 text-base md:text-lg">Nkoyo Nyong</p>
+                                        <p class="text-sm md:text-base text-gray-600 dark:text-gray-300">Nkoyo Nyong, the second runner-up receiving her award.</p>
+                                    </div>
+                                </article>
+
+                            </div>
+
+                        </section>
+                    </div>
+                </div>
+
+               
+       
+
+            </article>
+        </section>
+    </main>
+
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Augustine Udefa Foundation</h3>
+                    <p class="text-gray-400">Empowering African youth through education since 2025.</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="about.html" class="text-gray-400 hover:text-white transition-colors">About Us</a>
+                        </li>
+                        <li><a href="program.html" class="text-gray-400 hover:text-white transition-colors">Programs</a>
+                        </li>
+                        <li><a href="news.html" class="text-gray-400 hover:text-white transition-colors">News &
+                                Stories</a></li>
+                        <li><a href="donate.html" class="text-gray-400 hover:text-white transition-colors">Donate</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Contact</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li class="flex items-center"><i class="fas fa-map-marker-alt mr-2"></i>Ikot Nkebre 2, Along
+                            Health Centre, 8 Miles, Calabar, Cross River State, Nigeria.</li>
+                        <li class="flex items-center"><i class="fas fa-phone-alt mr-2"></i> +234 816 261 5039</li>
+                        <!-- <li class="flex items-center"><i class="fas fa-envelope mr-2"></i> augustineudefafoundation@gmail.com</li> -->
+                        <li class="flex items-center"><i class="fas fa-envelope mr-2"></i>
+                            contact@augustineudefafoundation.com</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Follow Us</h3>
+                    <div class="flex space-x-4">
+                        <a href="https://www.facebook.com/share/1CYdGtH2dk/?mibextid=wwXIfr"
+                            class="text-gray-400 hover:text-white transition-colors text-xl"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://x.com/UdefaFoundation"
+                            class="text-gray-400 hover:text-white transition-colors text-xl"><img width="24" height="24" src="img/icons8-twitter-48.png" alt="twitterx--v2"/></a>
+                        <a href="https://www.instagram.com/augustineudefafoundation?igsh=eWsybWllYXlyMDB6&utm_source=qr"
+                            class="text-gray-400 hover:text-white transition-colors text-xl"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/augustine-udefa-foundation-a308a038a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+                            class="text-gray-400 hover:text-white transition-colors text-xl"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.youtube.com/@AugustineUdefaFoundation"
+                            class="text-gray-400 hover:text-white transition-colors text-xl"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 Augustine Udefa Foundation. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle (kept)
+      const mobileMenuButton = document.getElementById('mobile-menu-button');
+      const mobileMenu = document.getElementById('mobile-menu');
+
+      if (mobileMenuButton && mobileMenu) {
+          mobileMenuButton.addEventListener('click', function() {
+              const isHidden = mobileMenu.classList.contains('hidden');
+              if (isHidden) {
+                  mobileMenu.classList.remove('hidden');
+                  mobileMenuButton.innerHTML = '<i class="fas fa-times text-xl"></i>';
+              } else {
+                  mobileMenu.classList.add('hidden');
+                  mobileMenuButton.innerHTML = '<i class="fas fa-bars text-xl"></i>';
+              }
+          });
+      }
+    </script>
+    <!-- Image preview modal -->
+    <div id="image-modal" class="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50 hidden p-4">
+        <div class="relative max-w-4xl w-full">
+            <button id="modal-close" aria-label="Close image preview" class="absolute right-2 top-2 text-white bg-black bg-opacity-30 hover:bg-opacity-50 rounded-full p-2">
+                <i class="fas fa-times"></i>
+            </button>
+            <img id="modal-img" src="" alt="" class="w-full h-auto max-h-[80vh] object-contain rounded-md shadow-xl" />
+            <p id="modal-caption" class="mt-3 text-center text-white text-sm"></p>
+        </div>
+    </div>
+
+    <script>
+        // Image modal preview logic
+        (function(){
+            const modal = document.getElementById('image-modal');
+            const modalImg = document.getElementById('modal-img');
+            const modalCaption = document.getElementById('modal-caption');
+            const closeBtn = document.getElementById('modal-close');
+
+            function openModal(src, alt, captionText){
+                modalImg.src = src || '';
+                modalImg.alt = alt || '';
+                modalCaption.textContent = captionText || '';
+                modal.classList.remove('hidden');
+                document.body.style.overflow = 'hidden';
+            }
+
+            function closeModal(){
+                modal.classList.add('hidden');
+                modalImg.src = '';
+                modalCaption.textContent = '';
+                document.body.style.overflow = '';
+            }
+
+            // Attach click handlers to thumbs
+            document.querySelectorAll('.event-thumb').forEach(img => {
+                img.addEventListener('click', function(){
+                    const full = this.dataset.src || this.src;
+                    const captionEl = this.closest('article') && this.closest('article').querySelector('p.font-semibold');
+                    const captionText = captionEl ? captionEl.textContent.trim() : this.alt || '';
+                    openModal(full, this.alt || '', captionText);
+                });
+            });
+
+            // Close handlers
+            closeBtn.addEventListener('click', closeModal);
+            modal.addEventListener('click', function(e){ if(e.target === modal) closeModal(); });
+            document.addEventListener('keydown', function(e){ if(e.key === 'Escape') closeModal(); });
+        })();
+    </script>
+</body>
+
+</html>

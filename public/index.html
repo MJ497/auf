@@ -7,6 +7,7 @@
     <title>Augustine Udefa Foundation - Education Empowerment</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="shortcut icon" href="img/imgg.png" type="image/x-icon">
+    
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
    
@@ -87,22 +88,22 @@
         <div class="hero-marquee">
             <div class="hero-marquee__track">
                 <div class="hero-marquee__group">
-                    <span class="hero-marquee__label">Augustine Udefa Speaking Scholarship</span>
+                    <span class="hero-marquee__label">Augustine Udefa Speaking Scholarship — Closed</span>
                     <span>Application start date: November 17, 2025</span>
                     <span>Application deadline: December 31, 2025</span>
                     <!-- <span class="hero-marquee__label"> Augustine Udefa Scholarship Mentorship Program</span>
                     <span>Application start date: December 1, 2025</span>
                     <span>Application deadline: March 31, 2026</span> -->
-                    <span class="hero-marquee__status">These scholarships have started</span>
+                    <span class="hero-marquee__status">Closed — Reopens Nov 2026</span>
                 </div>
                 <div class="hero-marquee__group" aria-hidden="true">
-                    <span class="hero-marquee__label">Speaking Scholarship</span>
+                    <span class="hero-marquee__label">Augustine Udefa Speaking Scholarship — Closed</span>
                     <span>Application start date: November 17, 2025</span>
                     <span>Application deadline: December 31, 2025</span>
-                    <span class="hero-marquee__label">AUSMP</span>
+                    <!-- <span class="hero-marquee__label">AUSMP</span>
                     <span>Application start date: December 1, 2025</span>
-                    <span>Application deadline: March 31, 2026</span>
-                    <span class="hero-marquee__status">These scholarships have started</span>
+                    <span>Application deadline: March 31, 2026</span> -->
+                    <span class="hero-marquee__status">Closed — Reopens Nov 2026</span>
                 </div>
             </div>
         </div>
@@ -846,6 +847,100 @@ Sunday holds bachelor’s and master’s degrees in physiology from the Universi
         function closeTeamModal(id) {
             document.getElementById(id).classList.add('hidden');
         }
+
+        // Scholarship Closure Modal
+        function closeScholarshipModal() {
+            const modal = document.getElementById('scholarship-closure-modal');
+            if (!modal) return;
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const modal = document.getElementById('scholarship-closure-modal');
+            const closeBtn = document.getElementById('scholarship-close-btn');
+            const closeX = document.getElementById('scholarship-close-x');
+            
+            if (modal) {
+                setTimeout(() => {
+                    modal.classList.remove('hidden');
+                    modal.classList.add('flex');
+                }, 500);
+            }
+            
+            if (closeBtn) {
+                closeBtn.addEventListener('click', closeScholarshipModal);
+            }
+            if (closeX) {
+                closeX.addEventListener('click', closeScholarshipModal);
+            }
+
+            // Close modal when clicking outside
+            if (modal) {
+                modal.addEventListener('click', function(e) {
+                    if (e.target === this) {
+                        closeScholarshipModal();
+                    }
+                });
+            }
+        });
         </script>
+
+    <!-- Scholarship Closure Modal -->
+    <div id="scholarship-closure-modal" class="hidden fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4">
+        <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-2xl max-w-md w-full transform transition-all duration-300 scale-100 overflow-hidden">
+            <!-- Close Button -->
+            <button id="scholarship-close-x" class="absolute top-4 right-4 text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 transition-colors z-10">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+
+            <!-- Illustration -->
+            <div class="bg-gradient-to-br from-gold-500 to-gold-400" style="background: linear-gradient(135deg, #E68B31 0%, #f5a963 100%);">
+                <svg class="w-full h-48 text-white opacity-90" viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Calendar Icon -->
+                    <rect x="80" y="60" width="240" height="180" rx="12" fill="white" opacity="0.2" stroke="white" stroke-width="2"/>
+                    <line x1="80" y1="110" x2="320" y2="110" stroke="white" stroke-width="2"/>
+                    
+                    <!-- Calendar Days -->
+                    <circle cx="120" cy="150" r="8" fill="white" opacity="0.9"/>
+                    <circle cx="200" cy="150" r="8" fill="white" opacity="0.9"/>
+                    <circle cx="280" cy="150" r="8" fill="white" opacity="0.9"/>
+                    <circle cx="120" cy="210" r="8" fill="white" opacity="0.9"/>
+                    <circle cx="200" cy="210" r="8" fill="white" opacity="0.9"/>
+                    <circle cx="280" cy="210" r="8" fill="white" opacity="0.9"/>
+                    
+                    <!-- Lock Icon overlay -->
+                    <g transform="translate(160, 130)">
+                        <rect x="0" y="20" width="80" height="60" rx="8" fill="none" stroke="white" stroke-width="2.5"/>
+                        <path d="M 20 20 V 10 A 20 20 0 0 1 60 10 V 20" stroke="white" stroke-width="2.5" fill="none"/>
+                        <circle cx="40" cy="55" r="4" fill="white"/>
+                    </g>
+                </svg>
+            </div>
+
+            <!-- Content -->
+            <div class="p-8">
+                <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-2">Speaking Scholarship</h2>
+                <p class="text-gray-600 dark:text-gray-300 text-sm mb-4">Status Update</p>
+                
+                <div class="bg-yellow-50 dark:bg-yellow-900/20 border-l-4 border-yellow-400 dark:border-yellow-600 p-4 mb-6">
+                    <p class="text-gray-800 dark:text-gray-200 font-semibold text-center">
+                        This scholarship has temporarily closed and will reopen in <span class="text-yellow-600 dark:text-yellow-400 font-bold">November 2026</span>
+                    </p>
+                </div>
+
+                <p class="text-gray-600 dark:text-gray-400 text-sm mb-6">
+                    Thank you for your interest! We're working hard to prepare our next round of speaking scholarships. Stay tuned for updates.
+                </p>
+
+                <button id="scholarship-close-btn" class="w-full bg-gradient-to-r from-gold-500 to-gold-600" style="background: linear-gradient(90deg, #E68B31 0%, #d67a20 100%); color: white; padding: 12px 24px; border-radius: 8px; font-weight: 600; cursor: pointer; border: none; transition: all 0.3s ease; box-shadow: 0 4px 6px rgba(230, 139, 49, 0.3);">
+                    Got it
+                </button>
+            </div>
+        </div>
+    </div>
+
 </body>
 </html>

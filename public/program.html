@@ -39,6 +39,8 @@
           <a href="event.html" class="nav-link text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white" id="events-link">Events</a>
           <a href="volunteer.html" class="nav-link text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white" id="trustees-link">Volunteer</a>
           <a href="donate.html" class="nav-link text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white" id="donate-link">Donate</a>
+        <a href="news.html" class="nav-link text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white" id="donate-link">News</a>
+        
         </div>
       </div>
 
@@ -226,8 +228,14 @@
                         </li> -->
                     </ul>
                     <div class="flex flex-col space-y-3">
-                        <a href="excellence.html" class="px-4 py-2 bg-gold-500 text-white rounded-lg hover:bg-gold-600 transition-colors font-medium text-center">Apply Now</a>
-                        <a href="excellence.html" class="px-4 py-2 border border-gray-300 dark:border-gray-600 text-gray-900 dark:text-white rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors font-medium text-center">Learn More</a>
+                        <!-- <a href="excellence.html" class="px-4 py-2 bg-gold-500 text-white rounded-lg hover:bg-gold-600 transition-colors font-medium text-center">Apply Now</a> -->
+                        <!-- <a href="excellence.html" class="px-4 py-2 border border-gray-300 dark:border-gray-600 text-gray-900 dark:text-white rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors font-medium text-center">Learn More</a> -->
+                        <button class="px-4 py-2 bg-gold-500 text-white rounded-lg hover:bg-gold-600 transition-colors font-medium text-center" onclick="document.querySelector('.cancel-modal').classList.remove('hidden')">
+                            Apply Now
+                        </button>
+                         <button class="px-4 py-2 border border-gray-300 dark:border-gray-600 text-gray-900 dark:text-white rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors font-medium text-center" onclick="document.querySelector('.cancel-modal').classList.remove('hidden')">
+                           Learn More
+                        </button>
                     </div>
                 </div>
 
@@ -267,6 +275,23 @@
         </div>
     </section>
 
+    <!-- modal message for scholaorship -->
+     <div class="cancel-modal w-full backdrop-blur-md  h-full fixed top-0 left-0 flex items-center justify-center hidden">
+<div class="small-modal p-6 bg-white w-50 text-black flex justify-center align-center text-center flex-col rounded-lg shadow-lg">
+    <i class="fa-solid fa-circle-exclamation text-gold-500 text-4xl"></i>
+    <p>we are currently not accepting applications for this scholaorship.<br> When we begin accepting, an announcement will be made and the application form will be avialiable.</p>
+    <button class="close-modal mt-4 px-1 py-1 bg-gold-500 text-white rounded-lg hover:bg-gold-600 transition-colors font-medium">Close</button>
+</div>
+     </div>
+
+     <script>
+        const can_mod = document.querySelector('.cancel-modal');
+        const close_mod = document.querySelector('.close-modal');
+
+        close_mod.addEventListener('click', () => {
+            can_mod.classList.add('hidden');
+        });
+     </script>
     <!-- Health Programs -->
     <section class="py-20 bg-gray-50 dark:bg-gray-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

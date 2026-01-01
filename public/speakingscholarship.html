@@ -8,19 +8,32 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="shortcut icon" href="img/imgg.png" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/@preline/preline@2.0.0/dist/preline.min.js"></script>
     <script src="script.js" defer></script>
     <!-- Uploadcare Widget -->
-    <script>
+    <!-- <script>
       // Replace with your Uploadcare public key
       UPLOADCARE_PUBLIC_KEY = 'bb3e37fd7caa0a712fe8';
-    </script>
-    <script src="https://ucarecdn.com/libs/widget/3.x/uploadcare.full.min.js"></script>
+    </script> -->
+    <!-- <script src="https://ucarecdn.com/libs/widget/3.x/uploadcare.full.min.js"></script> -->
     <!-- EmailJS -->
     <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <!-- <link rel="stylesheet" -->
+      <!-- href="https://cdn.jsdelivr.net/npm/@uploadcare/file-uploader@1/web/uc-file-uploader-regular.min.css"> -->
+    <!-- <script type="module">
+      import * as UC from 'https://cdn.jsdelivr.net/npm/@uploadcare/file-uploader@1/web/uc-file-uploader-regular.min.js';
+      UC.defineComponents(UC);
+    </script> -->
     
+    <!-- <uc-config ctx-name="my-uploader" source-list="local, camera, facebook, gdrive" pubkey="bb3e37fd7caa0a712fe8">
+    </uc-config>
+    
+    <uc-file-uploader-regular ctx-name="my-uploader" class="uc-light"></uc-file-uploader-regular>
+    
+    <uc-upload-ctx-provider ctx-name="my-uploader"></uc-upload-ctx-provider> -->
       
     <link rel="icon" href="img/favicon.png" type="image/png">
 </head>
@@ -35,7 +48,16 @@
     </div>
     <div style="width:2.5rem;"></div> <!-- Spacer to balance flex -->
   </header>
-
+<style>
+.error-message {
+color: #dc2626; /* red */
+font-size: 0.875rem;
+margin-top: 4px;
+}
+.error-border {
+border: 1px solid #dc2626 !important;
+}
+</style>
   <main class="max-w-2xl mx-auto py-10 px-4">
     <h1 class="text-3xl font-bold text-gray-900 dark:text-white mb-6">Augustine Udefa Speaking Scholarship</h1>
     <div class="text-gray-700 dark:text-gray-300 space-y-4">
@@ -103,10 +125,12 @@ Recipients of the Augustine Udefa Speaking Scholarship are expected to be good a
       </div>
       <!-- Success Message -->
       <div id="success-message" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
-        <div class="bg-white dark:bg-gray-800 p-8 rounded-lg shadow-lg flex flex-col items-center">
+        <div class="bg-white dark:bg-gray-800 p-8 rounded-lg shadow-lg flex flex-col items-center text-center">
           <i class="fas fa-check-circle text-green-500 text-4xl mb-4"></i>
-          <span class="text-gray-900 dark:text-white font-semibold">Application submitted successfully!</span>
-          <p>we will get back to you shortly!!</p>
+          <span class="text-gray-900 dark:text-white font-semibold">Application submitted successfully. <br>
+    You will now be redirected to upload your required documents <br>
+    Please use the <b>SAME</b> email address.</span>
+          <p class="mt-2">we will get back to you shortly!!</p>
           <button onclick="window.location.reload()" class="mt-4 px-4 py-2 bg-gold-500 text-white rounded-lg hover:bg-gold-600">Close</button>
         </div>
       </div>
@@ -193,60 +217,122 @@ Recipients of the Augustine Udefa Speaking Scholarship are expected to be good a
           <input type="text" id="cgpa" name="cgpa" class="w-full px-4 py-2 border border-gray-300 rounded-lg text-gray-900 dark:bg-gray-900 dark-border-gray-700 dark:text-gray-400" required placeholder="e.g. 4.35 / 5.0">
         </div>
         <!-- Uploadcare File Uploads (no duplicate hidden inputs) -->
-            <div>
+            <!-- <div>
           <label for="admission-letter" class="block text-sm font-medium mb-1 dark:text-white text-gray-900">Upload Photo</label>
            <input type="hidden" role="uploadcare-uploader" id="photo" name="photo" data-public-key="bb3e37fd7caa0a712fe8" data-tabs="file url" data-clearable="true" data-multiple="false"  data-crop="" data-system-dialog="true" data-preview-step="true" required />
-        </div>
-        <div>
+        </div> -->
+        <!-- <div>
           <label for="coverletter" class="block text-sm font-medium mb-1 dark:text-white text-gray-900">Cover Letter (PDF)</label>
           <input type="hidden" role="uploadcare-uploader" id="coverletter" name="coverletter" data-public-key="bb3e37fd7caa0a712fe8" data-tabs="file url" data-clearable="true" data-multiple="false" data-images-only="false" data-accept="application/pdf" data-crop="" data-input-accept-types="application/pdf" data-system-dialog="true" data-preview-step="true" required />
-        </div>
-        <div>
+        </div> -->
+        <!-- <div>
           <label for="cv" class="block text-sm font-medium mb-1 dark:text-white text-gray-900">Curriculum Vitae (PDF)</label>
           <input type="hidden" role="uploadcare-uploader" id="cv" name="cv" data-public-key="bb3e37fd7caa0a712fe8" data-tabs="file url" data-clearable="true" data-multiple="false" data-images-only="false" data-accept="application/pdf" data-crop="" data-input-accept-types="application/pdf" data-system-dialog="true" data-preview-step="true" required />
-        </div>
-        <div>
+        </div> -->
+        <!-- <div>
           <label for="admissionletter" class="block text-sm font-medium mb-1 dark:text-white text-gray-900">Admission Letter (PDF)</label>
           <input type="hidden" role="uploadcare-uploader" id="admissionletter" name="admissionletter" data-public-key="bb3e37fd7caa0a712fe8" data-tabs="file url" data-clearable="true" data-multiple="false" data-images-only="false" data-accept="application/pdf" data-crop="" data-input-accept-types="application/pdf" data-system-dialog="true" data-preview-step="true" required />
-        </div>
-        <div>
+        </div> -->
+        <!-- <div>
           <label for="attestationletter" class="block text-sm font-medium mb-1 dark:text-white text-gray-900">Attestation Letter from HOD (PDF)</label>
           <input type="hidden" role="uploadcare-uploader" id="attestationletter" name="attestationletter" data-public-key="bb3e37fd7caa0a712fe8" data-tabs="file url" data-clearable="true" data-multiple="false" data-images-only="false" data-accept="application/pdf" data-crop="" data-input-accept-types="application/pdf" data-system-dialog="true" data-preview-step="true" required />
-        </div>
+        </div> -->
+        <div class="bg-yellow-100 text-yellow-800 p-4 rounded-lg text-sm">
+  <strong>Important:</strong><br>
+  After submitting this form, you will be redirected to upload your documents.
+  You must sign in with a Google account and use the SAME email address.
+</div>
+
         <button type="submit" class="w-full py-3 px-4 bg-gold-500 text-white rounded-lg hover:bg-gold-600 font-semibold">Submit Application</button>
       </form>
     </div>
   </main>
 <script>
-// Initialize EmailJS (replace with your user ID)
-emailjs.init('Hp8-g_JbMoY33XsD_');
+  emailjs.init('Hp8-g_JbMoY33XsD_');
 
-// Uploadcare widget event listeners
 document.addEventListener('DOMContentLoaded', function () {
-  // No need to map widget to hidden fields, just use the widget's value
   var form = document.getElementById('scholarship-form');
+
   form.addEventListener('submit', function (e) {
     e.preventDefault();
+ 
+     // Generate unique Application ID
+  const appId = 'AU-' + Date.now();
+    // let isValid = true;
+
+    // // List of required Uploadcare fields  
+    // const requiredUploadcareFields = [
+    //   "photo",
+    //   "coverletter",
+    //   "cv",
+    //   "admissionletter",
+    //   "attestationletter"
+    // ];
+
+    // // Validate each Uploadcare uploader
+    // requiredUploadcareFields.forEach(id => {
+    //   const widgetInput = document.getElementById(id);
+    //   const widgetValue = widgetInput.value;
+
+    //   // Remove old errors
+    //   widgetInput.classList.remove("error-border");
+    //   let oldError = document.querySelector(`#${id}-error`);
+    //   if (oldError) oldError.remove();
+
+    //   if (!widgetValue || widgetValue.trim() === "") {
+    //     isValid = false;
+
+    //     // Add red border
+    //     widgetInput.classList.add("error-border");
+
+    //     // Add inline error message
+    //     const error = document.createElement("p");
+    //     error.id = `${id}-error`;
+    //     error.className = "error-message";
+    //     error.innerText = "This file is required.";
+
+    //     widgetInput.parentNode.appendChild(error);
+    //   }
+    // });
+
+    // // If any upload is missing, do not submit email
+    // if (!isValid) {
+    //   return;
+    // }
+
+    // Show loading screen
     document.getElementById('loading-screen').classList.remove('hidden');
 
     // Collect form data
     var formData = {};
     Array.from(form.elements).forEach(function (el) {
-      if (el.name) formData[el.name] = el.value;
+      if (el.name) {
+        formData[el.name] = el.value;
+      }
     });
+ 
+    formData.application_id = appId;
 
-    // Send with EmailJS (replace with your service/template IDs)
+    // Send EmailJS
     emailjs.send('service_hxc7wck', 'template_nkge1vv', formData)
-      .then(function () {
-        document.getElementById('loading-screen').classList.add('hidden');
-        document.getElementById('success-message').classList.remove('hidden');
-        form.reset();
-      }, function (error) {
+     .then(function () {
+  document.getElementById('loading-screen').classList.add('hidden');
+  document.getElementById('success-message').classList.remove('hidden');
+
+  // Redirect to Google Form for uploads
+ // Prefill Google Form with Application ID
+const googleFormURL = "https://docs.google.com/forms/d/e/1FAIpQLScMIqRB4GVThxurdWG7_8CaBh5j9EzWkKuEh-Z0DSgEpLrcJg/viewform?usp=pp_url";
+const appIdField = "entry.1665077451"; // Replace with your actual field ID
+window.location.href = `${googleFormURL}&${appIdField}=${encodeURIComponent(appId)}`;
+
+}
+, function () {
         document.getElementById('loading-screen').classList.add('hidden');
         alert('Submission failed. Please try again.');
       });
   });
 });
 </script>
+
 </body>
 </html>

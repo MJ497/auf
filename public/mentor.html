@@ -14,11 +14,7 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://cdn.jsdelivr.net/npm/@preline/preline@2.0.0/dist/preline.min.js"></script>
 
-  <script>
-    // Replace with your Uploadcare public key
-    UPLOADCARE_PUBLIC_KEY = 'bb3e37fd7caa0a712fe8';
-  </script>
-  <script src="https://ucarecdn.com/libs/widget/3.x/uploadcare.full.min.js"></script>
+  
 
   <!-- EmailJS -->
   <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
@@ -85,11 +81,16 @@
 
       <!-- Success Message -->
       <div id="success-message" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
-        <div class="bg-white dark:bg-gray-800 p-8 rounded-lg shadow-lg flex flex-col items-center">
+        <div class="bg-white dark:bg-gray-800 p-8 rounded-lg shadow-lg flex flex-col items-center text-center">
           <i class="fas fa-check-circle text-green-500 text-4xl mb-4"></i>
-          <span class="text-gray-900 dark:text-white font-semibold">Application submitted successfully!</span>
-          <p class="mt-2">We will get back to you shortly.</p>
-          <button onclick="window.location.reload()" class="mt-4 px-4 py-2 bg-gold-500 text-white rounded-lg hover:bg-gold-600">Close</button>
+          <span class="text-gray-900 dark:text-white font-semibold">Application submitted successfully. <br>
+    You will now be redirected to upload your required documents <br>
+    Please use the <b>SAME</b> email address.</span>
+          <p class="mt-2">we will get back to you shortly!!</p>
+          <div class="mt-4 flex flex-col items-center">
+            <svg class="animate-spin h-8 w-8 text-gold-500 mb-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8z"></path></svg>
+            <p class="text-sm text-gray-600 dark:text-gray-300">Redirecting to upload page...</p>
+          </div>
         </div>
       </div>
 
@@ -236,60 +237,13 @@
           </div>
         </fieldset>
 
-        <!-- DOCUMENT UPLOADS -->
-        <fieldset class="border border-gray-200 dark:border-gray-700 p-4 rounded-lg">
-          <legend class="px-2 text-lg font-semibold text-gray-900 dark:text-white">Document upload (PDFs unless otherwise stated)</legend>
-          <p class="text-sm text-gray-600 dark:text-gray-300 mt-2">Upload PDFs for documents. Photograph should be a JPG/PNG.</p>
+       
 
-          
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-3">
-               <div>
-          <label for="admission-letter" class="block text-sm font-medium mb-1 dark:text-white text-gray-900">Upload Photo</label>
-           <input type="hidden" role="uploadcare-uploader" id="photo" name="photo" data-public-key="bb3e37fd7caa0a712fe8" data-tabs="file url" data-clearable="true" data-multiple="false"  data-crop="" data-system-dialog="true" data-preview-step="true" required />
-        </div>
-            <div>
-              <label for="coverLetter" class="block text-sm font-medium mb-1 text-gray-900 dark:text-white">Cover letter (PDF)</label>
-              <input type="hidden" role="uploadcare-uploader" id="mcoverLetter" name="mcoverLetter" data-public-key="bb3e37fd7caa0a712fe8" data-tabs="file url" data-clearable="true" data-accept="application/pdf" data-preview-step="true" />
-            </div>
-
-            <div>
-              <label for="cvUpload" class="block text-sm font-medium mb-1 text-gray-900 dark:text-white">Curriculum vitae (PDF)</label>
-              <input type="hidden" role="uploadcare-uploader" id="cvUpload" name="cvUpload" data-public-key="bb3e37fd7caa0a712fe8" data-tabs="file url" data-clearable="true" data-accept="application/pdf" data-preview-step="true" />
-            </div>
-
-            <div>
-              <label for="personalStatementUpload" class="block text-sm font-medium mb-1 text-gray-900 dark:text-white">Personal statement (PDF)</label>
-              <input type="hidden" role="uploadcare-uploader" id="personalStatementUpload" name="personalStatementUpload" data-public-key="bb3e37fd7caa0a712fe8" data-tabs="file url" data-clearable="true" data-accept="application/pdf" data-preview-step="true" />
-            </div>
-
-            <div>
-              <label for="unofficialTranscript" class="block text-sm font-medium mb-1 text-gray-900 dark:text-white">Unofficial transcript (PDF)</label>
-              <input type="hidden" role="uploadcare-uploader" id="unofficialTranscript" name="unofficialTranscript" data-public-key="bb3e37fd7caa0a712fe8" data-tabs="file url" data-clearable="true" data-accept="application/pdf" data-preview-step="true" />
-            </div>
-
-            <div>
-              <label for="mrecommendation1" class="block text-sm font-medium mb-1 text-gray-900 dark:text-white">Recommendation letter 1 (PDF)</label>
-              <input type="hidden" role="uploadcare-uploader" id="mrecommendation1" name="mrecommendation1" data-public-key="bb3e37fd7caa0a712fe8" data-tabs="file url" data-clearable="true" data-accept="application/pdf" data-preview-step="true" />
-            </div>
-
-            <div>
-              <label for="mrecommendation2" class="block text-sm font-medium mb-1 text-gray-900 dark:text-white">Recommendation letter 2 (PDF)</label>
-              <input type="hidden" role="uploadcare-uploader" id="mrecommendation2" name="mrecommendation2" data-public-key="bb3e37fd7caa0a712fe8" data-tabs="file url" data-clearable="true" data-accept="application/pdf" data-preview-step="true" />
-            </div>
-
-            <div>
-              <label for="mrecommendation3" class="block text-sm font-medium mb-1 text-gray-900 dark:text-white">Recommendation letter 3 (PDF)</label>
-              <input type="hidden" role="uploadcare-uploader" id="mrecommendation3" name="mrecommendation3" data-public-key="bb3e37fd7caa0a712fe8" data-tabs="file url" data-clearable="true" data-accept="application/pdf" data-preview-step="true" />
-            </div>
-
-         
-          </div>
-        </fieldset>
-
-        <div class="flex items-center gap-3">
-          <input id="declaration" name="declaration" type="checkbox" required class="w-4 h-4 text-gold-600 border-gray-300 rounded focus:ring-gold-500">
-          <label for="declaration" class="text-sm text-gray-700 dark:text-gray-300">I declare that the information I have provided is true and complete to the best of my knowledge.</label>
-        </div>
+          <div class="bg-yellow-100 text-yellow-800 p-4 rounded-lg text-sm">
+  <strong>Important:</strong><br>
+  After submitting this form, you will be redirected to upload your documents.
+  You must sign in with a Google account and use the SAME email address.
+</div>
 
         <div>
           <button type="submit" class="w-full py-3 px-4 bg-gold-500 text-white rounded-lg hover:bg-gold-600 font-semibold">Submit Application</button>
@@ -302,10 +256,7 @@
     // Initialize EmailJS (replace with your user ID)
     emailjs.init('Hp8-g_JbMoY33XsD_');
 
-    // Helper to read uploadcare widget value (the widget stores a value string)
-    function getUploadcareValue(input) {
-      return input && input.value ? input.value : '';
-    }
+  
 
     // Collect form and send via EmailJS
     window.addEventListener('DOMContentLoaded', function () {
@@ -321,21 +272,20 @@
           return;
         }
 
+        // Generate unique Application ID
+        const appId = 'AUM-' + Date.now();
+
         document.getElementById('loading-screen').classList.remove('hidden');
 
         var formData = {};
-        // Collect standard inputs
+        // Collect standard inputs (no Uploadcare integration)
         Array.from(form.elements).forEach(function (el) {
           if (!el.name) return;
-          // Uploadcare inputs have role attribute
-          if (el.getAttribute('role') === 'uploadcare-uploader') {
-            formData[el.name] = getUploadcareValue(el);
-          } else if (el.type === 'checkbox') {
-            formData[el.name] = el.checked ? 'yes' : 'no';
-          } else {
-            formData[el.name] = el.value;
-          }
+          
         });
+
+        // Attach application id
+        formData.application_id = appId;
 
         // Add subject and summary fields for email template
         formData.subject = 'AUSMP Application — ' + (formData.fullName || 'Applicant');
@@ -345,19 +295,20 @@
         emailjs.send('service_hxc7wck', 'template_nkge1vv', formData)
           .then(function () {
             document.getElementById('loading-screen').classList.add('hidden');
+            // Show success modal
             document.getElementById('success-message').classList.remove('hidden');
+
+            // Reset form
             form.reset();
 
-            // Reset uploadcare widgets if present
-            if (window.uploadcare && uploadcare.Widget) {
-              var widgets = document.querySelectorAll('input[role="uploadcare-uploader"]');
-              widgets.forEach(function (inp) {
-                try {
-                  var widget = uploadcare.Widget(inp);
-                  widget.value(null);
-                } catch (err) { /* ignore */ }
-              });
-            }
+            // Redirect to Google Form for uploads (short delay so spinner is visible)
+            // NOTE: Replace `googleFormURL` and `appIdField` with your actual form URL and entry ID
+            const googleFormURL = "https://docs.google.com/forms/d/e/1FAIpQLSes7ucb14B-8_tU7nRi3an6ApTDRqjjpBZPOWfpb7yuah6mqg/viewform?usp=header";
+            const appIdField = "entry.2013121715"; // Replace with your actual field ID
+            setTimeout(function(){
+              window.location.href = `${googleFormURL}&${appIdField}=${encodeURIComponent(appId)}`;
+            }, 1200);
+
           }, function (error) {
             document.getElementById('loading-screen').classList.add('hidden');
             console.error('EmailJS error', error);
@@ -365,8 +316,7 @@
           });
       });
 
-      // Optional: attach uploadcare widgets and show previews inline (Uploadcare handles UI automatically)
-      // Example: you can access widget instance via uploadcare.Widget('#coverLetter') etc. if you want custom behavior.
+      // Note: Uploadcare removed — file uploads should be handled via the redirect/upload form.
     });
   </script>
 
