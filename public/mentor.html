@@ -96,7 +96,7 @@
 
       <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">Application form for AUSMP</h2>
 
-      <form id="ausmp-form" class="space-y-6 bg-gray-50 dark:bg-gray-800 p-6 rounded-xl shadow-md" novalidate>
+      <form id="ausmp-form" class="space-y-6 bg-gray-50 dark:bg-gray-800 p-6 rounded-xl shadow-md" >
         <!-- PERSONAL DETAILS -->
         <fieldset class="border border-gray-200 dark:border-gray-700 p-4 rounded-lg">
           <legend class="px-2 text-lg font-semibold text-gray-900 dark:text-white">Personal details</legend>
@@ -219,7 +219,7 @@
 
             <div>
               <label class="block text-sm font-medium mb-1 text-gray-900 dark:text-white">Institution 4</label>
-              <input type="text" id="institute4" name="instituteinst4" placeholder="Institution name" class="w-full px-4 py-2 border rounded-lg dark:bg-gray-900 dark:border-gray-700 dark:text-gray-400">
+              <input type="text" id="institute4" name="institute4" placeholder="Institution name" class="w-full px-4 py-2 border rounded-lg dark:bg-gray-900 dark:border-gray-700 dark:text-gray-400">
             </div>
             <div>
               <label class="block text-sm font-medium mb-1 text-gray-900 dark:text-white">Program 4</label>
@@ -253,72 +253,64 @@
   </main>
 
   <script>
-    // Initialize EmailJS (replace with your user ID)
-    emailjs.init('Hp8-g_JbMoY33XsD_');
+  // Initialize EmailJS (replace with your user ID if needed)
+  emailjs.init('Hp8-g_JbMoY33XsD_');
 
-  
+  window.addEventListener('DOMContentLoaded', function () {
+    var form = document.getElementById('ausmp-form');
+    if (!form) return;
 
-    // Collect form and send via EmailJS
-    window.addEventListener('DOMContentLoaded', function () {
-      var form = document.getElementById('ausmp-form');
-      if (!form) return;
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
 
-      form.addEventListener('submit', function (e) {
-        e.preventDefault();
+      if (!form.checkValidity()) {
+        form.reportValidity();
+        return;
+      }
 
-        // Basic front-end validation
-        if (!form.checkValidity()) {
-          form.reportValidity();
-          return;
-        }
+      // Generate unique Application ID
+      const appId = 'AUM-' + Date.now();
 
-        // Generate unique Application ID
-        const appId = 'AUM-' + Date.now();
+      // show loading
+      document.getElementById('loading-screen').classList.remove('hidden');
 
-        document.getElementById('loading-screen').classList.remove('hidden');
+      // collect all form fields into an object (only inputs with name= will be included)
+      const fd = new FormData(form);
+      // convert to plain object
+      const formData = Object.fromEntries(fd.entries());
 
-        var formData = {};
-        // Collect standard inputs (no Uploadcare integration)
-        Array.from(form.elements).forEach(function (el) {
-          if (!el.name) return;
-          
+      // attach application id and other constructed fields
+      formData.application_id = appId;
+      // build subject/summary using actual field names from your form/template
+      formData.subject = 'AUSMP Application — ' + (formData.applicantname || 'Applicant');
+      formData.summary = 'AUSMP applicant: ' + (formData.applicantname || '') + ' | Email: ' + (formData.applicantemail || '');
+
+      // DEBUG: inspect what will be sent
+      console.log('EmailJS payload:', formData);
+
+      // send submission via EmailJS (update service/template IDs if needed)
+      emailjs.send('service_hxc7wck', 'template_nkge1vv', formData)
+        .then(function () {
+          document.getElementById('loading-screen').classList.add('hidden');
+          document.getElementById('success-message').classList.remove('hidden');
+          form.reset();
+
+          // redirect to upload form with application id
+          const googleFormURL = "https://docs.google.com/forms/d/e/1FAIpQLSes7ucb14B-8_tU7nRi3an6ApTDRqjjpBZPOWfpb7yuah6mqg/viewform?usp=header";
+          const appIdField = "entry.2013121715"; // Replace if different
+          setTimeout(function(){
+            window.location.href = `${googleFormURL}&${appIdField}=${encodeURIComponent(appId)}`;
+          }, 1200);
+
+        }, function (error) {
+          document.getElementById('loading-screen').classList.add('hidden');
+          console.error('EmailJS error', error);
+          alert('Submission failed. Please try again.');
         });
-
-        // Attach application id
-        formData.application_id = appId;
-
-        // Add subject and summary fields for email template
-        formData.subject = 'AUSMP Application — ' + (formData.fullName || 'Applicant');
-        formData.summary = 'AUSMP applicant: ' + (formData.fullName || '') + ' | Email: ' + (formData.email || '');
-
-        // Send submission via EmailJS (update service/template IDs if needed)
-        emailjs.send('service_hxc7wck', 'template_nkge1vv', formData)
-          .then(function () {
-            document.getElementById('loading-screen').classList.add('hidden');
-            // Show success modal
-            document.getElementById('success-message').classList.remove('hidden');
-
-            // Reset form
-            form.reset();
-
-            // Redirect to Google Form for uploads (short delay so spinner is visible)
-            // NOTE: Replace `googleFormURL` and `appIdField` with your actual form URL and entry ID
-            const googleFormURL = "https://docs.google.com/forms/d/e/1FAIpQLSes7ucb14B-8_tU7nRi3an6ApTDRqjjpBZPOWfpb7yuah6mqg/viewform?usp=header";
-            const appIdField = "entry.2013121715"; // Replace with your actual field ID
-            setTimeout(function(){
-              window.location.href = `${googleFormURL}&${appIdField}=${encodeURIComponent(appId)}`;
-            }, 1200);
-
-          }, function (error) {
-            document.getElementById('loading-screen').classList.add('hidden');
-            console.error('EmailJS error', error);
-            alert('Submission failed. Please try again.');
-          });
-      });
-
-      // Note: Uploadcare removed — file uploads should be handled via the redirect/upload form.
     });
-  </script>
+  });
+</script>
+
 
 </body>
 </html>
